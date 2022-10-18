@@ -29,5 +29,3 @@ val update_board : gameboard -> int -> int -> int -> int -> gameboard
 
 val print_board : gameboard -> unit
 (** [print_board g] prints [g]. *)
-
-(* Some comment *)
