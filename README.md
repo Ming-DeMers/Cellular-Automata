@@ -1,5 +1,5 @@
 ﻿# Cellular-Automata
-#brought to you by OChamaleon:
+Brought to you by OChameleon:  
 Ming DeMers (mtd64)  
 Jack Jansons (jcj59)  
 Benjamin Nozik (bhn9)  
