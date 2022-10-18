@@ -11,7 +11,8 @@ type gameboard = node list list
 exception PreconditionViolation of string
 (** raised when precondtion is violated*)
 
-(** Helper function for new_gamebaord. Creates a list of x default nodes *)
+(** Helper function for new_gamebaord. Creates a list of x default nodes that
+    are dead *)
 let rec ng_x lst x =
   match x with
   | 0 -> lst
@@ -56,12 +57,13 @@ let rec make_gb_string gb =
 let print_board gb = print_endline (make_gb_string gb)
 
 (** Is the width of given gameboard *)
-let rec get_gb_width gb =
+let get_gb_width gb =
   match gb with
   | [] -> 0
   | h :: t -> List.length h
 
-let rec get_gb_height gb = List.length gb
+(** Is the height of given gameboard *)
+let get_gb_height gb = List.length gb
 
 (** Is the node with coordinate (x,y) in the given gameboard *)
 let get_node gb x y =
@@ -112,3 +114,9 @@ let check_west gb x y =
 let get_neighbors gb x y =
   check_north gb x y + check_south gb x y + check_east gb x y
   + check_west gb x y
+
+let update_node b n = raise (Failure "Unimplemented")
+let update_board gb x y max_x max_y acc = raise (Failure "Unimplemented")
+let print_board gb = raise (Failure "Unimplemented")
+let loop gb iterations = raise (Failure "Unimplemented")
+let turn gb = raise (Failure "unimplemented")

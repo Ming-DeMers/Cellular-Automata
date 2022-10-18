@@ -1,0 +1,4 @@
+(library
+ (name gameboard)
+ (public_name Gameboard)
+ (libraries ANSITerminal))

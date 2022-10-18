@@ -1,0 +1,35 @@
+(lang dune 3.4)
+(name Gameboard)
+(sections (lib .) (libexec .) (doc ../../doc/Gameboard))
+(files
+ (lib
+  (META
+   dune-package
+   gameboard.a
+   gameboard.cma
+   gameboard.cmi
+   gameboard.cmt
+   gameboard.cmti
+   gameboard.cmx
+   gameboard.cmxa
+   gameboard.ml
+   gameboard.mli
+   opam))
+ (libexec (gameboard.cmxs))
+ (doc (README.md)))
+(library
+ (name Gameboard)
+ (kind normal)
+ (archives (byte gameboard.cma) (native gameboard.cmxa))
+ (plugins (byte gameboard.cma) (native gameboard.cmxs))
+ (native_archives gameboard.a)
+ (requires ANSITerminal)
+ (main_module_name Gameboard)
+ (modes byte native)
+ (modules
+  (singleton
+   (name Gameboard)
+   (obj_name gameboard)
+   (visibility public)
+   (impl)
+   (intf))))

@@ -15,7 +15,7 @@ val turn : gameboard -> gameboard
     number of neighboars each node has, determines whether each node will be
     dead or alive, and updates and prints the board for the next generation. *)
 
-val get_neighboards : gameboard -> int -> int -> int
+val get_neighbors : gameboard -> int -> int -> int
 (** [get_neighbors g x y] is the number of neighbors that the node located at
     position ([x], [y]) on the grid has. *)
 
