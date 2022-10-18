@@ -1,5 +1,9 @@
-type node = bool * int
-(** bool is true if alive, false if not. int is number of neighbors *)
+type state =
+  | Dead
+  | Alive
+
+type node = state * int
+(** int is number of neighbors *)
 
 type gameboard = node list list
 (** Two dimensional list of nodes representing a gameboard *)
@@ -11,7 +15,7 @@ exception PreconditionViolation of string
 let rec ng_x lst x =
   match x with
   | 0 -> lst
-  | e -> ng_x ((false, 0) :: lst) (e - 1)
+  | e -> ng_x ((Dead, 0) :: lst) (e - 1)
 
 (** Helper function for new_gamebaord. Creates a list of x default nodes*)
 let rec ng_y outer_lst y inner_lst =
@@ -39,8 +43,8 @@ let rec make_row_string r =
   | [] -> ""
   | h :: t -> (
       match h with
-      | true, _ -> "◾" ^ make_row_string t
-      | false, _ -> "◽" ^ make_row_string t)
+      | Alive, _ -> "◾" ^ make_row_string t
+      | Dead, _ -> "◽" ^ make_row_string t)
 
 (** Creates a string of the given gameboard*)
 let rec make_gb_string gb =
