@@ -1,4 +1,4 @@
-type gameboard = int list list
+type gameboard 
 
 val init_gameboard : gameboard option -> gameboard
 (** [init_gameboard g_option] is the initial gameboard.  The initial gameboard is either
