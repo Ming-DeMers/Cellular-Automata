@@ -65,8 +65,13 @@ let gb_width gb =
 let gb_height gb = List.length gb
 
 (** Is the node with coordinate (x,y) in the given gameboard *)
+<<<<<<< HEAD
 let node gb x y =
   let index = (gb_width gb * (y - 1)) + x in
+=======
+let get_node gb x y =
+  let index = (get_gb_width gb * (y - 1)) - 1 + x in
+>>>>>>> 8706424fcbc202fb6168e8c22feec6faf4e53c77
   let flat = List.flatten gb in
   List.nth flat index
 
