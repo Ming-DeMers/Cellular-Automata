@@ -167,14 +167,33 @@ let get_tail gb =
   | [] -> []
   | _ :: t -> t
 
-let rec update_board gb x y acc =
+(** [update_board_aux gb x y acc] takes in an empty gameboard and constructs a
+    new gameboard with node x y added.
+
+    [acc] is originally an empty list [update_board 1 1 gb acc] calls
+    [update_board 2 1 gb (acc with node 1, 1 updated)]
+    [update_board max_x 1 gb acc] calls
+    [update_board 1 2 gb (acc with node max_x 1 updated)]
+    [update_board max_x max_y gb acc] is the final updated board *)
+let rec update_board_aux gb x y acc =
   let new_node = update_node gb x y in
   match (x, y) with
   | 1, 1 -> (new_node :: get_head acc) :: get_tail acc
   | 1, y ->
-      update_board gb (get_gb_width gb) (y - 1) ([ new_node ] :: get_tail acc)
+      update_board_aux gb (get_gb_width gb) (y - 1)
+        ([ new_node ] :: get_tail acc)
   | x, _ ->
-      update_board gb (x - 1) y ((new_node :: get_head acc) :: get_tail acc)
+      update_board_aux gb (x - 1) y ((new_node :: get_head acc) :: get_tail acc)
 
-let loop gb iterations = raise (Failure "Unimplemented")
-let turn gb = raise (Failure "unimplemented")
+let update_board gb =
+  update_board_aux gb (get_gb_width gb) (get_gb_height gb) [ [] ]
+
+let turn gb =
+  let up = update_board gb in
+  print_board up;
+  up
+
+let rec loop gb iterations =
+  match iterations with
+  | 0 -> gb
+  | x -> loop (turn gb) (x - 1)

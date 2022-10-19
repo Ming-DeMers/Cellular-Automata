@@ -30,15 +30,8 @@ val update_node : state -> int -> int -> state
 (** [update_node status x y] is whether or not the node is dead or alive in the
     next generation. *)
 
-val update_board : gameboard -> int -> int -> gameboard
-(** [update_board g x y acc] takes in an empty gameboard and constructs a new
-    gameboard with node x y added.
-
-    [acc] is originally an empty list [update_board 1 1 gb acc] calls
-    [update_board 2 1 gb (acc with node 0, 0 updated)]
-    [update_board max_x 1 gb acc] calls
-    [update_board 1 2 gb (acc with node max_x 1 updated)]
-    [update_board max_x max_y gb acc] is the final updated board *)
+val update_board : gameboard -> gameboard
+(** [update_board gb] updates gameboard gb to the next generation *)
 
 val print_board : gameboard -> unit
 (** [print_board g] prints [g]. *)
