@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /home/mingtd/3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_0b3da6_output
+$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_4b71c4_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -33,8 +33,6 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_0b3da6_out
 #            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
 #            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib/toplevel"
-#        ; "OCAML_COLOR" : "always"
-#        ; "OPAMCOLOR" : "always"
 #        }
 #  ; findlib_paths = [ External "/home/mingtd/.opam/cs3110-2022fa/lib" ]
 #  ; arch_sixtyfour = true
@@ -118,42 +116,35 @@ $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1.
 > Error: The implementation src/gameboard.ml
 >        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
 >        Values do not match:
->          val update_board : 'a -> 'b -> 'c -> 'd -> 'e -> 'f -> 'g
+>          val loop : state list list -> int -> state list list
 >        is not included in
->          val update_board :
->            gameboard -> int -> int -> int -> int -> gameboard
->        The type gameboard -> int -> int -> int -> int -> 'a -> 'b
->        is not compatible with the type
->          gameboard -> int -> int -> int -> int -> gameboard
->        Type 'a -> 'b is not compatible with type gameboard = node list list 
->        File "src/gameboard.mli", line 29, characters 0-69:
+>          val loop : gameboard -> int -> unit
+>        The type state list list -> int -> state list list
+>        is not compatible with the type gameboard -> int -> unit
+>        Type state list list is not compatible with type unit 
+>        File "src/gameboard.mli", line 12, characters 0-35:
 >          Expected declaration
->        File "src/gameboard.ml", line 119, characters 4-16: Actual declaration
+>        File "src/gameboard.ml", line 199, characters 8-12: Actual declaration
 [2]
 $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard.cmo -c -impl src/gameboard.ml)
 > File "src/gameboard.ml", line 1:
 > Error: The implementation src/gameboard.ml
 >        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
 >        Values do not match:
->          val update_board : 'a -> 'b -> 'c -> 'd -> 'e -> 'f -> 'g
+>          val loop : state list list -> int -> state list list
 >        is not included in
->          val update_board :
->            gameboard -> int -> int -> int -> int -> gameboard
->        The type gameboard -> int -> int -> int -> int -> 'a -> 'b
->        is not compatible with the type
->          gameboard -> int -> int -> int -> int -> gameboard
->        Type 'a -> 'b is not compatible with type gameboard = node list list 
->        File "src/gameboard.mli", line 29, characters 0-69:
+>          val loop : gameboard -> int -> unit
+>        The type state list list -> int -> state list list
+>        is not compatible with the type gameboard -> int -> unit
+>        Type state list list is not compatible with type unit 
+>        File "src/gameboard.mli", line 12, characters 0-35:
 >          Expected declaration
->        File "src/gameboard.ml", line 119, characters 4-16: Actual declaration
+>        File "src/gameboard.ml", line 199, characters 8-12: Actual declaration
 [2]
 $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
-> File "test/main.ml", line 1, characters 0-11:
-> 1 | open OUnit2
->     ^^^^^^^^^^^
-> Error (warning 33 [unused-open]): unused open OUnit2.
-> File "test/main.ml", line 2, characters 0-14:
-> 2 | open Gameboard
->     ^^^^^^^^^^^^^^
-> Error (warning 33 [unused-open]): unused open Gameboard.
+> File "test/main.ml", line 92, characters 20-23:
+> 92 |   name >:: fun _ -> ass
+>                          ^^^
+> Error: Unbound value ass
+> Hint: Did you mean abs or asr?
 [2]

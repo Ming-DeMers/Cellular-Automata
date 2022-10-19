@@ -15,7 +15,8 @@ let rec ng_x lst x =
   | 0 -> lst
   | e -> ng_x (Dead :: lst) (e - 1)
 
-(** Helper function for new_gamebaord. Creates a list of x default nodes *)
+(** Helper function for new_gamebaord. Creates a list of default lists that are
+    dead nodes.*)
 let rec ng_y outer_lst y inner_lst =
   match y with
   | 0 -> outer_lst
@@ -23,13 +24,13 @@ let rec ng_y outer_lst y inner_lst =
 
 (** Creates a new gameboard with dimensions x by y filled with empty nodes.
     Precondition: x,y >= 1 *)
-let new_gameboard x y = x |> ng_x [] |> ng_y [] y
+let new_gameboard x y : gameboard = x |> ng_x [] |> ng_y [] y
 
 (** [init_gameboard g_option] is the initial gameboard. The initial gameboard is
     either [g] if [g_option] is [Some g], otherwise it is some default
     gameboard.
 
-    Right now set to create a 10x10 empty gameboard if none *)
+    Default gameboard is a 10x10 empty board. *)
 let init_gameboard gb_op =
   match gb_op with
   | None -> new_gameboard 10 10
@@ -39,32 +40,33 @@ let init_gameboard gb_op =
 let rec make_row_string r =
   match r with
   | [] -> ""
-  | h :: t -> (
+  | h :: t -> begin
       match h with
       | Alive -> "◾" ^ make_row_string t
-      | Dead -> "◽" ^ make_row_string t)
+      | Dead -> "◽" ^ make_row_string t
+    end
 
 (** Creates a string of the given gameboard *)
-let rec make_gb_string gb =
+let rec gb_to_string (gb : gameboard) =
   match gb with
   | [] -> ""
-  | h :: t -> make_row_string h ^ "\n" ^ make_gb_string t
+  | h :: t -> make_row_string h ^ "\n" ^ gb_to_string t
 
 (** Prints the given gameboard *)
-let print_board gb = print_endline (make_gb_string gb)
+let print_board gb = print_endline (gb_to_string gb)
 
 (** Is the width of given gameboard *)
-let get_gb_width gb =
+let gb_width gb =
   match gb with
   | [] -> 0
   | h :: t -> List.length h
 
 (** Is the height of given gameboard *)
-let get_gb_height gb = List.length gb
+let gb_height gb = List.length gb
 
 (** Is the node with coordinate (x,y) in the given gameboard *)
-let get_node gb x y =
-  let index = (get_gb_width gb * (y - 1)) + x in
+let node gb x y =
+  let index = (gb_width gb * (y - 1)) + x in
   let flat = List.flatten gb in
   List.nth flat index
 
@@ -72,25 +74,25 @@ let get_node gb x y =
 let check_north gb x y =
   if y = 1 then 0
   else
-    let n = get_node gb x (y - 1) in
+    let n = node gb x (y - 1) in
     match n with
     | Dead -> 0
     | Alive -> 1
 
 (** Is 0 if neighbor to the south is dead, 1 if alive *)
 let check_south gb x y =
-  if y = get_gb_height gb then 0
+  if y = gb_height gb then 0
   else
-    let n = get_node gb x (y + 1) in
+    let n = node gb x (y + 1) in
     match n with
     | Dead -> 0
     | Alive -> 1
 
 (** Is 0 if neighbor to the east is dead, 1 if alive *)
 let check_east gb x y =
-  if x = get_gb_width gb then 0
+  if x = gb_width gb then 0
   else
-    let n = get_node gb (x + 1) y in
+    let n = node gb (x + 1) y in
     match n with
     | Dead -> 0
     | Alive -> 1
@@ -99,7 +101,7 @@ let check_east gb x y =
 let check_west gb x y =
   if x = 1 then 0
   else
-    let n = get_node gb (x - 1) y in
+    let n = node gb (x - 1) y in
     match n with
     | Dead -> 0
     | Alive -> 1
@@ -108,61 +110,66 @@ let check_west gb x y =
 let check_nw gb x y =
   if y = 1 || x = 1 then 0
   else
-    let n = get_node gb (x - 1) (y - 1) in
+    let n = node gb (x - 1) (y - 1) in
     match n with
     | Dead -> 0
     | Alive -> 1
 
 (** Is 0 if neighbor to the northeast is dead, 1 if alive *)
 let check_ne gb x y =
-  if y = 1 || x = get_gb_width gb then 0
+  if y = 1 || x = gb_width gb then 0
   else
-    let n = get_node gb (x + 1) (y - 1) in
+    let n = node gb (x + 1) (y - 1) in
     match n with
     | Dead -> 0
     | Alive -> 1
 
 (** Is 0 if neighbor to the southwest is dead, 1 if alive *)
 let check_sw gb x y =
-  if y = get_gb_height gb || x = 1 then 0
+  if y = gb_height gb || x = 1 then 0
   else
-    let n = get_node gb (x - 1) (y + 1) in
+    let n = node gb (x - 1) (y + 1) in
     match n with
     | Dead -> 0
     | Alive -> 1
 
 (** Is 0 if neighbor to the southeast is dead, 1 if alive *)
 let check_se gb x y =
-  if y = get_gb_height gb || x = get_gb_width gb then 0
+  if y = gb_height gb || x = gb_width gb then 0
   else
-    let n = get_node gb (x + 1) (y + 1) in
+    let n = node gb (x + 1) (y + 1) in
     match n with
     | Dead -> 0
     | Alive -> 1
 
-(** [get_neighbors g x y] is the number of neighbors that the node located at
+(** [neighbors g x y] is the number of neighbors that the node located at
     position ([x], [y]) on the grid has.
 
     Precondition: (x,y) must be a valid position in the grid *)
-let get_neighbors gb x y =
+let neighbors gb x y =
   check_north gb x y + check_south gb x y + check_east gb x y
   + check_west gb x y + check_nw gb x y + check_ne gb x y + check_sw gb x y
   + check_se gb x y
 
+(** [update_node gb x y] updates the node to be dead or alive for the next
+    generation, based on the number of neighbors and according to the specified
+    rules.
+
+    Precondition: (x,y) is a valid coordinate of a node on the gameboard. *)
 let update_node gb x y =
-  let n = get_neighbors gb x y in
-  match get_node gb x y with
+  let n = neighbors gb x y in
+  match node gb x y with
   | Alive -> if n = 2 || n = 3 then Alive else Dead
   | Dead -> if n = 3 then Alive else Dead
 
 (** [get_head gb] is the first element of [gb] or [\[\]] if empty. *)
-let get_head gb =
+let head gb =
   match gb with
   | [] -> []
   | h :: _ -> h
 
 (** [get_head gb] is [gb] without the first element or [\[\]] if empty. *)
-let get_tail gb =
+let tail gb =
   match gb with
   | [] -> []
   | _ :: t -> t
@@ -178,15 +185,11 @@ let get_tail gb =
 let rec update_board_aux gb x y acc =
   let new_node = update_node gb x y in
   match (x, y) with
-  | 1, 1 -> (new_node :: get_head acc) :: get_tail acc
-  | 1, y ->
-      update_board_aux gb (get_gb_width gb) (y - 1)
-        ([ new_node ] :: get_tail acc)
-  | x, _ ->
-      update_board_aux gb (x - 1) y ((new_node :: get_head acc) :: get_tail acc)
+  | 1, 1 -> (new_node :: head acc) :: tail acc
+  | 1, y -> update_board_aux gb (gb_width gb) (y - 1) ([ new_node ] :: tail acc)
+  | x, _ -> update_board_aux gb (x - 1) y ((new_node :: head acc) :: tail acc)
 
-let update_board gb =
-  update_board_aux gb (get_gb_width gb) (get_gb_height gb) [ [] ]
+let update_board gb = update_board_aux gb (gb_width gb) (gb_height gb) [ [] ]
 
 let turn gb =
   let up = update_board gb in
