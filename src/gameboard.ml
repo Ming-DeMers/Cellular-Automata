@@ -107,13 +107,50 @@ let check_west gb x y =
     | Dead, _ -> 0
     | Alive, _ -> 1
 
+(** Is 0 if neighbor to the northwest is dead, 1 if alive *)
+let check_nw gb x y =
+  if y = 1 || x = 1 then 0
+  else
+    let n = get_node gb (x - 1) (y - 1) in
+    match n with
+    | Dead, _ -> 0
+    | Alive, _ -> 1
+
+(** Is 0 if neighbor to the northeast is dead, 1 if alive *)
+let check_ne gb x y =
+  if y = 1 || x = get_gb_width gb then 0
+  else
+    let n = get_node gb (x + 1) (y - 1) in
+    match n with
+    | Dead, _ -> 0
+    | Alive, _ -> 1
+
+(** Is 0 if neighbor to the southwest is dead, 1 if alive *)
+let check_sw gb x y =
+  if y = get_gb_height gb || x = 1 then 0
+  else
+    let n = get_node gb (x - 1) (y + 1) in
+    match n with
+    | Dead, _ -> 0
+    | Alive, _ -> 1
+
+(** Is 0 if neighbor to the southeast is dead, 1 if alive *)
+let check_se gb x y =
+  if y = get_gb_height gb || x = get_gb_width gb then 0
+  else
+    let n = get_node gb (x + 1) (y + 1) in
+    match n with
+    | Dead, _ -> 0
+    | Alive, _ -> 1
+
 (** [get_neighbors g x y] is the number of neighbors that the node located at
     position ([x], [y]) on the grid has.
 
     Precondition: (x,y) must be a valid position in the grid *)
 let get_neighbors gb x y =
   check_north gb x y + check_south gb x y + check_east gb x y
-  + check_west gb x y
+  + check_west gb x y + check_nw gb x y + check_ne gb x y + check_sw gb x y
+  + check_se gb x y
 
 let update_node b n = raise (Failure "Unimplemented")
 let update_board gb x y max_x max_y acc = raise (Failure "Unimplemented")
