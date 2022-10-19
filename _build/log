@@ -1,9 +1,9 @@
 # dune build
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /home/mingtd/3110/Cellular-Automata
-# Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_db9487_output
+# Workspace root: /home/jcj59/final_project/Cellular-Automata
+# Auto-detected concurrency: 12
+$ /home/jcj59/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_4f8eeb_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,38 +13,38 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_db9487_out
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
 #  ; toplevel_path =
-#      Some External "/home/mingtd/.opam/cs3110-2022fa/lib/toplevel"
-#  ; ocaml_bin = External "/home/mingtd/.opam/cs3110-2022fa/bin"
-#  ; ocaml = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocaml"
-#  ; ocamlc = External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt"
-#  ; ocamlopt = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt"
-#  ; ocamldep = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt"
+#      Some External "/home/jcj59/.opam/cs3110-2022fa/lib/toplevel"
+#  ; ocaml_bin = External "/home/jcj59/.opam/cs3110-2022fa/bin"
+#  ; ocaml = Ok External "/home/jcj59/.opam/cs3110-2022fa/bin/ocaml"
+#  ; ocamlc = External "/home/jcj59/.opam/cs3110-2022fa/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/jcj59/.opam/cs3110-2022fa/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/jcj59/.opam/cs3110-2022fa/bin/ocamldep.opt"
 #  ; ocamlmklib =
-#      Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
+#      Ok External "/home/jcj59/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/home/mingtd/.opam/cs3110-2022fa/lib"
-#        ; "DUNE_OCAML_STDLIB" : "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/home/mingtd/3110/Cellular-Automata"
-#        ; "INSIDE_DUNE" : "/home/mingtd/3110/Cellular-Automata/_build/default"
+#        { "DUNE_OCAML_HARDCODED" : "/home/jcj59/.opam/cs3110-2022fa/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/jcj59/.opam/cs3110-2022fa/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/jcj59/final_project/Cellular-Automata"
+#        ; "INSIDE_DUNE" :
+#            "/home/jcj59/final_project/Cellular-Automata/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
+#            "/home/jcj59/final_project/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
+#            "/home/jcj59/final_project/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib/toplevel"
+#            "/home/jcj59/final_project/Cellular-Automata/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/home/mingtd/.opam/cs3110-2022fa/lib" ]
+#  ; findlib_paths = [ External "/home/jcj59/.opam/cs3110-2022fa/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
-#      ; standard_library_default =
-#          "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
-#      ; standard_library = "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_library_default = "/home/jcj59/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_library = "/home/jcj59/.opam/cs3110-2022fa/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
 #      ; c_compiler = "gcc"
@@ -113,9 +113,7 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_db9487_out
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard.cmi -c -intf src/gameboard.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard.cmo -c -impl src/gameboard.ml)
+$ (cd _build/default && /home/jcj59/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/jcj59/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard.cmo -c -impl src/gameboard.ml)
 > File "src/gameboard.ml", line 1:
 > Error: The implementation src/gameboard.ml
 >        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
@@ -132,7 +130,7 @@ $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3
 >          Expected declaration
 >        File "src/gameboard.ml", line 119, characters 4-16: Actual declaration
 [2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/native/gameboard.cmx -c -impl src/gameboard.ml)
+$ (cd _build/default && /home/jcj59/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/jcj59/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/native/gameboard.cmx -c -impl src/gameboard.ml)
 > File "src/gameboard.ml", line 1:
 > Error: The implementation src/gameboard.ml
 >        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
@@ -149,7 +147,7 @@ $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1.
 >          Expected declaration
 >        File "src/gameboard.ml", line 119, characters 4-16: Actual declaration
 [2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+$ (cd _build/default && /home/jcj59/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/jcj59/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/jcj59/.opam/cs3110-2022fa/lib/ounit2 -I /home/jcj59/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/jcj59/.opam/cs3110-2022fa/lib/seq -I /home/jcj59/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
 > File "test/main.ml", line 1, characters 0-11:
 > 1 | open OUnit2
 >     ^^^^^^^^^^^

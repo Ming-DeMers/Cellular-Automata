@@ -117,6 +117,5 @@ let get_neighbors gb x y =
 
 let update_node b n = raise (Failure "Unimplemented")
 let update_board gb x y max_x max_y acc = raise (Failure "Unimplemented")
-let print_board gb = raise (Failure "Unimplemented")
 let loop gb iterations = raise (Failure "Unimplemented")
 let turn gb = raise (Failure "unimplemented")

@@ -16,8 +16,11 @@ val turn : gameboard -> gameboard
     dead or alive, and updates and prints the board for the next generation. *)
 
 val get_neighbors : gameboard -> int -> int -> int
-(** [get_neighbors g x y] is the number of neighbors that the node located at
-    position ([x], [y]) on the grid has. *)
+(** [get_neighbors g x y] is the number of alive neighbors that the node located
+    at position ([x], [y]) on the grid has. Neighbors are located directly to
+    either side, diagonally, above, and below the original node. If a node is
+    located on the border of the board, some of its neighbors may not exist.
+    Requires: ([x], [y]) must be a valid position in the grid. *)
 
 val update_node : bool -> int -> bool
 (** [update_node status neighbors] is whether or not the node is dead or alive
