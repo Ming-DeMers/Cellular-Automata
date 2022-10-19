@@ -2,10 +2,7 @@ type state =
   | Dead
   | Alive
 
-type node = state * int
-(** int is number of neighbors *)
-
-type gameboard = node list list
+type gameboard = state list list
 (** Two dimensional list of nodes representing a gameboard *)
 
 exception PreconditionViolation of string
@@ -16,7 +13,7 @@ exception PreconditionViolation of string
 let rec ng_x lst x =
   match x with
   | 0 -> lst
-  | e -> ng_x ((Dead, 0) :: lst) (e - 1)
+  | e -> ng_x (Dead :: lst) (e - 1)
 
 (** Helper function for new_gamebaord. Creates a list of x default nodes *)
 let rec ng_y outer_lst y inner_lst =
@@ -44,8 +41,8 @@ let rec make_row_string r =
   | [] -> ""
   | h :: t -> (
       match h with
-      | Alive, _ -> "◾" ^ make_row_string t
-      | Dead, _ -> "◽" ^ make_row_string t)
+      | Alive -> "◾" ^ make_row_string t
+      | Dead -> "◽" ^ make_row_string t)
 
 (** Creates a string of the given gameboard *)
 let rec make_gb_string gb =
@@ -77,8 +74,8 @@ let check_north gb x y =
   else
     let n = get_node gb x (y - 1) in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** Is 0 if neighbor to the south is dead, 1 if alive *)
 let check_south gb x y =
@@ -86,8 +83,8 @@ let check_south gb x y =
   else
     let n = get_node gb x (y + 1) in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** Is 0 if neighbor to the east is dead, 1 if alive *)
 let check_east gb x y =
@@ -95,8 +92,8 @@ let check_east gb x y =
   else
     let n = get_node gb (x + 1) y in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** Is 0 if neighbor to the west is dead, 1 if alive *)
 let check_west gb x y =
@@ -104,8 +101,8 @@ let check_west gb x y =
   else
     let n = get_node gb (x - 1) y in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** Is 0 if neighbor to the northwest is dead, 1 if alive *)
 let check_nw gb x y =
@@ -113,8 +110,8 @@ let check_nw gb x y =
   else
     let n = get_node gb (x - 1) (y - 1) in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** Is 0 if neighbor to the northeast is dead, 1 if alive *)
 let check_ne gb x y =
@@ -122,8 +119,8 @@ let check_ne gb x y =
   else
     let n = get_node gb (x + 1) (y - 1) in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** Is 0 if neighbor to the southwest is dead, 1 if alive *)
 let check_sw gb x y =
@@ -131,8 +128,8 @@ let check_sw gb x y =
   else
     let n = get_node gb (x - 1) (y + 1) in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** Is 0 if neighbor to the southeast is dead, 1 if alive *)
 let check_se gb x y =
@@ -140,8 +137,8 @@ let check_se gb x y =
   else
     let n = get_node gb (x + 1) (y + 1) in
     match n with
-    | Dead, _ -> 0
-    | Alive, _ -> 1
+    | Dead -> 0
+    | Alive -> 1
 
 (** [get_neighbors g x y] is the number of neighbors that the node located at
     position ([x], [y]) on the grid has.
@@ -152,7 +149,30 @@ let get_neighbors gb x y =
   + check_west gb x y + check_nw gb x y + check_ne gb x y + check_sw gb x y
   + check_se gb x y
 
-let update_node b n = raise (Failure "Unimplemented")
-let update_board gb x y max_x max_y acc = raise (Failure "Unimplemented")
+let update_node gb x y =
+  let n = get_neighbors gb x y in
+  if n = 2 || n = 3 then Alive else Dead
+
+(** [get_head gb] is the first element of [gb] or [\[\]] if empty. *)
+let get_head gb =
+  match gb with
+  | [] -> []
+  | h :: _ -> h
+
+(** [get_head gb] is [gb] without the first element or [\[\]] if empty. *)
+let get_tail gb =
+  match gb with
+  | [] -> []
+  | _ :: t -> t
+
+let rec update_board gb x y acc =
+  let new_node = update_node gb x y in
+  match (x, y) with
+  | 1, 1 -> (new_node :: get_head acc) :: get_tail acc
+  | 1, y ->
+      update_board gb (get_gb_width gb) (y - 1) ([ new_node ] :: get_tail acc)
+  | x, _ ->
+      update_board gb (x - 1) y ((new_node :: get_head acc) :: get_tail acc)
+
 let loop gb iterations = raise (Failure "Unimplemented")
 let turn gb = raise (Failure "unimplemented")

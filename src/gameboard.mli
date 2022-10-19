@@ -26,7 +26,7 @@ val update_node : bool -> int -> bool
 (** [update_node status neighbors] is whether or not the node is dead or alive
     in the next generation. *)
 
-val update_board : gameboard -> int -> int -> int -> int -> gameboard
+val update_board : gameboard -> int -> int -> gameboard
 (** [update_board g x y max_x max_y acc] is acc with the node at ([x], [y])
     updated or acc if x = max_x and y = max_y. *)
 
