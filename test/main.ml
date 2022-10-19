@@ -14,7 +14,7 @@ type gameboard = state list list
   KNOW*)
 
 let assert_equal_boards (gb1 : gameboard) (gb2 : gameboard) =
-  if List.flatten gb1 == List.flatten gb2 then true else false
+  if List.flatten gb1 = List.flatten gb2 then true else false
 
 let dead : gameboard =
   [
