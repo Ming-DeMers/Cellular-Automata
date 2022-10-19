@@ -151,7 +151,9 @@ let get_neighbors gb x y =
 
 let update_node gb x y =
   let n = get_neighbors gb x y in
-  if n = 2 || n = 3 then Alive else Dead
+  match get_node gb x y with
+  | Alive -> if n = 2 || n = 3 then Alive else Dead
+  | Dead -> if n = 3 then Alive else Dead
 
 (** [get_head gb] is the first element of [gb] or [\[\]] if empty. *)
 let get_head gb =
