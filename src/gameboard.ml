@@ -186,7 +186,9 @@ let rec update_board_aux gb x y acc =
   let new_node = update_node gb x y in
   match (x, y) with
   | 1, 1 -> (new_node :: head acc) :: tail acc
-  | 1, y -> update_board_aux gb (gb_width gb) (y - 1) ([ new_node ] :: tail acc)
+  | 1, y ->
+      update_board_aux gb (gb_width gb) (y - 1)
+        ([] :: (new_node :: head acc) :: tail acc)
   | x, _ -> update_board_aux gb (x - 1) y ((new_node :: head acc) :: tail acc)
 
 let update_board gb = update_board_aux gb (gb_width gb) (gb_height gb) [ [] ]
