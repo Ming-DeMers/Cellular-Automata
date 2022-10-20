@@ -70,13 +70,6 @@ let node gb x y =
   let flat = List.flatten gb in
   List.nth flat index
 
-(** [edge gb x y] check whether a certain node (x,y) in gamebaord gb is on th
-    edge of the board.*)
-let edge gb x y =
-  let h = gb_height gb in
-  let w = gb_width gb in
-  if y = 1 || y = h || x = w || x = 1 then true else false
-
 (* a list of possible neigbor nodes with wrap around. Each entry is the (x, y,
    x_add, x_mod, y_add, y_mod)*)
 let neighbor_list gb =
@@ -93,22 +86,22 @@ let neighbor_list gb =
     (-1, 0, w, w, 0, 1);
   ]
 
-(* [neighbors_helper] is a helper function called by [neighbors] that sums the
-   number of neighbors of a given node (x,y) in a given game.*)
-let neighbors_helper gb x y lst acc =
+(* [neighbors_aux] is a ~tail recursive~ helper function called by [neighbors]
+   that sums the number of neighbors of a given node (x,y) in a given game.*)
+let rec neighbors_aux gb x y lst acc =
   match lst with
   | [] -> acc
-  | (nx, ny, w_add, w_mod, h_add, h_mod) :: _ -> begin
+  | (nx, ny, w_add, w_mod, h_add, h_mod) :: t -> begin
       match
         node gb (x + nx + (w_add mod w_mod)) (y + ny + (h_add mod h_mod))
       with
-      | Dead -> acc
-      | Alive -> acc + 1
+      | Dead -> neighbors_aux gb x y t acc
+      | Alive -> neighbors_aux gb x y t (acc + 1)
     end
 
-(** [neighbors gb x y] Gets the number of neighbors of a certain node at
+(** [neighbors gb x y] Returns the number of neighbors of a certain node at
     coordinate [x,y] in gameboard [gb].*)
-let neighbors gb x y = neighbors_helper gb x y (neighbor_list gb) 0
+let neighbors gb x y = neighbors_aux gb x y (neighbor_list gb) 0
 
 (** [update_node gb x y] updates the node to be dead or alive for the next
     generation, based on the number of neighbors and according to the specified
@@ -121,13 +114,13 @@ let update_node gb x y =
   | Alive -> if n = 2 || n = 3 then Alive else Dead
   | Dead -> if n = 3 then Alive else Dead
 
-(** [get_head gb] is the first element of [gb] or [\[\]] if empty. *)
+(** [head gb] is the first element of [gb] or [\[\]] if empty. *)
 let head gb =
   match gb with
   | [] -> []
   | h :: _ -> h
 
-(** [get_head gb] is [gb] without the first element or [\[\]] if empty. *)
+(** [tail gb] is [gb] without the first element or [\[\]] if empty. *)
 let tail gb =
   match gb with
   | [] -> []

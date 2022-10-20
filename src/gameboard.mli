@@ -23,8 +23,8 @@ val neighbors : gameboard -> int -> int -> int
 (** [get_neighbors g x y] is the number of alive neighbors that the node located
     at position ([x], [y]) on the grid has. Neighbors are located directly to
     either side, diagonally, above, and below the original node. If a node is
-    located on the border of the board, some of its neighbors may not exist.
-    Requires: ([x], [y]) must be a valid position in the grid. *)
+    located on the border of the board, wrap-around occurs. Requires: ([x], [y])
+    must be a valid position in the grid. *)
 
 val update_node : state -> int -> int -> state
 (** [update_node gb x y] updates the node to be dead or alive for the next

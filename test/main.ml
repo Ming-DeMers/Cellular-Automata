@@ -76,5 +76,5 @@ let update_board_test name in_gb exp_out =
 
 (* test suite to execute gameboard tests*)
 let gameboard_tests = [ (*TODO: implement test cases*) ]
-let suite = "test suite for CA" >::: List.flatten [ gameboard_tests ]
+let suite = "test suite for CA" >::: List.flatten []
 let _ = run_test_tt_main suite

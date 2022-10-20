@@ -1,9 +1,9 @@
-# dune build
+# dune build @doc
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /home/mingtd/3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_d89a39_output
+$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_368c2b_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -113,80 +113,3 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_d89a39_out
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard.cmo -c -impl src/gameboard.ml)
-> File "src/gameboard.ml", line 1:
-> Error: The implementation src/gameboard.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
->        Values do not match:
->          val loop : state list list -> int -> state list list
->        is not included in
->          val loop : gameboard -> int -> unit
->        The type state list list -> int -> state list list
->        is not compatible with the type gameboard -> int -> unit
->        Type state list list is not compatible with type unit 
->        File "src/gameboard.mli", line 12, characters 0-35:
->          Expected declaration
->        File "src/gameboard.ml", line 141, characters 8-12: Actual declaration
-[2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/native/gameboard.cmx -c -impl src/gameboard.ml)
-> File "src/gameboard.ml", line 1:
-> Error: The implementation src/gameboard.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
->        Values do not match:
->          val loop : state list list -> int -> state list list
->        is not included in
->          val loop : gameboard -> int -> unit
->        The type state list list -> int -> state list list
->        is not compatible with the type gameboard -> int -> unit
->        Type state list list is not compatible with type unit 
->        File "src/gameboard.mli", line 12, characters 0-35:
->          Expected declaration
->        File "src/gameboard.ml", line 141, characters 8-12: Actual declaration
-[2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
-> File "test/main.ml", lines 4-6, characters 0-9:
-> 4 | type state =
-> 5 |   | Dead
-> 6 |   | Alive
-> Error (warning 34 [unused-type-declaration]): unused type state.
-> File "test/main.ml", line 5, characters 2-8:
-> 5 |   | Dead
->       ^^^^^^
-> Error (warning 37 [unused-constructor]): unused constructor Dead.
-> File "test/main.ml", line 6, characters 2-9:
-> 6 |   | Alive
->       ^^^^^^^
-> Error (warning 37 [unused-constructor]): unused constructor Alive.
-> File "test/main.ml", line 8, characters 0-36:
-> 8 | type gameboard = Gameboard.gameboard
->     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-> Error (warning 34 [unused-type-declaration]): unused type gameboard.
-> File "test/main.ml", line 16, characters 4-23:
-> 16 | let assert_equal_boards gb1 gb2 =
->          ^^^^^^^^^^^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value assert_equal_boards.
-> File "test/main.ml", line 59, characters 4-23:
-> 59 | let init_gameboard_test name in_gb exp_out =
->          ^^^^^^^^^^^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value init_gameboard_test.
-> File "test/main.ml", line 62, characters 4-13:
-> 62 | let loop_test name in_gb in_int exp_out =
->          ^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value loop_test.
-> File "test/main.ml", line 65, characters 4-13:
-> 65 | let turn_test name in_gb exp_out =
->          ^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value turn_test.
-> File "test/main.ml", line 68, characters 4-18:
-> 68 | let neighbors_test name in_gb in_x in_y exp_out =
->          ^^^^^^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value neighbors_test.
-> File "test/main.ml", line 71, characters 4-20:
-> 71 | let update_node_test name in_gb in_x in_y exp_out =
->          ^^^^^^^^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value update_node_test.
-> File "test/main.ml", line 74, characters 4-21:
-> 74 | let update_board_test name in_gb exp_out =
->          ^^^^^^^^^^^^^^^^^
-> Error (warning 32 [unused-value-declaration]): unused value update_board_test.
-[2]

@@ -70,26 +70,39 @@ let node gb x y =
   let flat = List.flatten gb in
   List.nth flat index
 
-let edge = false
-(*TODO: Properly implement for edge cases*)
+(* a list of possible neigbor nodes with wrap around. Each entry is the (x, y,
+   x_add, x_mod, y_add, y_mod)*)
+let neighbor_list gb =
+  let h = gb_height gb in
+  let w = gb_width gb in
+  [
+    (-1, -1, w, w, h, h);
+    (0, -1, 0, 1, h, h);
+    (1, -1, 0, w, h, h);
+    (1, 0, 0, w, 0, 1);
+    (1, -1, 0, w, 0, h);
+    (0, -1, 0, 1, 0, h);
+    (-1, -1, w, w, 0, h);
+    (-1, 0, w, w, 0, 1);
+  ]
 
-let neighbor_list =
-  [ (-1, -1); (0, -1); (1, -1); (1, 0); (1, -1); (0, -1); (-1, -1); (-1, 0) ]
-
-let neighbors_helper gb x y lst acc =
-  (*TODO: Ensure edge cases are considered. OR, we could do wrap around,
-    instead. This would be easier to implement, too.*)
+(* [neighbors_helper] is a ~tail recursive~ helper function called by
+   [neighbors] that sums the number of neighbors of a given node (x,y) in a
+   given game.*)
+let rec neighbors_helper gb x y lst acc =
   match lst with
   | [] -> acc
-  | (nx, ny) :: _ -> begin
-      match node gb (x + nx) (y + ny) with
-      | Dead -> acc
-      | Alive -> acc + 1
+  | (nx, ny, w_add, w_mod, h_add, h_mod) :: t -> begin
+      match
+        node gb (x + nx + (w_add mod w_mod)) (y + ny + (h_add mod h_mod))
+      with
+      | Dead -> neighbors_helper gb x y t acc
+      | Alive -> neighbors_helper gb x y t (acc + 1)
     end
 
-(** Gets the number of neighbors of a certain node at coordinate x,y in
-    gameboard gb.*)
-let neighbors gb x y = neighbors_helper gb x y neighbor_list 0
+(** [neighbors gb x y] Returns the number of neighbors of a certain node at
+    coordinate [x,y] in gameboard [gb].*)
+let neighbors gb x y = neighbors_helper gb x y (neighbor_list gb) 0
 
 (** [update_node gb x y] updates the node to be dead or alive for the next
     generation, based on the number of neighbors and according to the specified
