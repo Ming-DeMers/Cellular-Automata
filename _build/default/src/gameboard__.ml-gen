@@ -1,2 +1,0 @@
-(** @canonical Gameboard.Outdated *)
-module Outdated = Gameboard__Outdated
