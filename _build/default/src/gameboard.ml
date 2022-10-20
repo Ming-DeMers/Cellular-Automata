@@ -66,9 +66,24 @@ let gb_height gb = List.length gb
 
 (** Is the node with coordinate (x,y) in the given gameboard *)
 let node gb x y =
-  let index = (gb_width gb * (y - 1)) + x in
+  let index = (gb_width gb * (y - 1)) - 1 + x in
   let flat = List.flatten gb in
   List.nth flat index
+
+let edge = false
+
+let neighbor_list =
+  [ (-1, -1); (0, -1); (1, -1); (1, 0); (1, -1); (0, -1); (-1, -1); (-1, 0) ]
+
+  let neighbors_helper gb x y lst acc = match lst with
+  | [] -> acc
+  | (nx, ny) :: t -> begin match (node gb (x+nx) (y+ny)) with 
+  |Dead -> acc
+  |Alive -> acc+1
+  
+
+    let neighbors gb x y = neighbors_helper gb x y neighbor_list 0
+
 
 (** Is 0 if neighbor to the north is dead, 1 if alive *)
 let check_north gb x y =
@@ -186,7 +201,9 @@ let rec update_board_aux gb x y acc =
   let new_node = update_node gb x y in
   match (x, y) with
   | 1, 1 -> (new_node :: head acc) :: tail acc
-  | 1, y -> update_board_aux gb (gb_width gb) (y - 1) ([ new_node ] :: tail acc)
+  | 1, y ->
+      update_board_aux gb (gb_width gb) (y - 1)
+        ([] :: (new_node :: head acc) :: tail acc)
   | x, _ -> update_board_aux gb (x - 1) y ((new_node :: head acc) :: tail acc)
 
 let update_board gb = update_board_aux gb (gb_width gb) (gb_height gb) [ [] ]

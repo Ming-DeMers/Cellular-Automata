@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /home/mingtd/3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_4b71c4_output
+$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_01b930_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -33,6 +33,8 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_4b71c4_out
 #            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
 #            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
 #        }
 #  ; findlib_paths = [ External "/home/mingtd/.opam/cs3110-2022fa/lib" ]
 #  ; arch_sixtyfour = true
@@ -111,40 +113,28 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_4b71c4_out
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/native/gameboard.cmx -c -impl src/gameboard.ml)
-> File "src/gameboard.ml", line 1:
-> Error: The implementation src/gameboard.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
->        Values do not match:
->          val loop : state list list -> int -> state list list
->        is not included in
->          val loop : gameboard -> int -> unit
->        The type state list list -> int -> state list list
->        is not compatible with the type gameboard -> int -> unit
->        Type state list list is not compatible with type unit 
->        File "src/gameboard.mli", line 12, characters 0-35:
->          Expected declaration
->        File "src/gameboard.ml", line 199, characters 8-12: Actual declaration
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I src/.gameboard.objs/byte -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard__.cmo -c -impl src/gameboard__.ml-gen)
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/gameboard.mli) > _build/default/src/.gameboard.objs/gameboard.mli.d
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/outdated.ml) > _build/default/src/.gameboard.objs/outdated.ml.d
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/gameboard.ml) > _build/default/src/.gameboard.objs/gameboard.ml.d
+> File "src/gameboard.ml", line 85, characters 4-7:
+> 85 |     let neighbors gb x y = neighbors_helper gb x y neighbor_list 0
+>          ^^^
+> Error: Syntax error: 'end' expected
+> File "src/gameboard.ml", line 80, characters 21-26:
+> 80 |   | (nx, ny) :: t -> begin match (node gb (x+nx) (y+ny)) with 
+>                           ^^^^^
+>   This 'begin' might be unmatched
 [2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard.cmo -c -impl src/gameboard.ml)
-> File "src/gameboard.ml", line 1:
-> Error: The implementation src/gameboard.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
->        Values do not match:
->          val loop : state list list -> int -> state list list
->        is not included in
->          val loop : gameboard -> int -> unit
->        The type state list list -> int -> state list list
->        is not compatible with the type gameboard -> int -> unit
->        Type state list list is not compatible with type unit 
->        File "src/gameboard.mli", line 12, characters 0-35:
->          Expected declaration
->        File "src/gameboard.ml", line 199, characters 8-12: Actual declaration
-[2]
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__Outdated.cmo -c -impl src/outdated.ml)
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard.cmi -c -intf src/gameboard.mli)
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
 $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
-> File "test/main.ml", line 92, characters 20-23:
-> 92 |   name >:: fun _ -> ass
->                          ^^^
-> Error: Unbound value ass
-> Hint: Did you mean abs or asr?
+> File "test/main.ml", line 97, characters 62-66:
+> 97 |     init_gameboard_test "empty board creates dead cells" None dead
+>                                                                    ^^^^
+> Error: This expression has type gameboard = state list list
+>        but an expression was expected of type Gameboard.gameboard
 [2]
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o src/.gameboard.objs/native/gameboard__.cmx -c -impl src/gameboard__.ml-gen)
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/native/gameboard__Outdated.cmx -c -impl src/outdated.ml)

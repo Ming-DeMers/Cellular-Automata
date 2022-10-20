@@ -14,7 +14,15 @@
    gameboard.cmxa
    gameboard.ml
    gameboard.mli
-   opam))
+   gameboard__.cmi
+   gameboard__.cmt
+   gameboard__.cmx
+   gameboard__.ml
+   gameboard__Outdated.cmi
+   gameboard__Outdated.cmt
+   gameboard__Outdated.cmx
+   opam
+   outdated.ml))
  (libexec (gameboard.cmxs))
  (doc (README.md)))
 (library
@@ -27,9 +35,18 @@
  (main_module_name Gameboard)
  (modes byte native)
  (modules
-  (singleton
-   (name Gameboard)
-   (obj_name gameboard)
-   (visibility public)
-   (impl)
-   (intf))))
+  (wrapped
+   (main_module_name Gameboard)
+   (modules
+    ((name Gameboard) (obj_name gameboard) (visibility public) (impl) (intf))
+    ((name Outdated)
+     (obj_name gameboard__Outdated)
+     (visibility public)
+     (impl)))
+   (alias_module
+    (name Gameboard__)
+    (obj_name gameboard__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

@@ -44,7 +44,7 @@ let block : gameboard =
     [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
   ]
 
-let toad =
+let toad : gameboard =
   [
     [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
     [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
@@ -94,8 +94,8 @@ let update_board_test name in_gb exp_out =
 (* test suite to execute gameboard tests*)
 let gameboard_tests =
   [
-    init_gameboard_test "test empty board creates" None
-      dead (*TODO: implement more test cases*);
+    init_gameboard_test "empty board creates dead cells" None dead
+    (*TODO: implement more test cases*);
   ]
 
 let suite = "test suite for CA" >::: List.flatten [ gameboard_tests ]
