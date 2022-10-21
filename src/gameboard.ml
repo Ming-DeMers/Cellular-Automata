@@ -70,38 +70,86 @@ let node gb x y =
   let flat = List.flatten gb in
   List.nth flat index
 
-(* a list of possible neigbor nodes with wrap around. Each entry is the (x, y,
-   x_add, x_mod, y_add, y_mod)*)
-let neighbor_list gb =
-  let h = gb_height gb in
-  let w = gb_width gb in
-  [
-    (-1, -1, w, w, h, h);
-    (0, -1, 0, 1, h, h);
-    (1, -1, 0, w, h, h);
-    (1, 0, 0, w, 0, 1);
-    (1, -1, 0, w, 0, h);
-    (0, -1, 0, 1, 0, h);
-    (-1, -1, w, w, 0, h);
-    (-1, 0, w, w, 0, 1);
-  ]
+(** Is 0 if neighbor to the north is dead, 1 if alive *)
+let check_north gb x y =
+  if y = 1 then 0
+  else
+    let n = node gb x (y - 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
 
-(* [neighbors_aux] is a ~tail recursive~ helper function called by [neighbors]
-   that sums the number of neighbors of a given node (x,y) in a given game.*)
-let rec neighbors_aux gb x y lst acc =
-  match lst with
-  | [] -> acc
-  | (nx, ny, w_add, w_mod, h_add, h_mod) :: t -> begin
-      match
-        node gb (x + nx + (w_add mod w_mod)) (y + ny + (h_add mod h_mod))
-      with
-      | Dead -> neighbors_aux gb x y t acc
-      | Alive -> neighbors_aux gb x y t (acc + 1)
-    end
+(** Is 0 if neighbor to the south is dead, 1 if alive *)
+let check_south gb x y =
+  if y = gb_height gb then 0
+  else
+    let n = node gb x (y + 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
 
-(** [neighbors gb x y] Returns the number of neighbors of a certain node at
-    coordinate [x,y] in gameboard [gb].*)
-let neighbors gb x y = neighbors_aux gb x y (neighbor_list gb) 0
+(** Is 0 if neighbor to the east is dead, 1 if alive *)
+let check_east gb x y =
+  if x = gb_width gb then 0
+  else
+    let n = node gb (x + 1) y in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the west is dead, 1 if alive *)
+let check_west gb x y =
+  if x = 1 then 0
+  else
+    let n = node gb (x - 1) y in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the northwest is dead, 1 if alive *)
+let check_nw gb x y =
+  if y = 1 || x = 1 then 0
+  else
+    let n = node gb (x - 1) (y - 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the northeast is dead, 1 if alive *)
+let check_ne gb x y =
+  if y = 1 || x = gb_width gb then 0
+  else
+    let n = node gb (x + 1) (y - 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the southwest is dead, 1 if alive *)
+let check_sw gb x y =
+  if y = gb_height gb || x = 1 then 0
+  else
+    let n = node gb (x - 1) (y + 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the southeast is dead, 1 if alive *)
+let check_se gb x y =
+  if y = gb_height gb || x = gb_width gb then 0
+  else
+    let n = node gb (x + 1) (y + 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** [neighbors g x y] is the number of neighbors that the node located at
+    position ([x], [y]) on the grid has.
+
+    Precondition: (x,y) must be a valid position in the grid *)
+let neighbors gb x y =
+  check_north gb x y + check_south gb x y + check_east gb x y
+  + check_west gb x y + check_nw gb x y + check_ne gb x y + check_sw gb x y
+  + check_se gb x y
 
 (** [update_node gb x y] updates the node to be dead or alive for the next
     generation, based on the number of neighbors and according to the specified
