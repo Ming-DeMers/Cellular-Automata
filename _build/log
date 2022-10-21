@@ -1,9 +1,9 @@
-# dune build @doc
+# dune build
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /home/mingtd/3110/Cellular-Automata
+# Workspace root: /Users/jasonchung/git/cs3110/final-project/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_368c2b_output
+$ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc/4gjfwk713qv9rfgq12chmzlw0000gn/T/dune_679a7b_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,75 +13,78 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_368c2b_out
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
 #  ; toplevel_path =
-#      Some External "/home/mingtd/.opam/cs3110-2022fa/lib/toplevel"
-#  ; ocaml_bin = External "/home/mingtd/.opam/cs3110-2022fa/bin"
-#  ; ocaml = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocaml"
-#  ; ocamlc = External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt"
-#  ; ocamlopt = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt"
-#  ; ocamldep = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt"
+#      Some External "/Users/jasonchung/.opam/cs3110-2022fa/lib/toplevel"
+#  ; ocaml_bin = External "/Users/jasonchung/.opam/cs3110-2022fa/bin"
+#  ; ocaml = Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocaml"
+#  ; ocamlc = External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt"
+#  ; ocamlopt =
+#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt"
+#  ; ocamldep =
+#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamldep.opt"
 #  ; ocamlmklib =
-#      Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
+#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/home/mingtd/.opam/cs3110-2022fa/lib"
-#        ; "DUNE_OCAML_STDLIB" : "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/home/mingtd/3110/Cellular-Automata"
-#        ; "INSIDE_DUNE" : "/home/mingtd/3110/Cellular-Automata/_build/default"
+#        { "DUNE_OCAML_HARDCODED" : "/Users/jasonchung/.opam/cs3110-2022fa/lib"
+#        ; "DUNE_OCAML_STDLIB" :
+#            "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/Users/jasonchung/git/cs3110/final-project/Cellular-Automata"
+#        ; "INSIDE_DUNE" :
+#            "/Users/jasonchung/git/cs3110/final-project/Cellular-Automata/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
+#            "/Users/jasonchung/git/cs3110/final-project/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
+#            "/Users/jasonchung/git/cs3110/final-project/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib/toplevel"
+#            "/Users/jasonchung/git/cs3110/final-project/Cellular-Automata/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/home/mingtd/.opam/cs3110-2022fa/lib" ]
+#  ; findlib_paths = [ External "/Users/jasonchung/.opam/cs3110-2022fa/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
 #      ; standard_library_default =
-#          "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
-#      ; standard_library = "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
+#          "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_library = "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
-#      ; c_compiler = "gcc"
+#      ; c_compiler = "cc"
 #      ; ocamlc_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; ocamlopt_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
 #      ; native_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_c_libraries = [ "-lm" ]
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
-#      ; architecture = "amd64"
+#      ; architecture = "arm64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
-#      ; system = "linux"
-#      ; asm = [ "as" ]
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -92,8 +95,8 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_368c2b_out
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "x86_64-pc-linux-gnu"
-#      ; target = "x86_64-pc-linux-gnu"
+#      ; host = "aarch64-apple-darwin21.6.0"
+#      ; target = "aarch64-apple-darwin21.6.0"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -113,3 +116,84 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_368c2b_out
 #      ; windows_unicode = false
 #      }
 #  }
+$ (cd _build/default && /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard.cmo -c -impl src/gameboard.ml)
+> File "src/gameboard.ml", line 1:
+> Error: The implementation src/gameboard.ml
+>        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
+>        Values do not match:
+>          val loop : state list list -> int -> state list list
+>        is not included in
+>          val loop : gameboard -> int -> unit
+>        The type state list list -> int -> state list list
+>        is not compatible with the type gameboard -> int -> unit
+>        Type state list list is not compatible with type unit 
+>        File "src/gameboard.mli", line 12, characters 0-35:
+>          Expected declaration
+>        File "src/gameboard.ml", line 153, characters 8-12: Actual declaration
+[2]
+$ (cd _build/default && /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -o src/.gameboard.objs/native/gameboard.cmx -c -impl src/gameboard.ml)
+> File "src/gameboard.ml", line 1:
+> Error: The implementation src/gameboard.ml
+>        does not match the interface src/.gameboard.objs/byte/gameboard.cmi: 
+>        Values do not match:
+>          val loop : state list list -> int -> state list list
+>        is not included in
+>          val loop : gameboard -> int -> unit
+>        The type state list list -> int -> state list list
+>        is not compatible with the type gameboard -> int -> unit
+>        Type state list list is not compatible with type unit 
+>        File "src/gameboard.mli", line 12, characters 0-35:
+>          Expected declaration
+>        File "src/gameboard.ml", line 153, characters 8-12: Actual declaration
+[2]
+$ (cd _build/default && /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ounit2 -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ounit2/advanced -I /Users/jasonchung/.opam/cs3110-2022fa/lib/seq -I /Users/jasonchung/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+> File "test/main.ml", lines 4-6, characters 0-9:
+> 4 | type state =
+> 5 |   | Dead
+> 6 |   | Alive
+> Error (warning 34 [unused-type-declaration]): unused type state.
+> File "test/main.ml", line 5, characters 2-8:
+> 5 |   | Dead
+>       ^^^^^^
+> Error (warning 37 [unused-constructor]): unused constructor Dead.
+> File "test/main.ml", line 6, characters 2-9:
+> 6 |   | Alive
+>       ^^^^^^^
+> Error (warning 37 [unused-constructor]): unused constructor Alive.
+> File "test/main.ml", line 8, characters 0-36:
+> 8 | type gameboard = Gameboard.gameboard
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Error (warning 34 [unused-type-declaration]): unused type gameboard.
+> File "test/main.ml", line 14, characters 4-23:
+> 14 | let assert_equal_boards gb1 gb2 =
+>          ^^^^^^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value assert_equal_boards.
+> File "test/main.ml", line 54, characters 4-23:
+> 54 | let init_gameboard_test name in_gb exp_out =
+>          ^^^^^^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value init_gameboard_test.
+> File "test/main.ml", line 57, characters 4-13:
+> 57 | let loop_test name in_gb in_int exp_out =
+>          ^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value loop_test.
+> File "test/main.ml", line 60, characters 4-13:
+> 60 | let turn_test name in_gb exp_out =
+>          ^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value turn_test.
+> File "test/main.ml", line 63, characters 4-18:
+> 63 | let neighbors_test name in_gb in_x in_y exp_out =
+>          ^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value neighbors_test.
+> File "test/main.ml", line 66, characters 4-20:
+> 66 | let update_node_test name in_gb in_x in_y exp_out =
+>          ^^^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value update_node_test.
+> File "test/main.ml", line 69, characters 4-21:
+> 69 | let update_board_test name in_gb exp_out =
+>          ^^^^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value update_board_test.
+> File "test/main.ml", line 73, characters 4-19:
+> 73 | let gameboard_tests = [ (*TODO: implement test cases*) ]
+>          ^^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value gameboard_tests.
+[2]
