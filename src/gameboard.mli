@@ -2,7 +2,7 @@ type state
 (** [state] is either Dead or Alive. *)
 
 type gameboard
-(** Grid with (1,1) as the top left node *)
+(** Two dimensional list of nodes representing a gameboard *)
 
 val init_gameboard : gameboard option -> gameboard
 (** [init_gameboard g_option] is the initial gameboard. The initial gameboard is

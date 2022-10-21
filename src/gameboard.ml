@@ -3,12 +3,11 @@ type state =
   | Alive
 
 type gameboard = state list list
-(** Two dimensional list of nodes representing a gameboard *)
 
 exception PreconditionViolation of string
 (** raised when precondtion is violated*)
 
-(** Helper function for new_gamebaord. Creates a list of x default nodes that
+(** Helper function for new_gameboard. Creates a list of x default nodes that
     are dead *)
 let rec ng_x lst x =
   match x with
@@ -26,11 +25,6 @@ let rec ng_y outer_lst y inner_lst =
     Precondition: x,y >= 1 *)
 let new_gameboard x y : gameboard = x |> ng_x [] |> ng_y [] y
 
-(** [init_gameboard g_option] is the initial gameboard. The initial gameboard is
-    either [g] if [g_option] is [Some g], otherwise it is some default
-    gameboard.
-
-    Default gameboard is a 10x10 empty board. *)
 let init_gameboard gb_op =
   match gb_op with
   | None -> new_gameboard 10 10
@@ -52,7 +46,6 @@ let rec gb_to_string (gb : gameboard) =
   | [] -> ""
   | h :: t -> make_row_string h ^ "\n" ^ gb_to_string t
 
-(** Prints the given gameboard *)
 let print_board gb = print_endline (gb_to_string gb)
 
 (** Is the width of given gameboard *)
@@ -142,20 +135,11 @@ let check_se gb x y =
     | Dead -> 0
     | Alive -> 1
 
-(** [neighbors g x y] is the number of neighbors that the node located at
-    position ([x], [y]) on the grid has.
-
-    Precondition: (x,y) must be a valid position in the grid *)
 let neighbors gb x y =
   check_north gb x y + check_south gb x y + check_east gb x y
   + check_west gb x y + check_nw gb x y + check_ne gb x y + check_sw gb x y
   + check_se gb x y
 
-(** [update_node gb x y] updates the node to be dead or alive for the next
-    generation, based on the number of neighbors and according to the specified
-    rules.
-
-    Precondition: (x,y) is a valid coordinate of a node on the gameboard. *)
 let update_node gb x y =
   let n = neighbors gb x y in
   match node gb x y with
