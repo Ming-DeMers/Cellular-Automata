@@ -200,5 +200,19 @@ let turn gb =
 
 let rec loop gb iterations =
   match iterations with
-  | 0 -> gb
+  | 0 -> ()
   | x -> loop (turn gb) (x - 1)
+
+let glider : gameboard =
+  [
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+  ]
