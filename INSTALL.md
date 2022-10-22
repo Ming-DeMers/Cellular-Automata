@@ -5,7 +5,9 @@
 - OCAML compiler, standard library and UTOP
 
 >## Installation and Running
-- In the command line, move to the directory ./ms2_code/Cellular-Automata/src
+- In the command line, move to the directory ./Cellular-Automata
+- Input the command $ dune build
+- move to the directory ./Cellular-Automata/src
 - Open utop
 - Input the command $ #use "gameboard.ml";;
 Now to try out some various inital states

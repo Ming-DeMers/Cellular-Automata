@@ -20,7 +20,7 @@ title: "OChameleon: Cellular Automata"
 # OK if this is a Cornell Github link, but public gallery viewers won't be able to see it.
 git-repo: "https://github.com/Ming-DeMers/Cellular-Automata"
 # If you have no demo screencast, replace the url string with an empty string ""
-demo-video-url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+demo-video-url: ""
 # Write a short, attention-grabbing description of your project.
 desc: >
   Our project works within the field of Cellular Automata. Inspired by the famous Rule 90 and John Conway's Game of Life, we intend to implement systems of cellular automata, and allow interactivity by changing parameters and adding rules. For example, we have already implemented 2D cellular automata, demo'd above, but hope to implment 1D CA and even 3D CA. Other variations come from adding more states beyond alive and dead (i.e. killer cells, protector cells), allows values to represent color (i.e. 255 = RGB), and possibly neural networks and machine learning for regenerative and mutating CA.

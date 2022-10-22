@@ -1,19 +1,19 @@
-# OCHamleon MS2 Report:
+# OChamleon MS2 Report:
 >## Vision:
-Our current vision is to have an interactive system with cellular automata. At the very least, we hope to have users be able to create Cellular Automata patterns (CA), whether in the first or second dimension, on the CLI. Users can implement their own starter patterns or rules, but we hope to extend functionality and complexity with a third dimension, adding more roles for nodes, and adding continous functions and models. A GUI may be implemented, but its necessity isn't seen yet.
+Our current vision is to have an interactive system with cellular automata. At the very least, we hope to have users be able to create Cellular Automata patterns (CA), whether in the first or second dimension, on the CLI and observe their behavior based on a set of predetermined rules. Users will be able create their own starter patterns, choose premade patterns, or modify existing patterns. Users will also be able to determine the rules that dictate automaton behavior. We hope to extend functionality and complexity with a third dimension, adding additional roles for nodes, and adding continuous functions and models. For example, we hope to add more states beyond alive and dead (i.e. killer cells, protector cells), allow values to represent color (i.e. 255 = RGB), and possibly neural networks and machine learning for regenerative and mutating CA. A GUI may be implemented, but its necessity isn't seen yet.
 
 >## Summary of progress:
-Between the two milestones, idea became code. We agreed on a reachable goal that would provide a strong foundation for our project: implementing 2D CA, based off Conways' Game of Life. We first outline the functions in the .mli interface, demonstrating what functions should be exposed to the user. This gives the user power to interact and work with our program without needing to know the messy detials (i.e. abstraction).
+Between the two milestones, idea became code. We agreed on a reachable goal that would provide a strong foundation for our project: implementing 2D CA, based off Conways' Game of Life. We first outline the functions in the .mli interface, demonstrating what functions should be exposed to the user. This gives the user power to interact and work with our program without needing to know the messy details (i.e. abstraction).
 
-`gameboard.ml` contains our implementation of the 2D CA. It contains a number of helper functions to sucessfully implement our game in OCaml. We allow the user to create a pattern, the default being a 10x10 dead grid. From there, we allow the user to run a generation at a time, or run many in a loop. The board is implemented with wrap-around, too.
+`gameboard.ml` contains our implementation of the 2D CA. It contains a number of helper functions to successfully implement our game in OCaml. We allow the user to select a pattern, either the default being a 10x10 dead grid or a one of a selection of premade patterns. From there, we allow the user to run a generation at a time, or run many in a loop. 
 
-Overall progress is substantial and a good step to our goals. Implementing the grid with pattern matching was at first challenging, but became more clear as we continued writing functions. We intially had a number number of duplicitous functions intended to "check neighbors," but are working on writing a tail recursive function that can do the same in fewer and non-duplicitous lines of code. Our next steps are to ensure code coverage, better implement user interaction, and to work on the 1D and 3D CA versions.
+Overall progress is substantial and a good step to our goals. Implementing the grid with pattern matching was at first challenging, but became more clear as we continued writing functions. We currently have a number of duplicitous functions intended to "check neighbors," but are working on writing a tail recursive function that can do the same in fewer and non-duplicitous lines of code. Our next steps are to ensure code coverage, better implement user interaction, and to work on the 1D and 3D CA versions.
 
 >## Activity breakdown: 
-For each team member, give a bulleted list of the responsibilities that team member had, the activities in which they participated, the features they delivered, and the number of hours they spent working.
+For each team member, give a bulleted list of the responsibilities that team members had, the activities in which they participated, the features they delivered, and the number of hours they spent working.
 
 ### Ming
-- Assigned to setup the repo and collaborative enviroment, help implement functions, and ensure program is within application requirements.
+- Assigned to setup the repo and collaborative environment, help implement functions, and ensure the program is within application requirements.
 - Set up Cornell github, as well as personal github so those not at Cornell may see the project.
 - Wrote makefiles, dune files, etc.
 - Helped implement functions and ensure functionality.
@@ -21,21 +21,31 @@ For each team member, give a bulleted list of the responsibilities that team mem
 - Created and wrote the yaml, report, instructions.
 - 8 Hours.
 
-
 ### Jack
 - Assigned to implement in the program, testing, and ensure we are meeting application req's.
-- *What you did*
+- Defined specifications for all functions in gameboard.mli
+- Implemented update_board and its helper functions
+- Implemented update_node
+- Reviewed code for errors
+-8 hours
 
 ### Ben
 - Assigned to implement the program, communicate with the project mentor.
-- *What you did*
+- Implemented most functions defined in gameboard.mli using many helper functions
+- Fixed bugs to ensure all code ran as intended
+- Coordinated meetings with PM and PG
+- General code cleanup and organization
+- Created install instructions
+- Submit project
+- 12 hours
 
 ### Jason
-- Assigned to test functionality and ensure program correctness.
-- *What you did*
+- Assigned to test functionality, ensure program correctness, and clean and organize function declarations, order, and specifications to ensure readability.
+- Created gameboard.ml and gameboard.mli and helped write specifications for the essential functions in gameboard.mli
+- Performed final checks on gameboard.ml and .mli functionality
+- Created writeup file and made structure for content
+- 5 hours
 
 >## Productivity analysis: 
 
-As an entire team, how productive were you? Did you accomplish what you planned in your sprints? Were your estimates of what you could do accurate, or far off? Write a paragraph addressing those questions. Please be honest: we want you to reflect candidly on your progress, so that you can make more accurate estimates between MS2 and MS3. Your grade is not going to be based on how positive or negative you are here.
-
-*I will write this once y'all add your stuff*
+As an entire team, we were somewhat productive. We were able to accomplish what we set out to do for this sprint, although our goals were not too lofty. Our estimates of what we could do were pretty spot on, as we worked right up to the deadline in order to accomplish our goals. Now that we have established a base, it should be much easier to expand upon our ideas for future sprints. For this reason, we should be able to set our sights higher for these future sprints. Our communication stands to gain some improvement, but there is no doubt that we are all committed to this project and making it the best we possibly can.
