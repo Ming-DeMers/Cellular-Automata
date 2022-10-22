@@ -200,3 +200,31 @@ let glider : gameboard =
     [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
     [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
   ]
+
+let toad : gameboard =
+  [
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+  ]
+
+let block : gameboard =
+  [
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Alive; Alive; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Alive; Alive; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+  ]
