@@ -6,14 +6,14 @@
 
 >## Installation and Running
 - In the command line, move to the directory ./Cellular-Automata
-- Input the command $ dune build
-- move to the directory ./Cellular-Automata/src
+- Input the command $ dune build (expect some errors to pop up, can ignore these for now)
+- move to the directory ./Cellular-Automata/src, use command $ cd src
 - Open utop
 - Input the command $ #use "gameboard.ml";;
 Now to try out some various inital states
 Glider:
 - Input the command $ let x = init_gameboard (Some glider);;
-- Input the command $ loop x 10;;
+- Input the command $ loop x 15;;
 - Observe the printed gameboards
 Toad:
 - Input the command $ let y = init_gameboard (Some toad);;

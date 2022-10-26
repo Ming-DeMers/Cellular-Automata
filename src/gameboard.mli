@@ -38,3 +38,13 @@ val turn : gameboard -> gameboard
 val loop : gameboard -> int -> unit
 (** [loop g i] loops through [i] generations of the Game of Life with gameboard
     [g]. Loop simply calls [loop (turn g) (i-1)] or returns () if i = 0. *)
+
+val add_node : int -> int -> gameboard
+(** [add_node x y] checks the state of the node at grid position ([x], [y]. If
+    that node is alive, the original gameboard is returned. If that node is
+    dead, a new gameboard is returned with that node now alive. *)
+
+val del_node : int -> int -> gameboard
+(** [del_node x y] checks the state of the node at grid position ([x], [y]. If
+    that node is dead, the original gameboard is returned. If that node is
+    alive, a new gameboard is returned with that node now dead. *)
