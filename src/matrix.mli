@@ -3,7 +3,7 @@ type state =
   | Alive  (** [state] is either Dead or Alive. *)
 
 type gameboard = state array array
-(** Two dimensional list of nodes representing a gameboard *)
+(** Two dimensional array of nodes representing a gameboard *)
 
 exception AlreadyAlive
 exception AlreadyDead
@@ -35,12 +35,12 @@ val loop : gameboard -> int -> unit
 (** [loop g i] loops through [i] generations of the Game of Life with gameboard
     [g], printing each time the board is updated *)
 
-val birth_node : int -> int -> unit
-(** [birth_node x y] checks the state of the node at grid position [x], [y]. If
-    that node is dead, it is updated to be alive. Raises AlreadyAlive if the
-    node at position [x], [y] is already alive *)
+val birth_node : gameboard -> int -> int -> unit
+(** [birth_node g x y] checks the state of the node at grid position [x], [y] in
+    gameboard g. If that node is dead, it is updated to be alive. Raises
+    AlreadyAlive if the node at position [x], [y] is already alive *)
 
-val kill_node : int -> int -> unit
-(** [kill_node x y] checks the state of the node at grid position [x], [y]. If
-    that node is alice, it is updated to be dead. Raises AlreadyDead if the node
-    at position [x], [y] is already alive *)
+val kill_node : gameboard -> int -> int -> unit
+(** [kill_node g x y] checks the state of the node at grid position [x], [y] in
+    gameboard g. If that node is alice, it is updated to be dead. Raises
+    AlreadyDead if the node at position [x], [y] is already alive *)
