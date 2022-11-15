@@ -1,3 +1,5 @@
+include Samples
+
 type state =
   | Dead
   | Alive
@@ -187,44 +189,35 @@ let rec loop gb iterations =
   | 0 -> ()
   | x -> loop (turn gb) (x - 1)
 
-let glider : gameboard =
-  [
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-  ]
+let add_node x y = [ [] ]
+let del_node x y = [ [] ]
 
-let toad : gameboard =
-  [
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-  ]
+(* let glider : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead; Dead ]; [ Dead;
+   Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
+   Alive; Alive; Alive; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; ]
 
-let block : gameboard =
-  [
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Alive; Alive; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Alive; Alive; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-    [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-  ]
+   let toad : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead;
+   Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
+   Alive; Alive; Alive; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; ]
+
+   let block : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead;
+   Dead; Alive; Alive; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
+   Alive; Alive; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [
+   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; ] *)

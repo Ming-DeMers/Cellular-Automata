@@ -1,7 +1,8 @@
-type state
-(** [state] is either Dead or Alive. *)
+type state =
+  | Dead
+  | Alive  (** [state] is either Dead or Alive. *)
 
-type gameboard
+type gameboard = state list list
 (** Two dimensional list of nodes representing a gameboard *)
 
 val init_gameboard : gameboard option -> gameboard
@@ -19,7 +20,7 @@ val neighbors : gameboard -> int -> int -> int
     located on the border of the board, wrap-around occurs. Requires: ([x], [y])
     must be a valid position in the grid. *)
 
-val update_node : state -> int -> int -> state
+val update_node : gameboard -> int -> int -> state
 (** [update_node gb x y] updates the node to be dead or alive for the next
     generation, based on the number of neighbors and according to the specified
     rules.
