@@ -3,12 +3,13 @@ type state =
   | Alive  (** [state] is either Dead or Alive. *)
 
 type gameboard = state array array
-(** Two dimensional array of nodes representing a gameboard *)
+(** Two dimensional array of nodes representing a gameboard. Top left corner is
+    (0, 0), increasing in x and y when moving right and down respectively *)
 
 exception AlreadyAlive
 exception AlreadyDead
 
-val init_gameboard : int -> int -> gameboard
+val init_empty : int -> int -> gameboard
 (** [init_gameboard x y] is a gameboard with dimensions x by y with all dead
     nodes *)
 
@@ -21,8 +22,9 @@ val neighbors : gameboard -> int -> int -> int
     either side, diagonally, above, and below the original node. Requires: ([x],
     [y]) must be a valid position in the grid. *)
 
-val update_node : gameboard -> int -> int -> unit
-(** [update_node gb x y] updates the node to be dead or alive for the next
+val update_node : gameboard -> int -> int -> int -> unit
+(** [update_node gb x y n] updates the node at (x,y) in gamebaord g with n
+    neighbors in the previous generation to be dead or alive for the next
     generation, based on its number neighbors and according to the specified
     rules.
 
@@ -44,3 +46,6 @@ val kill_node : gameboard -> int -> int -> unit
 (** [kill_node g x y] checks the state of the node at grid position [x], [y] in
     gameboard g. If that node is alice, it is updated to be dead. Raises
     AlreadyDead if the node at position [x], [y] is already alive *)
+
+val init_glider : gameboard
+(** Is a new glider *)
