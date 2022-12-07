@@ -1,14 +1,15 @@
+include Samples
+
 type state =
   | Dead
   | Alive
 
 type gameboard = state list list
-(** Two dimensional list of nodes representing a gameboard *)
 
 exception PreconditionViolation of string
 (** raised when precondtion is violated*)
 
-(** Helper function for new_gamebaord. Creates a list of x default nodes that
+(** Helper function for new_gameboard. Creates a list of x default nodes that
     are dead *)
 let rec ng_x lst x =
   match x with
@@ -26,11 +27,6 @@ let rec ng_y outer_lst y inner_lst =
     Precondition: x,y >= 1 *)
 let new_gameboard x y : gameboard = x |> ng_x [] |> ng_y [] y
 
-(** [init_gameboard g_option] is the initial gameboard. The initial gameboard is
-    either [g] if [g_option] is [Some g], otherwise it is some default
-    gameboard.
-
-    Default gameboard is a 10x10 empty board. *)
 let init_gameboard gb_op =
   match gb_op with
   | None -> new_gameboard 10 10
@@ -52,7 +48,6 @@ let rec gb_to_string (gb : gameboard) =
   | [] -> ""
   | h :: t -> make_row_string h ^ "\n" ^ gb_to_string t
 
-(** Prints the given gameboard *)
 let print_board gb = print_endline (gb_to_string gb)
 
 (** Is the width of given gameboard *)
@@ -70,44 +65,83 @@ let node gb x y =
   let flat = List.flatten gb in
   List.nth flat index
 
-(* a list of possible neigbor nodes with wrap around. Each entry is the (x, y,
-   x_add, x_mod, y_add, y_mod)*)
-let neighbor_list gb =
-  let h = gb_height gb in
-  let w = gb_width gb in
-  [
-    (-1, -1, w, w, h, h);
-    (0, -1, 0, 1, h, h);
-    (1, -1, 0, w, h, h);
-    (1, 0, 0, w, 0, 1);
-    (1, -1, 0, w, 0, h);
-    (0, -1, 0, 1, 0, h);
-    (-1, -1, w, w, 0, h);
-    (-1, 0, w, w, 0, 1);
-  ]
+(** Is 0 if neighbor to the north is dead, 1 if alive *)
+let check_north gb x y =
+  if y = 1 then 0
+  else
+    let n = node gb x (y - 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
 
-(* [neighbors_aux] is a ~tail recursive~ helper function called by [neighbors]
-   that sums the number of neighbors of a given node (x,y) in a given game.*)
-let rec neighbors_aux gb x y lst acc =
-  match lst with
-  | [] -> acc
-  | (nx, ny, w_add, w_mod, h_add, h_mod) :: t -> begin
-      match
-        node gb (x + nx + (w_add mod w_mod)) (y + ny + (h_add mod h_mod))
-      with
-      | Dead -> neighbors_aux gb x y t acc
-      | Alive -> neighbors_aux gb x y t (acc + 1)
-    end
+(** Is 0 if neighbor to the south is dead, 1 if alive *)
+let check_south gb x y =
+  if y = gb_height gb then 0
+  else
+    let n = node gb x (y + 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
 
-(** [neighbors gb x y] Returns the number of neighbors of a certain node at
-    coordinate [x,y] in gameboard [gb].*)
-let neighbors gb x y = neighbors_aux gb x y (neighbor_list gb) 0
+(** Is 0 if neighbor to the east is dead, 1 if alive *)
+let check_east gb x y =
+  if x = gb_width gb then 0
+  else
+    let n = node gb (x + 1) y in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
 
-(** [update_node gb x y] updates the node to be dead or alive for the next
-    generation, based on the number of neighbors and according to the specified
-    rules.
+(** Is 0 if neighbor to the west is dead, 1 if alive *)
+let check_west gb x y =
+  if x = 1 then 0
+  else
+    let n = node gb (x - 1) y in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
 
-    Precondition: (x,y) is a valid coordinate of a node on the gameboard. *)
+(** Is 0 if neighbor to the northwest is dead, 1 if alive *)
+let check_nw gb x y =
+  if y = 1 || x = 1 then 0
+  else
+    let n = node gb (x - 1) (y - 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the northeast is dead, 1 if alive *)
+let check_ne gb x y =
+  if y = 1 || x = gb_width gb then 0
+  else
+    let n = node gb (x + 1) (y - 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the southwest is dead, 1 if alive *)
+let check_sw gb x y =
+  if y = gb_height gb || x = 1 then 0
+  else
+    let n = node gb (x - 1) (y + 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+(** Is 0 if neighbor to the southeast is dead, 1 if alive *)
+let check_se gb x y =
+  if y = gb_height gb || x = gb_width gb then 0
+  else
+    let n = node gb (x + 1) (y + 1) in
+    match n with
+    | Dead -> 0
+    | Alive -> 1
+
+let neighbors gb x y =
+  check_north gb x y + check_south gb x y + check_east gb x y
+  + check_west gb x y + check_nw gb x y + check_ne gb x y + check_sw gb x y
+  + check_se gb x y
+
 let update_node gb x y =
   let n = neighbors gb x y in
   match node gb x y with
@@ -152,5 +186,39 @@ let turn gb =
 
 let rec loop gb iterations =
   match iterations with
-  | 0 -> gb
+  | 0 -> ()
   | x -> loop (turn gb) (x - 1)
+
+let add_node x y = [ [] ]
+
+let del_node x y = [ [] ]
+
+(* let glider : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead; Dead ]; [ Dead;
+   Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
+   Alive; Alive; Alive; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; ]
+
+   let toad : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead;
+   Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
+   Alive; Alive; Alive; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; ]
+
+   let block : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
+   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead;
+   Dead; Alive; Alive; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
+   Alive; Alive; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
+   Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [
+   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; ] *)

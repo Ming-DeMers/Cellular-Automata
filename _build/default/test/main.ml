@@ -50,7 +50,8 @@ let assert_equal_boards gb1 gb2 =
    Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
    Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
    ] *)
-(* test functions to test functionality of gamboard.ml*)
+
+(* test functions to test functionality of gameboard.ml *)
 let init_gameboard_test name in_gb exp_out =
   name >:: fun _ -> assert_equal exp_out (init_gameboard in_gb)
 
@@ -70,6 +71,8 @@ let update_board_test name in_gb exp_out =
   name >:: fun _ -> assert_equal exp_out (update_board in_gb)
 
 (* test suite to execute gameboard tests*)
-let gameboard_tests = [ (*TODO: implement test cases*) ]
-let suite = "test suite for CA" >::: List.flatten []
+
+(* let g : gameboard = init_gameboard () *)
+let gameboard_tests = [ (* TODO: implement test cases *) ]
+let suite = "test suite for CA" >::: List.flatten [ gameboard_tests ]
 let _ = run_test_tt_main suite

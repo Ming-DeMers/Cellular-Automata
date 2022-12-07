@@ -190,6 +190,7 @@ let rec loop gb iterations =
   | x -> loop (turn gb) (x - 1)
 
 let add_node x y = [ [] ]
+
 let del_node x y = [ [] ]
 
 (* let glider : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;

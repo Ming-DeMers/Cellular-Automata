@@ -14,7 +14,27 @@
    gameboard.cmxa
    gameboard.ml
    gameboard.mli
-   opam))
+   gameboard__.cmi
+   gameboard__.cmt
+   gameboard__.cmx
+   gameboard__.ml
+   gameboard__One_matrix.cmi
+   gameboard__One_matrix.cmt
+   gameboard__One_matrix.cmti
+   gameboard__One_matrix.cmx
+   gameboard__Samples.cmi
+   gameboard__Samples.cmt
+   gameboard__Samples.cmx
+   gameboard__Two_matrix.cmi
+   gameboard__Two_matrix.cmt
+   gameboard__Two_matrix.cmti
+   gameboard__Two_matrix.cmx
+   one_matrix.ml
+   one_matrix.mli
+   opam
+   samples.ml
+   two_matrix.ml
+   two_matrix.mli))
  (libexec (gameboard.cmxs))
  (doc (README.md)))
 (library
@@ -27,9 +47,25 @@
  (main_module_name Gameboard)
  (modes byte native)
  (modules
-  (singleton
-   (name Gameboard)
-   (obj_name gameboard)
-   (visibility public)
-   (impl)
-   (intf))))
+  (wrapped
+   (main_module_name Gameboard)
+   (modules
+    ((name Gameboard) (obj_name gameboard) (visibility public) (impl) (intf))
+    ((name One_matrix)
+     (obj_name gameboard__One_matrix)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Samples) (obj_name gameboard__Samples) (visibility public) (impl))
+    ((name Two_matrix)
+     (obj_name gameboard__Two_matrix)
+     (visibility public)
+     (impl)
+     (intf)))
+   (alias_module
+    (name Gameboard__)
+    (obj_name gameboard__)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))
