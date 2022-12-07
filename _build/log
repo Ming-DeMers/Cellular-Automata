@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /home/mingtd/3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_9136f6_output
+$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_83b146_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -113,113 +113,6 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_9136f6_out
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/one_matrix.mli) > _build/default/src/.gameboard.objs/one_matrix.mli.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/one_matrix.ml) > _build/default/src/.gameboard.objs/one_matrix.ml.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I src/.gameboard.objs/byte -no-alias-deps -opaque -o src/.gameboard.objs/byte/gameboard__.cmo -c -impl src/gameboard__.ml-gen)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/two_matrix.mli) > _build/default/src/.gameboard.objs/two_matrix.mli.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard.cmi -c -intf src/gameboard.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__One_matrix.cmi -c -intf src/one_matrix.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__Two_matrix.cmi -c -intf src/two_matrix.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o src/.gameboard.objs/native/gameboard__.cmx -c -impl src/gameboard__.ml-gen)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__Samples.cmo -c -impl src/samples.ml)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__One_matrix.cmo -c -impl src/one_matrix.ml)
-> File "src/one_matrix.ml", line 1:
-> Error: The implementation src/one_matrix.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard__One_matrix.cmi:
->         The type `state' is required but not provided
->        File "src/one_matrix.mli", lines 1-3, characters 0-9:
->          Expected declaration
->        The type `gameboard' is required but not provided
->        File "src/one_matrix.mli", line 5, characters 0-34:
->          Expected declaration
->        The exception `AlreadyAlive' is required but not provided
->        The exception `AlreadyDead' is required but not provided
->        The value `init_empty' is required but not provided
->        File "src/one_matrix.mli", line 12, characters 0-40:
->          Expected declaration
->        The value `print_board' is required but not provided
->        File "src/one_matrix.mli", line 16, characters 0-35:
->          Expected declaration
->        The value `neighbors' is required but not provided
->        File "src/one_matrix.mli", line 19, characters 0-46:
->          Expected declaration
->        The value `update_node' is required but not provided
->        File "src/one_matrix.mli", line 25, characters 0-56:
->          Expected declaration
->        The value `update_board' is required but not provided
->        File "src/one_matrix.mli", line 33, characters 0-36:
->          Expected declaration
->        The value `loop' is required but not provided
->        File "src/one_matrix.mli", line 36, characters 0-35:
->          Expected declaration
->        The value `birth_node' is required but not provided
->        File "src/one_matrix.mli", line 40, characters 0-48:
->          Expected declaration
->        The value `kill_node' is required but not provided
->        File "src/one_matrix.mli", line 45, characters 0-47:
->          Expected declaration
->        The value `init_glider' is required but not provided
->        File "src/one_matrix.mli", line 50, characters 0-27:
->          Expected declaration
-[2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/native/gameboard__One_matrix.cmx -c -impl src/one_matrix.ml)
-> File "src/one_matrix.ml", line 1:
-> Error: The implementation src/one_matrix.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard__One_matrix.cmi:
->         The type `state' is required but not provided
->        File "src/one_matrix.mli", lines 1-3, characters 0-9:
->          Expected declaration
->        The type `gameboard' is required but not provided
->        File "src/one_matrix.mli", line 5, characters 0-34:
->          Expected declaration
->        The exception `AlreadyAlive' is required but not provided
->        The exception `AlreadyDead' is required but not provided
->        The value `init_empty' is required but not provided
->        File "src/one_matrix.mli", line 12, characters 0-40:
->          Expected declaration
->        The value `print_board' is required but not provided
->        File "src/one_matrix.mli", line 16, characters 0-35:
->          Expected declaration
->        The value `neighbors' is required but not provided
->        File "src/one_matrix.mli", line 19, characters 0-46:
->          Expected declaration
->        The value `update_node' is required but not provided
->        File "src/one_matrix.mli", line 25, characters 0-56:
->          Expected declaration
->        The value `update_board' is required but not provided
->        File "src/one_matrix.mli", line 33, characters 0-36:
->          Expected declaration
->        The value `loop' is required but not provided
->        File "src/one_matrix.mli", line 36, characters 0-35:
->          Expected declaration
->        The value `birth_node' is required but not provided
->        File "src/one_matrix.mli", line 40, characters 0-48:
->          Expected declaration
->        The value `kill_node' is required but not provided
->        File "src/one_matrix.mli", line 45, characters 0-47:
->          Expected declaration
->        The value `init_glider' is required but not provided
->        File "src/one_matrix.mli", line 50, characters 0-27:
->          Expected declaration
-[2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__Two_matrix.cmo -c -impl src/two_matrix.ml)
-> File "src/two_matrix.ml", line 1:
-> Error: The implementation src/two_matrix.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard__Two_matrix.cmi:
->         The type `gen' is required but not provided
->        File "src/two_matrix.mli", lines 9-10, characters 0-23:
->          Expected declaration
-[2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/native/gameboard__Two_matrix.cmx -c -impl src/two_matrix.ml)
-> File "src/two_matrix.ml", line 1:
-> Error: The implementation src/two_matrix.ml
->        does not match the interface src/.gameboard.objs/byte/gameboard__Two_matrix.cmi:
->         The type `gen' is required but not provided
->        File "src/two_matrix.mli", lines 9-10, characters 0-23:
->          Expected declaration
-[2]
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/native/gameboard__Samples.cmx -c -impl src/samples.ml)
 $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard.cmo -c -impl src/gameboard.ml)
 > File "src/gameboard.ml", line 9, characters 0-41:
 > 9 | exception PreconditionViolation of string
@@ -245,6 +138,44 @@ $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3
 > 194 | let del_node x y = [ [] ]
 >                      ^
 > Error (warning 27 [unused-var-strict]): unused variable y.
+[2]
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/two_matrix.mli) > _build/default/src/.gameboard.objs/two_matrix.mli.d
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/one_matrix.mli) > _build/default/src/.gameboard.objs/one_matrix.mli.d
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/one_matrix.ml) > _build/default/src/.gameboard.objs/one_matrix.ml.d
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__Two_matrix.cmi -c -intf src/two_matrix.mli)
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__One_matrix.cmi -c -intf src/one_matrix.mli)
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__One_matrix.cmo -c -impl src/one_matrix.ml)
+> File "src/one_matrix.ml", line 1:
+> Error: The implementation src/one_matrix.ml
+>        does not match the interface src/.gameboard.objs/byte/gameboard__One_matrix.cmi:
+>         The value `update_board' is required but not provided
+>        File "src/one_matrix.mli", line 38, characters 0-36:
+>          Expected declaration
+[2]
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.gameboard.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/native/gameboard__One_matrix.cmx -c -impl src/one_matrix.ml)
+> File "src/one_matrix.ml", line 1:
+> Error: The implementation src/one_matrix.ml
+>        does not match the interface src/.gameboard.objs/byte/gameboard__One_matrix.cmi:
+>         The value `update_board' is required but not provided
+>        File "src/one_matrix.mli", line 38, characters 0-36:
+>          Expected declaration
+[2]
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.gameboard.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/byte/gameboard__Two_matrix.cmo -c -impl src/two_matrix.ml)
+> File "src/two_matrix.ml", line 1:
+> Error: The implementation src/two_matrix.ml
+>        does not match the interface src/.gameboard.objs/byte/gameboard__Two_matrix.cmi:
+>         The type `gen' is required but not provided
+>        File "src/two_matrix.mli", lines 15-16, characters 0-23:
+>          Expected declaration
+[2]
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/native/gameboard__Two_matrix.cmx -c -impl src/two_matrix.ml)
+> File "src/two_matrix.ml", line 1:
+> Error: The implementation src/two_matrix.ml
+>        does not match the interface src/.gameboard.objs/byte/gameboard__Two_matrix.cmi:
+>         The type `gen' is required but not provided
+>        File "src/two_matrix.mli", lines 15-16, characters 0-23:
+>          Expected declaration
 [2]
 $ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.gameboard.objs/byte -I src/.gameboard.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Gameboard__ -o src/.gameboard.objs/native/gameboard.cmx -c -impl src/gameboard.ml)
 > File "src/gameboard.ml", line 9, characters 0-41:

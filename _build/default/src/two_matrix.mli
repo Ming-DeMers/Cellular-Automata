@@ -1,3 +1,9 @@
+(* two_matrix is the 2 dimensional implementation of the Game of Life. The game
+   is represented in a 2D that updates upon each generation. Each node has 8
+   neighbors, which affects whether it lives or dies on the next round. This
+   implementation allows the user to generate preset patterns or input their own
+   manually, and run the pattern for generations. *)
+
 type state =
   | Dead
   | Alive  (** [state] is either Dead or Alive. *)
