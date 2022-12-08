@@ -6,7 +6,9 @@
 
 type state =
   | Dead
-  | Alive  (** [state] is either Dead or Alive. *)
+  | Alive
+  | Killer
+  | Protector
 
 type gameboard = state array array
 (** Two dimensional array of nodes representing a gameboard. Top left corner is
