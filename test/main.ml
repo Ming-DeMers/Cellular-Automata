@@ -1,38 +1,44 @@
 open OUnit2
 open Cellular_automata.Two_matrix
 
-type state =
-  | Dead
-  | Alive
+(* Test Boards *)
+module GoL = Make (B3_S23)
 
-type gameboard = state array array
-
-(*some starter patterns for the board TODO: WOULD LIKE TO MAKE HELPER FUNCTION
-  THAT ALLOWS ONE TO CREATE BOARDS BY ONLY SPECIFIYING WHICH CELLS ARE ALIVE,
-  RATHER THAN WRITING IT ALL OUT, YA KNOW*)
+(************** Tests for Standard Game of Life with Wraparound **************)
+let empty_10x10 = GoL.init_empty 10 10
+let b1_10x10 = GoL.init_empty 10 10
 
 let assert_equal_boards gb1 gb2 =
-  if List.flatten gb1 = List.flatten gb2 then true else false
-
-(* test functions to test functionality of gameboard.ml *)
-let init_gameboard_test name in_gb exp_out =
-  name >:: fun _ -> assert_equal exp_out (init_empty in_gb)
+  let gb1_lst =
+    gb1 |> Array.to_list
+    |> List.map (fun arr -> Array.to_list arr)
+    |> List.flatten
+  in
+  let gb2_lst =
+    gb2 |> Array.to_list
+    |> List.map (fun arr -> Array.to_list arr)
+    |> List.flatten
+  in
+  assert_equal (List.equal (fun a b -> a = b) gb1_lst gb2_lst) true
 
 let neighbors_test name in_gb in_x in_y exp_out =
-  name >:: fun _ -> assert_equal exp_out (neighbors in_gb in_x in_y)
+  name >:: fun _ -> assert_equal exp_out (GoL.neighbors in_gb in_x in_y)
 
 let update_node_test name in_gb in_x in_y exp_out =
-  name >:: fun _ -> assert_equal exp_out (update_node in_gb in_x in_y)
+  name >:: fun _ -> assert_equal exp_out (GoL.update_node in_gb in_x in_y)
 
 let update_board_test name in_gb exp_out =
-  name >:: fun _ -> assert_equal exp_out (update_board in_gb)
+  name >:: fun _ -> assert_equal exp_out (GoL.update_board in_gb)
 
 let loop_test name in_gb in_int exp_out =
-  name >:: fun _ -> assert_equal exp_out (loop in_gb in_int)
+  name >:: fun _ -> assert_equal exp_out (GoL.loop in_gb in_int)
 
-(* test suite to execute gameboard tests*)
+let neighbors_tests =
+  [ neighbors_test "neighbors of empty @ 0,0" empty_10x10 0 0 0 ]
 
-(* let g : gameboard = init_gameboard () *)
-let gameboard_tests = [ (* TODO: implement test cases *) ]
-let suite = "test suite for CA" >::: List.flatten [ gameboard_tests ]
+let gol_tests = List.flatten [ neighbors_tests ]
+
+(******************************************************************************)
+
+let suite = "test suite for CA" >::: List.flatten [ gol_tests ]
 let _ = run_test_tt_main suite

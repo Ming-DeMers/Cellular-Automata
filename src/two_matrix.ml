@@ -3,6 +3,27 @@ module type BSRules = sig
   val survive : int list
 end
 
+module type Board = sig
+  type state =
+    | Dead
+    | Alive
+
+  type gameboard = state array array
+
+  exception AlreadyAlive
+  exception AlreadyDead
+
+  val init_empty : int -> int -> gameboard
+  val print_board : gameboard -> unit
+  val neighbors : gameboard -> int -> int -> int
+  val update_node : gameboard -> int -> int -> int -> unit
+  val update_board : gameboard -> unit
+  val loop : gameboard -> int -> unit
+  val birth_node : gameboard -> int -> int -> unit
+  val kill_node : gameboard -> int -> int -> unit
+  val init_glider : unit -> gameboard
+end
+
 (* Conway's Game of Life *)
 module B3_S23 : BSRules = struct
   let born = [ 3 ]
@@ -27,7 +48,7 @@ module B2_S : BSRules = struct
   let survive = []
 end
 
-module Board (BS : BSRules) = struct
+module Make (BS : BSRules) : Board = struct
   type state =
     | Dead
     | Alive

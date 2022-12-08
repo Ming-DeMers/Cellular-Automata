@@ -9,6 +9,11 @@ module type BSRules = sig
   val survive : int list
 end
 
+module B3_S23 : BSRules
+module B36_S23 : BSRules
+module B34678_S3678 : BSRules
+module B2_S : BSRules
+
 module type Board = sig
   type state =
     | Dead
@@ -17,11 +22,6 @@ module type Board = sig
   type gameboard = state array array
   (** Two dimensional array of nodes representing a gameboard. Top left corner
       is (0, 0), increasing in x and y when moving right and down respectively *)
-
-  type 'a gen =
-    | Cons of 'a * 'a gen
-        (** A one dimensional list that represents the infinite row of each
-            generation*)
 
   exception AlreadyAlive
   exception AlreadyDead
@@ -64,6 +64,8 @@ module type Board = sig
       in gameboard g. If that node is alice, it is updated to be dead. Raises
       AlreadyDead if the node at position [x], [y] is already alive *)
 
-  val init_glider : gameboard
+  val init_glider : unit -> gameboard
   (** Is a new glider *)
 end
+
+module Make : functor (_ : BSRules) -> Board
