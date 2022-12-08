@@ -1,6 +1,0 @@
-description = ""
-requires = "ANSITerminal"
-archive(byte) = "gameboard.cma"
-archive(native) = "gameboard.cmxa"
-plugin(byte) = "gameboard.cma"
-plugin(native) = "gameboard.cmxs"

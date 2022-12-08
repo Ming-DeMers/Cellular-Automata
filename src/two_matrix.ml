@@ -15,6 +15,18 @@ module B36_S23 : BSRules = struct
   let survive = [ 2; 3 ]
 end
 
+(* Day and Night *)
+module B34678_S3678 : BSRules = struct
+  let born = [ 3; 4; 6; 7; 8 ]
+  let survive = [ 3; 6; 7; 8 ]
+end
+
+(* Seeds *)
+module B2_S : BSRules = struct
+  let born = [ 2 ]
+  let survive = []
+end
+
 module Board (BS : BSRules) = struct
   type state =
     | Dead
@@ -49,6 +61,7 @@ module Board (BS : BSRules) = struct
     | Alive -> set g x y Dead
 
   (* O(1) maybe*)
+  (* For ALl Dead Border *)
   let neighbors g x y =
     let width = Array.length g.(0) in
     let height = Array.length g in
@@ -60,6 +73,23 @@ module Board (BS : BSRules) = struct
           && (not (c = -1 || c = height))
           && not (r = x && c = y)
         then if get g r c = Alive then count := !count + 1 else ()
+        else ()
+      done
+    done;
+    !count
+
+  let neighbors_wraparound g x y =
+    let width = Array.length g.(0) in
+    let height = Array.length g in
+    let count = ref 0 in
+    for r = x - 1 to x + 1 do
+      for c = y - 1 to y + 1 do
+        let r' = if r = -1 then width - 1 else r in
+        let rf = if r' = width then 0 else r' in
+        let c' = if c = -1 then height - 1 else c in
+        let cf = if c' = height then 0 else c' in
+        if not (r = x && c = y) then
+          if get g rf cf = Alive then count := !count + 1 else ()
         else ()
       done
     done;

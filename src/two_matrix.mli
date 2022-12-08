@@ -7,8 +7,6 @@
 type state =
   | Dead
   | Alive
-  | Killer
-  | Protector
 
 type gameboard = state array array
 (** Two dimensional array of nodes representing a gameboard. Top left corner is

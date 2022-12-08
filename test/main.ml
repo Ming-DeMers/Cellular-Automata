@@ -5,7 +5,7 @@ type state =
   | Dead
   | Alive
 
-type gameboard = Gameboard.gameboard
+type gameboard = state array array
 
 (*some starter patterns for the board TODO: WOULD LIKE TO MAKE HELPER FUNCTION
   THAT ALLOWS ONE TO CREATE BOARDS BY ONLY SPECIFIYING WHICH CELLS ARE ALIVE,
@@ -13,43 +13,6 @@ type gameboard = Gameboard.gameboard
 
 let assert_equal_boards gb1 gb2 =
   if List.flatten gb1 = List.flatten gb2 then true else false
-
-(* let dead : Gameboard.gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-   [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; ] let block =
-   [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Alive; Alive;
-   Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Alive; Alive; Dead; Dead;
-   Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead ]; ] let toad = [ [ Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Alive; Alive; Alive; Dead;
-   Dead; Dead ]; [ Dead; Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead; Dead
-   ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead ]; ] let glider = [ [ Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead; Dead
-   ]; [ Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead ]; [ Dead;
-   Dead; Dead; Alive; Alive; Alive; Dead; Dead; Dead; Dead ]; [ Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead; Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
-   Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];
-   ] *)
 
 (* test functions to test functionality of gameboard.ml *)
 let init_gameboard_test name in_gb exp_out =

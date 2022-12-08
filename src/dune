@@ -1,4 +1,4 @@
 (library
- (name gameboard)
- (public_name Gameboard)
+ (name cellular_automata)
+ (public_name CellularAutomata)
  (libraries ANSITerminal))
