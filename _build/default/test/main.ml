@@ -1,5 +1,4 @@
 open OUnit2
-open Cellular_automata.Two_matrix
 
 type state =
   | Dead
@@ -16,7 +15,13 @@ let assert_equal_boards gb1 gb2 =
 
 (* test functions to test functionality of gameboard.ml *)
 let init_gameboard_test name in_gb exp_out =
-  name >:: fun _ -> assert_equal exp_out (init_empty in_gb)
+  name >:: fun _ -> assert_equal exp_out (init_gameboard in_gb)
+
+let loop_test name in_gb in_int exp_out =
+  name >:: fun _ -> assert_equal exp_out (loop in_gb in_int)
+
+let turn_test name in_gb exp_out =
+  name >:: fun _ -> assert_equal exp_out (turn in_gb)
 
 let neighbors_test name in_gb in_x in_y exp_out =
   name >:: fun _ -> assert_equal exp_out (neighbors in_gb in_x in_y)
@@ -26,9 +31,6 @@ let update_node_test name in_gb in_x in_y exp_out =
 
 let update_board_test name in_gb exp_out =
   name >:: fun _ -> assert_equal exp_out (update_board in_gb)
-
-let loop_test name in_gb in_int exp_out =
-  name >:: fun _ -> assert_equal exp_out (loop in_gb in_int)
 
 (* test suite to execute gameboard tests*)
 

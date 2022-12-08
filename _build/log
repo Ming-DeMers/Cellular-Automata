@@ -1,0 +1,202 @@
+# dune build
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: "/Users/bennozik/cs3110/final project/Cellular-Automata"
+# Auto-detected concurrency: 8
+$ /Users/bennozik/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/9z/1dzdfsv16tqf54_gwb5qymz00000gn/T/dune_4f94f6_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path =
+#      Some External "/Users/bennozik/.opam/cs3110-2022fa/lib/toplevel"
+#  ; ocaml_bin = External "/Users/bennozik/.opam/cs3110-2022fa/bin"
+#  ; ocaml = Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocaml"
+#  ; ocamlc = External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamlc.opt"
+#  ; ocamlopt =
+#      Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamlopt.opt"
+#  ; ocamldep =
+#      Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamldep.opt"
+#  ; ocamlmklib =
+#      Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/bennozik/.opam/cs3110-2022fa/lib"
+#        ; "DUNE_OCAML_STDLIB" :
+#            "/Users/bennozik/.opam/cs3110-2022fa/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata"
+#        ; "INSIDE_DUNE" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/Users/bennozik/.opam/cs3110-2022fa/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default =
+#          "/Users/bennozik/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_library = "/Users/bennozik/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "arm64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "aarch64-apple-darwin21.6.0"
+#      ; target = "aarch64-apple-darwin21.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/bennozik/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /Users/bennozik/.opam/cs3110-2022fa/lib/ANSITerminal -I /Users/bennozik/.opam/cs3110-2022fa/lib/ounit2 -I /Users/bennozik/.opam/cs3110-2022fa/lib/ounit2/advanced -I /Users/bennozik/.opam/cs3110-2022fa/lib/seq -I /Users/bennozik/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.cellular_automata.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
+$ (cd _build/default && /Users/bennozik/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -I /Users/bennozik/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/native/cellular_automata__Two_matrix.cmx -c -impl src/two_matrix.ml)
+> File "src/two_matrix.ml", line 1:
+> Error: The implementation src/two_matrix.ml
+>        does not match the interface src/.cellular_automata.objs/byte/cellular_automata__Two_matrix.cmi:
+>         The type `state' is required but not provided
+>        File "src/two_matrix.mli", lines 7-9, characters 0-9:
+>          Expected declaration
+>        The type `gameboard' is required but not provided
+>        File "src/two_matrix.mli", line 11, characters 0-34:
+>          Expected declaration
+>        The type `gen' is required but not provided
+>        File "src/two_matrix.mli", lines 15-16, characters 0-23:
+>          Expected declaration
+>        The exception `AlreadyAlive' is required but not provided
+>        The exception `AlreadyDead' is required but not provided
+>        The value `init_empty' is required but not provided
+>        File "src/two_matrix.mli", line 23, characters 0-40:
+>          Expected declaration
+>        The value `print_board' is required but not provided
+>        File "src/two_matrix.mli", line 27, characters 0-35:
+>          Expected declaration
+>        The value `neighbors' is required but not provided
+>        File "src/two_matrix.mli", line 30, characters 0-46:
+>          Expected declaration
+>        The value `update_node' is required but not provided
+>        File "src/two_matrix.mli", line 36, characters 0-56:
+>          Expected declaration
+>        The value `update_board' is required but not provided
+>        File "src/two_matrix.mli", line 44, characters 0-36:
+>          Expected declaration
+>        The value `loop' is required but not provided
+>        File "src/two_matrix.mli", line 47, characters 0-35:
+>          Expected declaration
+>        The value `birth_node' is required but not provided
+>        File "src/two_matrix.mli", line 51, characters 0-48:
+>          Expected declaration
+>        The value `kill_node' is required but not provided
+>        File "src/two_matrix.mli", line 56, characters 0-47:
+>          Expected declaration
+>        The value `init_glider' is required but not provided
+>        File "src/two_matrix.mli", line 61, characters 0-27:
+>          Expected declaration
+[2]
+$ (cd _build/default && /Users/bennozik/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -I /Users/bennozik/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/native/cellular_automata__One_matrix.cmx -c -impl src/one_matrix.ml)
+> File "src/one_matrix.ml", line 1:
+> Error: The implementation src/one_matrix.ml
+>        does not match the interface src/.cellular_automata.objs/byte/cellular_automata__One_matrix.cmi:
+>         The value `update_board' is required but not provided
+>        File "src/one_matrix.mli", line 38, characters 0-36:
+>          Expected declaration
+[2]
+$ (cd _build/default && /Users/bennozik/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/bennozik/.opam/cs3110-2022fa/lib/ANSITerminal -I /Users/bennozik/.opam/cs3110-2022fa/lib/ounit2 -I /Users/bennozik/.opam/cs3110-2022fa/lib/ounit2/advanced -I /Users/bennozik/.opam/cs3110-2022fa/lib/seq -I /Users/bennozik/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+> File "test/main.ml", line 18, characters 42-56:
+> 18 |   name >:: fun _ -> assert_equal exp_out (init_gameboard in_gb)
+>                                                ^^^^^^^^^^^^^^
+> Error: Unbound value init_gameboard
+[2]
+$ (cd _build/default && /Users/bennozik/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -I /Users/bennozik/.opam/cs3110-2022fa/lib/ANSITerminal -intf-suffix .ml -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/native/cellular_automata__Gameboard.cmx -c -impl src/gameboard.ml)
+> File "src/gameboard.ml", line 9, characters 0-41:
+> 9 | exception PreconditionViolation of string
+>     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Error (warning 38 [unused-extension]): unused exception PreconditionViolation
+> File "src/gameboard.ml", line 57, characters 9-10:
+> 57 |   | h :: t -> List.length h
+>               ^
+> Error (warning 27 [unused-var-strict]): unused variable t.
+> File "src/gameboard.ml", line 192, characters 13-14:
+> 192 | let add_node x y = [ [] ]
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable x.
+> File "src/gameboard.ml", line 192, characters 15-16:
+> 192 | let add_node x y = [ [] ]
+>                      ^
+> Error (warning 27 [unused-var-strict]): unused variable y.
+> File "src/gameboard.ml", line 194, characters 13-14:
+> 194 | let del_node x y = [ [] ]
+>                    ^
+> Error (warning 27 [unused-var-strict]): unused variable x.
+> File "src/gameboard.ml", line 194, characters 15-16:
+> 194 | let del_node x y = [ [] ]
+>                      ^
+> Error (warning 27 [unused-var-strict]): unused variable y.
+[2]
