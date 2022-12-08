@@ -5,6 +5,9 @@ type state =
 type gameboard = state list list
 (** Two dimensional list of nodes representing a gameboard *)
 
+exception PreconditionViolation of string
+(** raised when precondtion is violated*)
+
 val init_gameboard : gameboard option -> gameboard
 (** [init_gameboard g_option] is the initial gameboard. The initial gameboard is
     either [g] if [g_option] is [Some g], otherwise it is some default

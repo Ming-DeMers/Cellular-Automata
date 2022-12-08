@@ -116,6 +116,9 @@ let neighbors_tests =
     neighbors_test "neighbors of 0,9 @ 0,0" b09_10x10 0 0 1;
     neighbors_test "neighbors of 0,9 @ 9,9" b09_10x10 9 9 1;
     neighbors_test "neighbors of 0,9 @ 0,0" b09_10x10 9 0 1;
+    neighbors_test "neighbors of 9,9 @ 0,9" b99_10x10 0 9 1;
+    neighbors_test "neighbors of 9,9 @ 0,0" b99_10x10 0 0 1;
+    neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1;
   ]
 
 let gol_tests = List.flatten [ neighbors_tests ]

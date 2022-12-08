@@ -25,13 +25,19 @@ module type Board = sig
 
   exception AlreadyAlive
   exception AlreadyDead
+  exception PreconditionViolation of string
 
-  val init_empty : int -> int -> gameboard
-  (** [init_gameboard x y] is a gameboard with dimensions x by y with all dead
-      nodes *)
+  val birth_node : gameboard -> int -> int -> unit
+  (** [birth_node g x y] checks the state of the node at grid position [x], [y]
+      in gameboard g. If that node is dead, it is updated to be alive. Raises
+      AlreadyAlive if the node at position [x], [y] is already alive. Requires:
+      ([x], [y]) must be a valid position in the grid.*)
 
-  val print_board : gameboard -> unit
-  (** [print_board g] prints [g]. *)
+  val kill_node : gameboard -> int -> int -> unit
+  (** [kill_node g x y] checks the state of the node at grid position [x], [y]
+      in gameboard g. If that node is alice, it is updated to be dead. Raises
+      AlreadyDead if the node at position [x], [y] is already dead. Requires:
+      ([x], [y]) must be a valid position in the grid.*)
 
   val neighbors : gameboard -> int -> int -> int
   (** [neighbors g x y] is the number of alive neighbors that the node located
@@ -43,26 +49,22 @@ module type Board = sig
   (** [update_node gb x y n] updates the node at (x,y) in gamebaord g with n
       neighbors in the previous generation to be dead or alive for the next
       generation, based on its number neighbors and according to the rules of
-      the board.
-
-      Precondition: (x,y) is a valid coordinate of a node on the gameboard. *)
+      the board. Requires: (x,y) is a valid coordinate of a node on the
+      gameboard. *)
 
   val update_board : gameboard -> unit
   (** [update_board gb] updates gameboard gb to the next generation *)
+
+  val print_board : gameboard -> unit
+  (** [print_board g] prints [g]. *)
 
   val loop : gameboard -> int -> unit
   (** [loop g i] loops through [i] generations of the Game of Life with
       gameboard [g], printing each time the board is updated *)
 
-  val birth_node : gameboard -> int -> int -> unit
-  (** [birth_node g x y] checks the state of the node at grid position [x], [y]
-      in gameboard g. If that node is dead, it is updated to be alive. Raises
-      AlreadyAlive if the node at position [x], [y] is already alive *)
-
-  val kill_node : gameboard -> int -> int -> unit
-  (** [kill_node g x y] checks the state of the node at grid position [x], [y]
-      in gameboard g. If that node is alice, it is updated to be dead. Raises
-      AlreadyDead if the node at position [x], [y] is already alive *)
+  val init_empty : int -> int -> gameboard
+  (** [init_gameboard x y] is a gameboard with dimensions x by y with all dead
+      nodes. Requires: x > 0 and y > 0 *)
 
   val init_glider : unit -> gameboard
   (** Is a new glider *)
