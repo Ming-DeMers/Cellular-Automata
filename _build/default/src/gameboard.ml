@@ -7,7 +7,6 @@ type state =
 type gameboard = state list list
 
 exception PreconditionViolation of string
-(** raised when precondtion is violated*)
 
 (** Helper function for new_gameboard. Creates a list of x default nodes that
     are dead *)
@@ -25,7 +24,9 @@ let rec ng_y outer_lst y inner_lst =
 
 (** Creates a new gameboard with dimensions x by y filled with empty nodes.
     Precondition: x,y >= 1 *)
-let new_gameboard x y : gameboard = x |> ng_x [] |> ng_y [] y
+let new_gameboard x y : gameboard =
+  if x < 1 || y < 1 then raise (PreconditionViolation "x and y must be >= 1")
+  else x |> ng_x [] |> ng_y [] y
 
 let init_gameboard gb_op =
   match gb_op with
@@ -54,7 +55,9 @@ let print_board gb = print_endline (gb_to_string gb)
 let gb_width gb =
   match gb with
   | [] -> 0
-  | h :: t -> List.length h
+  | h :: t ->
+      ignore t;
+      List.length h
 
 (** Is the height of given gameboard *)
 let gb_height gb = List.length gb
@@ -189,9 +192,15 @@ let rec loop gb iterations =
   | 0 -> ()
   | x -> loop (turn gb) (x - 1)
 
-let add_node x y = [ [] ]
+let add_node x y =
+  ignore x;
+  ignore y;
+  [ [] ]
 
-let del_node x y = [ [] ]
+let del_node x y =
+  ignore x;
+  ignore y;
+  [ [] ]
 
 (* let glider : gameboard = [ [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead;
    Dead; Dead ]; [ Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead; Dead ];

@@ -11,18 +11,18 @@ type 'a gen = Cons of 'a * 'a gen
 exception AlreadyAlive
 exception AlreadyDead
 
-let init_empty x = failwith "Unimplemented"
+let init_empty x = raise (Failure "Unimplemented")
 
 (** [print_board gb] prints [gb]. *)
-let print_board gb = failwith "Unimplemented"
+let print_board gb = raise (Failure "Unimplemented")
 
 (** [neighbors gb x] is the number of alive neighbors that the node located at
     position ([x]). Neighbors are the left and right nodes, thus there can be
     none, one, or two neightbors Requires: ([x]) is a positive integer. *)
-let neighbors gb x = failwith "Unimplemented"
+let neighbors gb x = raise (Failure "Unimplemented")
 
-let update_node gb x = "Unimplemented"
-let update_board gb = "Unimplemented"
-let loop gb x = "Unimplemented"
-let birth_node gb x = "Unimplemented"
-let kill_node gb x = failwith "Unimplemented"
+let update_node gb x = raise (Failure "Unimplemented")
+let update_board gb = raise (Failure "Unimplemented")
+let loop gb x = raise (Failure "Unimplemented")
+let birth_node gb x = raise (Failure "Unimplemented")
+let kill_node gb x = raise (Failure "Unimplemented")

@@ -1,4 +1,4 @@
-(* One_matrix is the 1-dimendsional implementation of the game of life. The
+(** One_matrix is the 1-dimendsional implementation of the game of life. The
    gameboard is a one dimensional array, which updates on each generation. It
    can be stylized as as a 2D gird, however. Due to the nature of each node only
    having three neighbors, there are 8 possible outcomes of which a rule can be

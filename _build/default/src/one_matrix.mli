@@ -13,6 +13,11 @@ type gameboard = state array array
 (** Two dimensional array of nodes representing a gameboard. Top left corner is
     (0, 0), increasing in x and y when moving right and down respectively *)
 
+type 'a gen =
+  | Cons of 'a * 'a gen
+      (** A one dimensional list that represents the infinite row of each
+          generation*)
+
 exception AlreadyAlive
 exception AlreadyDead
 

@@ -6,6 +6,8 @@ type gameboard = state array array
 (** Two dimensional array of nodes representing a gameboard. Top left corner is
     (0, 0), increasing in x and y when moving right and down respectively *)
 
+type 'a gen = Cons of 'a * 'a gen
+
 exception AlreadyAlive
 exception AlreadyDead
 
@@ -20,7 +22,7 @@ let print_board gb = failwith "Unimplemented"
 let neighbors gb x = failwith "Unimplemented"
 
 let update_node gb x = "Unimplemented"
-let update_node gb = "Unimplemented"
+let update_board gb = "Unimplemented"
 let loop gb x = "Unimplemented"
 let birth_node gb x = "Unimplemented"
 let kill_node gb x = failwith "Unimplemented"
