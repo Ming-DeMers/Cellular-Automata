@@ -27,6 +27,12 @@ module type Board = sig
   exception AlreadyDead
   exception PreconditionViolation of string
 
+  val get : gameboard -> int -> int -> state
+  (** [get g x y] is the state of the node at coordinate position (x,y) with the
+      top left corner being (0, 0), increasing in x and y when moving right and
+      down respectively. Requires: ([x], [y]) must be a valid position in the
+      grid *)
+
   val birth_node : gameboard -> int -> int -> unit
   (** [birth_node g x y] checks the state of the node at grid position [x], [y]
       in gameboard g. If that node is dead, it is updated to be alive. Raises

@@ -14,6 +14,7 @@ module type Board = sig
   exception AlreadyDead
   exception PreconditionViolation of string
 
+  val get : gameboard -> int -> int -> state
   val birth_node : gameboard -> int -> int -> unit
   val kill_node : gameboard -> int -> int -> unit
   val neighbors : gameboard -> int -> int -> int
@@ -69,10 +70,6 @@ module Make (BS : BSRules) : Board = struct
         raise (PreconditionViolation ("y out of bounds. Error in: " ^ f_name))
     else raise (PreconditionViolation ("x out of bounds. Error in: " ^ f_name))
 
-  (* [get g x y] is the state of the node at coordinate position (x,y) with the
-     top left corner being (0, 0), increasing in x and y when moving right and
-     down respectively. Requires: ([x], [y]) must be a valid position in the
-     grid *)
   let get g x y =
     check_inbounds g x y "get";
     g.(y).(x)

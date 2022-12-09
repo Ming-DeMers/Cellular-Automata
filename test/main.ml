@@ -6,6 +6,7 @@ module GoL = Make (B3_S23)
 
 (************** Tests for Standard Game of Life with Wraparound **************)
 let empty_10x10 = GoL.init_empty 10 10
+let glider_10x10 = GoL.init_glider ()
 
 let b55_10x10 =
   let x = GoL.init_empty 10 10 in
@@ -52,6 +53,11 @@ let b59_10x10 =
   GoL.birth_node x 5 0;
   x
 
+let state_printer s =
+  match s with
+  | GoL.Alive -> "Alive"
+  | GoL.Dead -> "Dead"
+
 let assert_equal_boards gb1 gb2 =
   let gb1_lst =
     gb1 |> Array.to_list
@@ -63,19 +69,22 @@ let assert_equal_boards gb1 gb2 =
     |> List.map (fun arr -> Array.to_list arr)
     |> List.flatten
   in
-  assert_equal (List.equal (fun a b -> a = b) gb1_lst gb2_lst) true
+  List.equal (fun a b -> a = b) gb1_lst gb2_lst
 
 let neighbors_test name in_gb in_x in_y exp_out =
-  name >:: fun _ -> assert_equal exp_out (GoL.neighbors in_gb in_x in_y)
+  name >:: fun _ ->
+  assert_equal exp_out (GoL.neighbors in_gb in_x in_y) ~printer:string_of_int
 
-let update_node_test name in_gb in_x in_y exp_out =
-  name >:: fun _ -> assert_equal exp_out (GoL.update_node in_gb in_x in_y)
+let update_node_test name in_gb in_x in_y (exp_out : GoL.state) =
+  name >:: fun _ ->
+  assert_equal exp_out
+    (let n = GoL.neighbors in_gb in_x in_y in
+     GoL.update_node in_gb in_x in_y n;
+     GoL.get in_gb in_x in_y)
+    ~printer:state_printer
 
 let update_board_test name in_gb exp_out =
   name >:: fun _ -> assert_equal exp_out (GoL.update_board in_gb)
-
-let loop_test name in_gb in_int exp_out =
-  name >:: fun _ -> assert_equal exp_out (GoL.loop in_gb in_int)
 
 let neighbors_tests =
   [
@@ -119,9 +128,21 @@ let neighbors_tests =
     neighbors_test "neighbors of 9,9 @ 0,9" b99_10x10 0 9 1;
     neighbors_test "neighbors of 9,9 @ 0,0" b99_10x10 0 0 1;
     neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1;
+    neighbors_test "neighbors of glider @ 5,5" glider_10x10 5 5 2;
+    neighbors_test "neighbors of glider @ 4,5" glider_10x10 4 5 3;
+    neighbors_test "neighbors of glider @ 4,4" glider_10x10 4 4 3;
+    neighbors_test "neighbors of glider @ 4,3" glider_10x10 4 3 5;
   ]
 
-let gol_tests = List.flatten [ neighbors_tests ]
+let update_node_tests =
+  [
+    update_node_test "update empty" empty_10x10 5 5 GoL.Dead;
+    update_node_test "update gilder @ 5,5" glider_10x10 5 5 GoL.Dead;
+    update_node_test "update gilder @ 4,5" glider_10x10 4 5 GoL.Alive;
+    update_node_test "update gilder @ 5,4" glider_10x10 5 4 GoL.Alive;
+  ]
+
+let gol_tests = List.flatten [ neighbors_tests; update_node_tests ]
 
 (******************************************************************************)
 
