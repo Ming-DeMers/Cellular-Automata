@@ -1,6 +1,0 @@
-description = ""
-requires = "ANSITerminal"
-archive(byte) = "cellular_automata.cma"
-archive(native) = "cellular_automata.cmxa"
-plugin(byte) = "cellular_automata.cma"
-plugin(native) = "cellular_automata.cmxs"

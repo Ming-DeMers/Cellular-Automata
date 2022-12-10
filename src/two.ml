@@ -96,21 +96,11 @@ module Make (BS : BSRules) : Board = struct
 
   (* O(1) maybe*)
   (* For ALl Dead Border, DEPRECIATED *)
-  let neighbors_dead_boundary g x y =
-    let width = Array.length g.(0) in
-    let height = Array.length g in
-    let count = ref 0 in
-    for r = x - 1 to x + 1 do
-      for c = y - 1 to y + 1 do
-        if
-          (not (r = -1 || r = width))
-          && (not (c = -1 || c = height))
-          && not (r = x && c = y)
-        then if get g r c = Alive then count := !count + 1 else ()
-        else ()
-      done
-    done;
-    !count
+  (* let neighbors_dead_boundary g x y = let width = Array.length g.(0) in let
+     height = Array.length g in let count = ref 0 in for r = x - 1 to x + 1 do
+     for c = y - 1 to y + 1 do if (not (r = -1 || r = width)) && (not (c = -1 ||
+     c = height)) && not (r = x && c = y) then if get g r c = Alive then count
+     := !count + 1 else () else () done done; !count *)
 
   let neighbors g x y =
     check_inbounds g x y "neighbors";

@@ -1,4 +1,4 @@
 (library
  (name cellular_automata)
  (public_name CellularAutomata)
- (libraries ANSITerminal))
+ (libraries graphics ANSITerminal))

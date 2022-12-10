@@ -1,5 +1,5 @@
 open OUnit2
-open Cellular_automata.Two_matrix
+open Cellular_automata.Two
 
 (* Test Boards *)
 module GoL = Make (B3_S23)
@@ -84,7 +84,10 @@ let update_node_test name in_gb in_x in_y (exp_out : GoL.state) =
     ~printer:state_printer
 
 let update_board_test name in_gb exp_out =
-  name >:: fun _ -> assert_equal exp_out (GoL.update_board in_gb)
+  name >:: fun _ ->
+  assert_equal exp_out
+    (GoL.update_board in_gb;
+     in_gb)
 
 let neighbors_tests =
   [
