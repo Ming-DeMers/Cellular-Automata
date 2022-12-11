@@ -1,3 +1,5 @@
+.PHONY: test check
+
 build:
 	dune build
 
@@ -15,7 +17,6 @@ test:
 run:
 	OCAMLRUNPARAM=b dune exec bin/main.exe
 
-
 clean:
 	dune clean
 	rm -f adventure.zip
@@ -25,3 +26,5 @@ doc:
 
 opendoc: doc
 	@bash opendoc.sh
+
+gui:  
