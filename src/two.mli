@@ -59,7 +59,7 @@ module type Board = sig
       gameboard. *)
 
   val update_board : gameboard -> unit
-  (** [update_board gb] updates gameboard gb to the next generation *)
+  (** [update_board gb] updates gameboard [gb] to the next generation *)
 
   val print_board : gameboard -> unit
   (** [print_board g] prints [g]. *)
@@ -69,11 +69,15 @@ module type Board = sig
       gameboard [g], printing each time the board is updated *)
 
   val init_empty : int -> int -> gameboard
-  (** [init_gameboard x y] is a gameboard with dimensions x by y with all dead
-      nodes. Requires: x > 0 and y > 0 *)
+  (** [init_gameboard x y] is a gameboard with dimensions [x] by [y] with all
+      dead nodes. Requires: [x > 0] and [y > 0] *)
 
   val init_glider : unit -> gameboard
   (** Is a new glider *)
+
+  val make_board : int -> int -> (int * int) list -> gameboard
+  (** [make_board x y c] is a gameboard with dimensions [x] by [y] and alive
+      nodes at each coordinate specified in [c] *)
 end
 
 module Make : functor (_ : BSRules) -> Board

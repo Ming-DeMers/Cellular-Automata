@@ -24,6 +24,7 @@ module type Board = sig
   val loop : gameboard -> int -> unit
   val init_empty : int -> int -> gameboard
   val init_glider : unit -> gameboard
+  val make_board : int -> int -> (int * int) list -> gameboard
 end
 
 (* Conway's Game of Life *)
@@ -172,12 +173,16 @@ module Make (BS : BSRules) : Board = struct
       raise (PreconditionViolation "error in init_empty: x and y must be >= 1")
     else Array.make_matrix x y Dead
 
+  let make_board x y c =
+    let gb = init_empty x y in
+    let f g (x, y) =
+      birth_node g x y;
+      g
+    in
+    List.fold_left f gb c
+
   let init_glider () =
-    let b = init_empty 10 10 in
-    birth_node b 3 4;
-    birth_node b 4 4;
-    birth_node b 5 4;
-    birth_node b 4 2;
-    birth_node b 5 3;
-    b
+    make_board 10 10 [ (3, 4); (4, 4); (5, 4); (4, 2); (5, 3) ]
+  (* let b = init_empty 10 10 in birth_node b 3 4; birth_node b 4 4; birth_node
+     b 5 4; birth_node b 4 2; birth_node b 5 3; b *)
 end
