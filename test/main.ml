@@ -58,18 +58,10 @@ let state_printer s =
   | GoL.Alive -> "Alive"
   | GoL.Dead -> "Dead"
 
-let assert_equal_boards gb1 gb2 =
-  let gb1_lst =
-    gb1 |> Array.to_list
-    |> List.map (fun arr -> Array.to_list arr)
-    |> List.flatten
-  in
-  let gb2_lst =
-    gb2 |> Array.to_list
-    |> List.map (fun arr -> Array.to_list arr)
-    |> List.flatten
-  in
-  List.equal (fun a b -> a = b) gb1_lst gb2_lst
+(* let assert_equal_boards gb1 gb2 = let gb1_lst = gb1 |> Array.to_list |>
+   List.map (fun arr -> Array.to_list arr) |> List.flatten in let gb2_lst = gb2
+   |> Array.to_list |> List.map (fun arr -> Array.to_list arr) |> List.flatten
+   in List.equal (fun a b -> a = b) gb1_lst gb2_lst *)
 
 let neighbors_test name in_gb in_x in_y exp_out =
   name >:: fun _ ->
@@ -83,11 +75,8 @@ let update_node_test name in_gb in_x in_y (exp_out : GoL.state) =
      GoL.get in_gb in_x in_y)
     ~printer:state_printer
 
-let update_board_test name in_gb exp_out =
-  name >:: fun _ ->
-  assert_equal exp_out
-    (GoL.update_board in_gb;
-     in_gb)
+(* let update_board_test name in_gb exp_out = name >:: fun _ -> assert_equal
+   exp_out (GoL.update_board in_gb; in_gb) *)
 
 let neighbors_tests =
   [
@@ -113,7 +102,7 @@ let neighbors_tests =
     neighbors_test "neighbors of 9,5 @ 0,5" b95_10x10 0 5 1;
     neighbors_test "neighbors of 9,5 @ 0,6" b95_10x10 0 6 1;
     neighbors_test "neighbors of 5,9 @ 4,0" b59_10x10 4 0 1;
-    neighbors_test "neighbors of 5,9 @ 5,0" b59_10x10 5 0 1;
+    neighbors_test "neighbors of 5,9 @ 5,0" b59_10x10 5 0 1; (** failed *)
     neighbors_test "neighbors of 5,9 @ 6,0" b59_10x10 6 0 1;
     neighbors_test "neighbors of 0,5 @ 9,4" b05_10x10 9 4 1;
     neighbors_test "neighbors of 0,5 @ 9,5" b05_10x10 9 5 1;
@@ -130,7 +119,7 @@ let neighbors_tests =
     neighbors_test "neighbors of 0,9 @ 0,0" b09_10x10 9 0 1;
     neighbors_test "neighbors of 9,9 @ 0,9" b99_10x10 0 9 1;
     neighbors_test "neighbors of 9,9 @ 0,0" b99_10x10 0 0 1;
-    neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1;
+    neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1; (** failed *)
     neighbors_test "neighbors of glider @ 5,5" glider_10x10 5 5 2;
     neighbors_test "neighbors of glider @ 4,5" glider_10x10 4 5 3;
     neighbors_test "neighbors of glider @ 4,4" glider_10x10 4 4 3;
