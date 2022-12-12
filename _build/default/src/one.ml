@@ -54,6 +54,9 @@ let int_to_rule (n : int) : rule =
    board. *)
 
 let init_empty x : gameboard =
+  if x = 0 then raise (Failure "Invalid board size")
+  else
+    
   let ary = Array.make x Dead in
   ary.(x / 2) <- Alive;
   ary
@@ -76,6 +79,8 @@ let print_board (gb : gameboard) = print_endline (gb_to_string gb)
 let neighbors gb x : int =
   if gb.(x - 1) = Alive then 1 else 0 + if gb.(x + 1) = Alive then 1 else 0
 
+let neighborhood gb x = [ gb.(x - 1); gb.(x); gb.(x + 1) ]
+
 (** [update_node gb x n] updates the node at ([x]) in gameboard g with n
     neighbors in the previous generation to be dead or alive for the next
     generation, based on its number neighbors and according to the specified
@@ -83,8 +88,9 @@ let neighbors gb x : int =
 
     Precondition: (x) is a positive integer. *)
 let update_node gb rule x =
+  let neighborhood = neighborhood gb x in
   let bin_rule = int_to_binary rule in
-  match binary_to_int gb.(x - 1) with
+  match binary_to_int neighborhood with
   | 7 -> if List.nth bin_rule 0 = 1 then Alive else Dead
   | 6 -> if List.nth bin_rule 1 = 1 then Alive else Dead
   | 5 -> if List.nth bin_rule 2 = 1 then Alive else Dead

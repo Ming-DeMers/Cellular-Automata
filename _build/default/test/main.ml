@@ -12,7 +12,10 @@ let binary_to_int_test name in_lst exp_out =
   name >:: fun _ -> assert_equal exp_out (binary_to_int in_lst)
 
 let int_to_rule_test name in_int exp_out =
-  name >:: fun _ -> assert_equal exp_out (int_to_rule in_int) 
+  name >:: fun _ -> assert_equal exp_out (int_to_rule in_int)
+
+let init_empty_test name in_x exp_out =
+  name >:: fun _ -> assert_equal exp_out (init_empty in_x)
 
 let one_tests =
   [
@@ -36,6 +39,13 @@ let one_tests =
       [ 0; 1; 0; 1; 1; 0; 1; 0 ];
     int_to_rule_test "int_to_rule 255 is [1; 1; 1; 1; 1; 1; 1; 1]" 255
       [ 1; 1; 1; 1; 1; 1; 1; 1 ];
+    init_empty_test "init_empty 3 is [|Dead; Alive; Dead|]" 3
+      [| Dead; Alive; Dead |];
+    init_empty_test "init_empty 5 is [|Dead; Dead; Alive; Dead; Dead|]" 5
+      [| Dead; Dead; Alive; Dead; Dead |];
+    init_empty_test
+      "init_empty 10 is [|Dead; Dead; Dead; Alive; Dead; Dead; Dead" 10
+      [| Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead |];
   ]
 
 (* Test Boards *)
@@ -67,7 +77,7 @@ let b90_10x10 =
 
 let b99_10x10 =
   let x = GoL.init_empty 10 10 in
-  GoL.birth_node x 9 0;
+  GoL.birth_node x 9 9;
   x
 
 let b05_10x10 =
@@ -87,7 +97,7 @@ let b50_10x10 =
 
 let b59_10x10 =
   let x = GoL.init_empty 10 10 in
-  GoL.birth_node x 5 0;
+  GoL.birth_node x 5 9;
   x
 
 let state_printer s =
