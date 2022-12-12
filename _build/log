@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /home/mingtd/3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_e48d71_output
+$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_6f1602_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"

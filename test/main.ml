@@ -14,14 +14,8 @@ let binary_to_int_test name in_lst exp_out =
 let int_to_rule_test name in_int exp_out =
   name >:: fun _ -> assert_equal exp_out (int_to_rule in_int)
 
-let game_9 = init_empty 9
-let game_15 = init_empty 15
-
 let init_empty_test name in_x exp_out =
   name >:: fun _ -> assert_equal exp_out (init_empty in_x)
-
-let update_node test_name in_gb in_rule in_x exp_out =
-  test_name >:: fun _ -> assert_equal exp_out (update_node in_gb in_rule in_x)
 
 let one_tests =
   [

@@ -44,7 +44,9 @@ let one_tests =
     init_empty_test "init_empty 5 is [|Dead; Dead; Alive; Dead; Dead|]" 5
       [| Dead; Dead; Alive; Dead; Dead |];
     init_empty_test
-      "init_empty 10 is [|Dead; Dead; Dead; Alive; Dead; Dead; Dead" 10
+      "init_empty 10 is [| Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; \
+       Dead; Dead |]"
+      10
       [| Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead |];
   ]
 
