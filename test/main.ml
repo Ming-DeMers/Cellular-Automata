@@ -30,7 +30,7 @@ let b90_10x10 =
 
 let b99_10x10 =
   let x = GoL.init_empty 10 10 in
-  GoL.birth_node x 9 0;
+  GoL.birth_node x 9 9;
   x
 
 let b05_10x10 =
@@ -50,7 +50,7 @@ let b50_10x10 =
 
 let b59_10x10 =
   let x = GoL.init_empty 10 10 in
-  GoL.birth_node x 5 0;
+  GoL.birth_node x 5 9;
   x
 
 let state_printer s =
