@@ -1,4 +1,5 @@
 .PHONY: test check
+.PHONY: gui check
 
 build:
 	dune build
@@ -28,3 +29,4 @@ opendoc: doc
 	@bash opendoc.sh
 
 gui:  
+	OCAMLRUNPARAM=b dune exec gui/gui.exe

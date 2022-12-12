@@ -1,0 +1,4 @@
+(executable
+ (name gui)
+ (public_name Gui)
+ (libraries CellularAutomata graphics ANSITerminal))

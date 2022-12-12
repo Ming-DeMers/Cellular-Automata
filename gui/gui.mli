@@ -1,4 +1,4 @@
-open Two
+open Cellular_automata.Two
 open Graphics
 module GoL : Board
 

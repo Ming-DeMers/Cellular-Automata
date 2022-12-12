@@ -1,5 +1,5 @@
 open Graphics
-open Two
+open Cellular_automata.Two
 
 (* Make the board *)
 module GoL = Make (B3_S23)
@@ -31,7 +31,7 @@ let draw_cell x y st =
   ignore color;
   fill_rect (x * cell_size) (y * cell_size) cell_size cell_size
 
-let create_button x y wh = failwith "unimplemented"
+(* let create_button x y wh = failwith "unimplemented" *)
 
 let draw_grid g =
   for x = 0 to grid_width - 1 do
@@ -55,3 +55,5 @@ let run_gui () =
 (* In utop, run: #require "graphics" then you can run a file with header `open
    Graphics` *)
 (* problem: open Two is not currently working. need to make new directory o*)
+
+let _ = run_gui ()
