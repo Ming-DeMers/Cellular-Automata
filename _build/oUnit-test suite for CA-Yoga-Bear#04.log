@@ -1,0 +1,42 @@
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:3:neighbors of 5,5 @ 4,4.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:3:neighbors of 5,5 @ 4,4 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:3:neighbors of 5,5 @ 4,4.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:7:neighbors of 5,5 @ 6,5.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:7:neighbors of 5,5 @ 6,5 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:7:neighbors of 5,5 @ 6,5.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:11:neighbors of 5,5 @ 5,7.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:11:neighbors of 5,5 @ 5,7 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:11:neighbors of 5,5 @ 5,7.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:15:neighbors of 9,5 @ 0,4.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:15:neighbors of 9,5 @ 0,4 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:15:neighbors of 9,5 @ 0,4.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:19:neighbors of 5,9 @ 6,0.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:19:neighbors of 5,9 @ 6,0 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:19:neighbors of 5,9 @ 6,0.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:21:neighbors of 0,5 @ 9,5.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:21:neighbors of 0,5 @ 9,5 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:21:neighbors of 0,5 @ 9,5.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:28:neighbors of 9,0 @ 9,9.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:28:neighbors of 9,0 @ 9,9 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:28:neighbors of 9,0 @ 9,9.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:29:neighbors of 0,9 @ 0,0.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:29:neighbors of 0,9 @ 0,0 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:29:neighbors of 0,9 @ 0,0.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:35:neighbors of glider @ 4,5.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:35:neighbors of glider @ 4,5 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:35:neighbors of glider @ 4,5.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:37:neighbors of glider @ 4,3.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:37:neighbors of glider @ 4,3 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:37:neighbors of glider @ 4,3.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:44:int_to_binary 0 is [0].
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:44:int_to_binary 0 is [0] is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:44:int_to_binary 0 is [0].
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:47:int_to_binary 3 is [1; 1].
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:47:int_to_binary 3 is [1; 1] is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:47:int_to_binary 3 is [1; 1].
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:51:binary_to_int [1; 0] is 2.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:51:binary_to_int [1; 0] is 2 is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:51:binary_to_int [1; 0] is 2.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Start test test suite for CA:55:int_to_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1].
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: Test test suite for CA:55:int_to_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1] is successful.
+2022-12-12T03:02:51+00:00 Yoga-Bear#04 I: End test test suite for CA:55:int_to_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1].

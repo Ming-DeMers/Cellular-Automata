@@ -1,0 +1,41 @@
+lib: [
+  "_build/install/default/lib/CellularAutomata/META"
+  "_build/install/default/lib/CellularAutomata/cellular_automata.a"
+  "_build/install/default/lib/CellularAutomata/cellular_automata.cma"
+  "_build/install/default/lib/CellularAutomata/cellular_automata.cmi"
+  "_build/install/default/lib/CellularAutomata/cellular_automata.cmt"
+  "_build/install/default/lib/CellularAutomata/cellular_automata.cmx"
+  "_build/install/default/lib/CellularAutomata/cellular_automata.cmxa"
+  "_build/install/default/lib/CellularAutomata/cellular_automata.ml"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Gameboard.cmi"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Gameboard.cmt"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Gameboard.cmti"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Gameboard.cmx"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__One.cmi"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__One.cmt"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__One.cmx"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Samples.cmi"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Samples.cmt"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Samples.cmx"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Two.cmi"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Two.cmt"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Two.cmti"
+  "_build/install/default/lib/CellularAutomata/cellular_automata__Two.cmx"
+  "_build/install/default/lib/CellularAutomata/dune-package"
+  "_build/install/default/lib/CellularAutomata/gameboard.ml"
+  "_build/install/default/lib/CellularAutomata/gameboard.mli"
+  "_build/install/default/lib/CellularAutomata/one.ml"
+  "_build/install/default/lib/CellularAutomata/opam"
+  "_build/install/default/lib/CellularAutomata/samples.ml"
+  "_build/install/default/lib/CellularAutomata/two.ml"
+  "_build/install/default/lib/CellularAutomata/two.mli"
+]
+libexec: [
+  "_build/install/default/lib/CellularAutomata/cellular_automata.cmxs"
+]
+bin: [
+  "_build/install/default/bin/Gui"
+]
+doc: [
+  "_build/install/default/doc/CellularAutomata/README.md"
+]

@@ -2,6 +2,7 @@
 .PHONY: gui check
 
 build:
+	dune clean
 	dune build
 
 code:
@@ -30,3 +31,4 @@ opendoc: doc
 
 gui:  
 	OCAMLRUNPARAM=b dune exec gui/gui.exe
+
