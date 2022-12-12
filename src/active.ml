@@ -48,17 +48,17 @@ module Make (BS : BSRules) = struct
     | Alive
 
   type active =
-    | Active
-    | Dormant
+    | Changed
+    | Unchanged
 
   type node = state * active
-  type gameboard = node array array
+  type gameboard = node array array * node list
 
   exception AlreadyAlive
   exception AlreadyDead
   exception PreconditionViolation of string
 
-  let check_inbounds g x y f_name =
+  let check_inbounds (g, _) x y f_name =
     let width = Array.length g.(0) in
     let height = Array.length g in
     if x >= 0 && x < width then
@@ -67,29 +67,47 @@ module Make (BS : BSRules) = struct
         raise (PreconditionViolation ("y out of bounds. Error in: " ^ f_name))
     else raise (PreconditionViolation ("x out of bounds. Error in: " ^ f_name))
 
-  let get g x y =
-    check_inbounds g x y "get";
+  let get (g, _) x y =
+    check_inbounds (g, []) x y "get";
     g.(y).(x)
 
   (* [set g x y st] changes the value the node at coordinate position (x,y) to
      st. Requires: ([x], [y]) must be a valid position in the grid *)
-  let set g x y n =
-    check_inbounds g x y "set";
+  let set (g, _) x y n =
+    check_inbounds (g, []) x y "set";
     g.(y).(x) <- n
+
+  let update_neighbors (g, a) x y =
+    check_inbounds (g, a) x y "neighbors";
+    let width = Array.length g.(0) in
+    let height = Array.length g in
+    for r = x - 1 to x + 1 do
+      for c = y - 1 to y + 1 do
+        let r' = if r = -1 then width - 1 else r in
+        let rf = if r' = width then 0 else r' in
+        let c' = if c = -1 then height - 1 else c in
+        let cf = if c' = height then 0 else c' in
+        if not (rf = x && cf = y) then
+          match get (g, a) rf cf with
+          | _, Changed -> ()
+          | _, Unchanged -> ()
+        else ()
+      done
+    done
 
   (* Obviously could just set nodes directly, but the errors here help for
      debugging *)
   let birth_node g x y =
     check_inbounds g x y "birth_node";
     match get g x y with
-    | Dead, _ -> set g x y (Alive, Active)
+    | Dead, _ -> set g x y (Alive, Changed)
     | Alive, _ -> raise AlreadyAlive
 
   let kill_node g x y =
     check_inbounds g x y "kill_node";
     match get g x y with
     | Dead, _ -> raise AlreadyDead
-    | Alive, _ -> set g x y (Dead, Active)
+    | Alive, _ -> set g x y (Dead, Changed)
 
   (* O(1) maybe*)
   (* For ALl Dead Border, DEPRECIATED *)
@@ -99,8 +117,8 @@ module Make (BS : BSRules) = struct
      c = height)) && not (r = x && c = y) then if get g r c = Alive then count
      := !count + 1 else () else () done done; !count *)
 
-  let neighbors g x y =
-    check_inbounds g x y "neighbors";
+  let neighbors (g, a) x y =
+    check_inbounds (g, a) x y "neighbors";
     let width = Array.length g.(0) in
     let height = Array.length g in
     let count = ref 0 in
@@ -111,9 +129,9 @@ module Make (BS : BSRules) = struct
         let c' = if c = -1 then height - 1 else c in
         let cf = if c' = height then 0 else c' in
         if not (rf = x && cf = y) then
-          if get g rf cf = (Alive, Active) || get g rf cf = (Alive, Dormant)
-          then count := !count + 1
-          else ()
+          match get (g, a) rf cf with
+          | Alive, _ -> count := !count + 1
+          | Dead, _ -> ()
         else ()
       done
     done;
@@ -155,15 +173,15 @@ module Make (BS : BSRules) = struct
   let init_empty x y =
     if x < 1 || y < 1 then
       raise (PreconditionViolation "error in init_empty: x and y must be >= 1")
-    else Array.make_matrix x y (Dead, Active)
+    else (Array.make_matrix x y (Dead, Changed), [])
 
   let make_board x y c =
-    let gb = init_empty x y in
-    let f g (x, y) =
-      birth_node g x y;
-      g
+    let gb, _ = init_empty x y in
+    let f (g, a) (x, y) =
+      birth_node (g, a) x y;
+      (g, a)
     in
-    List.fold_left f gb c
+    List.fold_left f (gb, []) c
 
   let init_glider () =
     make_board 10 10 [ (3, 4); (4, 4); (5, 4); (4, 2); (5, 3) ]
