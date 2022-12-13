@@ -104,10 +104,17 @@ let neighbors (gb : gameboard) x =
 
 let neighborhood (gb : gameboard) x : state array =
   let array = Array.make 3 Dead in
-  array.(0) <- gb.(x - 1);
-  array.(1) <- gb.(x);
-  array.(2) <- gb.(x + 1);
-  array
+  let rec make_nb count =
+    if count = 3 then array
+    else
+      let st =
+        if x = 0 && count = 0 then gb.(Array.length gb - 1)
+        else gb.((x - 1 + count) mod Array.length gb)
+      in
+      array.(count) <- st;
+      make_nb (count + 1)
+  in
+  make_nb 0
 
 (* [next_gen gb] is the next generation of gameboard [gb] according to the
    specified rules. *)
@@ -150,7 +157,7 @@ let update_node (gb : gameboard) rule x =
 (* [update_board gb] updates gameboard gb to the next generation *)
 let update_board (gb : gameboard) rule =
   let new_gb = init_empty (Array.length gb) in
-  for i = 1 to Array.length gb - 2 do
+  for i = 0 to Array.length gb - 1 do
     new_gb.(i) <- update_node gb rule i
   done;
   new_gb
@@ -169,8 +176,8 @@ let rec loop gb rule x =
   if x = 0 then gb else loop (update_board gb rule) rule (x - 1)
 
 let rec print_loop gb rule x =
-  if x = 0 then print_board (init_empty (Array.length gb))
-  else
-    let new_gb = update_board gb rule in
-    print_board new_gb;
-    print_loop new_gb rule (x - 1)
+  let new_gb = update_board gb rule in
+  if x = 0 then print_board gb
+  else (
+    print_board gb;
+    print_loop new_gb rule (x - 1))

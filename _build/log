@@ -1,9 +1,9 @@
-# dune exec gui/gui.exe
+# dune utop src
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /home/mingtd/3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_f1faad_output
+$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_0831e0_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -113,9 +113,10 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_f1faad_out
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I gui/.gui.eobjs/byte -I gui/.gui.eobjs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -intf-suffix .ml -no-alias-deps -opaque -o gui/.gui.eobjs/native/dune__exe__Gui.cmx -c -impl gui/gui.ml)
-> File "gui/gui.ml", line 43, characters 4-8:
-> 43 | let step g = GoL.update_board g
->          ^^^^
-> Error (warning 32 [unused-value-declaration]): unused value step.
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/one.ml) > _build/default/src/.cellular_automata.objs/one.ml.d
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.cellular_automata.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/byte/cellular_automata__One.cmo -c -impl src/one.ml)
+> File "src/one.ml", line 89, characters 4-15:
+> 89 | let print_board (gb : gameboard) = print_endline (gb_to_string gb)
+>          ^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value print_board.
 [2]
