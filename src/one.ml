@@ -166,8 +166,8 @@ let gb_to_string (gb : gameboard) =
   Array.to_list gb
   |> List.map (fun x ->
          match x with
-         | Dead -> "◽"
-         | Alive -> "◾")
+         | Dead -> "⬛"
+         | Alive -> "⬜")
   |> List.fold_left ( ^ ) ""
 
 let print_board (gb : gameboard) = print_endline (gb_to_string gb)

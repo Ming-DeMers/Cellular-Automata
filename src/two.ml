@@ -149,8 +149,8 @@ module Make (BS : BSRules) : Board = struct
     | [] -> ""
     | h :: t -> begin
         match h with
-        | Alive -> "◾" ^ make_row_string t
-        | Dead -> "◽" ^ make_row_string t
+        | Alive -> "⬛" ^ make_row_string t
+        | Dead -> "⬜" ^ make_row_string t
       end
 
   (** Creates a string of the given gameboard *)
