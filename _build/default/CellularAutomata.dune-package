@@ -1,4 +1,4 @@
-(lang dune 3.4)
+(lang dune 3.6)
 (name CellularAutomata)
 (sections
  (lib .)
@@ -8,6 +8,7 @@
 (files
  (lib
   (META
+   active.ml
    cellular_automata.a
    cellular_automata.cma
    cellular_automata.cmi
@@ -15,6 +16,9 @@
    cellular_automata.cmx
    cellular_automata.cmxa
    cellular_automata.ml
+   cellular_automata__Active.cmi
+   cellular_automata__Active.cmt
+   cellular_automata__Active.cmx
    cellular_automata__Gameboard.cmi
    cellular_automata__Gameboard.cmt
    cellular_automata__Gameboard.cmti
@@ -53,6 +57,10 @@
   (wrapped
    (main_module_name Cellular_automata)
    (modules
+    ((name Active)
+     (obj_name cellular_automata__Active)
+     (visibility public)
+     (impl))
     ((name Gameboard)
      (obj_name cellular_automata__Gameboard)
      (visibility public)

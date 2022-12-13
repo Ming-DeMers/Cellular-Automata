@@ -1,0 +1,25 @@
+1) Ensure `open_graph ""` opens a window
+2) semicolons to separate following commands:
+  a) open_graph " 400x600";
+  b) set_window_title "Conway's Game of Life";
+  c) set_color white;
+  d) display_mode true;
+  e) draw_grid grid;
+  f) while true do 
+    a) let g = step grid in (check if this works in continual stepping, if not use refs or something) 
+       clear_graph ();
+       draw_grid g;
+       Unix.sleep 2;
+    (* pause the loop for 2 seconds before displaying the new, stepped
+       gameboard *)
+       let key = read_key () in
+       match key with
+        | 'q' -> exit 0
+        | _ -> ()
+      
+When opening in utop, run these commands:
+
+#require "graphics";;
+open Graphics;;
+open Cellular_automata.Two;;
+then here you can run the commands, but have to open_graph " width*height";; 
