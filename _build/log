@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/jasonchung/git/cs3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc/4gjfwk713qv9rfgq12chmzlw0000gn/T/dune_2ed1f1_output
+$ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc/4gjfwk713qv9rfgq12chmzlw0000gn/T/dune_6b830c_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -115,5 +115,3 @@ $ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I gui/.gui.eobjs/byte -I gui/.gui.eobjs/native -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal -I /Users/jasonchung/.opam/cs3110-2022fa/lib/graphics -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -intf-suffix .ml -no-alias-deps -opaque -o gui/.gui.eobjs/native/dune__exe__Gui.cmx -c -impl gui/gui.ml)
-$ (cd _build/default && /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o gui/gui.exe /Users/jasonchung/.opam/cs3110-2022fa/lib/graphics/graphics.cmxa -I /Users/jasonchung/.opam/cs3110-2022fa/lib/graphics /Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml/unix.cmxa -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal/ANSITerminal.cmxa -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal src/cellular_automata.cmxa gui/.gui.eobjs/native/dune__exe__Gui.cmx)

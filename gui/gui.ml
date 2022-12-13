@@ -9,7 +9,7 @@ let grid = GoL.init_glider ()
 (* GUI dimensions*)
 let grid_width = Array.length grid.(0)
 let grid_height = Array.length grid
-let cell_size = 20
+let cell_size = 30
 let window_width = "800"
 let window_height = "800"
 let button_size = 50
@@ -36,7 +36,7 @@ let draw_cell x y st =
 let draw_grid g =
   for x = 0 to grid_width - 1 do
     for y = 0 to grid_height - 1 do
-      draw_cell x y g.(x).(x)
+      draw_cell (x + 8) (y + 8) g.(x).(y)
     done
   done
 
@@ -46,21 +46,15 @@ let open_string = " " ^ window_width ^ "x" ^ window_height
 let run_gui () =
   open_graph open_string;
   set_window_title "Conway's Game of Life";
-  set_color black;
   display_mode true;
-  draw_grid grid;
-  Unix.sleep 2;
-  clear_graph ();
-  Unix.sleep 2;
-  draw_grid grid;
   (* might need mutability here for a ref for grid. see if this works first in
      gui *)
-  while true do
-    Unix.sleep 1;
-    clear_graph ();
-    Unix.sleep 1;
+  let i = ref 0 in
+  while !i < 19 do
     draw_grid grid;
-    GoL.update_board grid
+    Unix.sleep 1;
+    GoL.update_board grid;
+    i := !i + 1
     (* let key = read_key () in match key with | 'q' -> exit 0 | _ -> () *)
   done
 
