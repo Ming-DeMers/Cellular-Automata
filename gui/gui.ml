@@ -40,8 +40,7 @@ let draw_grid g =
     done
   done
 
-let step g = GoL.update_board g
-
+(* let step g = GoL.update_board g *)
 let run_gui () =
   open_graph " 400x600";
   set_window_title "Conway's Game of Life";

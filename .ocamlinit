@@ -1,0 +1,11 @@
+(* #use "src/one.ml" *)
+#use "src/two.ml"
+module GoL = Make (B3_S23)
+open GoL
+
+#require "graphics"
+open Graphics
+
+(* let game = init_empty 59;;
+print_loop game 90 100;; *)
+
