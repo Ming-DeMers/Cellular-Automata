@@ -91,13 +91,12 @@ val update_board : gameboard -> bit -> gameboard
 (** [update_board gb rule] outputs a modified gameboard [gb] of the next
     generation. *)
 
-val gb_to_string : gameboard -> string
-(** [gb_to_string gb] is the string representation of the gameboard, using black
-    and white squares. *)
+(* val gb_to_string : gameboard -> string (** [gb_to_string gb] is the string
+   representation of the gameboard, using black and white squares. *)
 
-val print_board : gameboard -> unit
-(** [print_board gb] prints the string representation of the gameboard to
-    terminal, using [gb_to_string gb] as a helper function. *)
+   val print_board : gameboard -> unit (** [print_board gb] prints the string
+   representation of the gameboard to terminal, using [gb_to_string gb] as a
+   helper function. *) *)
 
 val print_loop : gameboard -> bit -> bit -> unit
 (** [print_loop gb rule x] is a loop that prints the continually updated

@@ -6,7 +6,7 @@ type bit = int
 type byte = bit list
 type rule = byte
 type gameboard = state array
-type 'a gen = Cons of 'a * 'a gen
+(* type 'a gen = Cons of 'a * 'a gen *)
 
 exception AlreadyAlive
 exception AlreadyDead
@@ -64,7 +64,7 @@ let gb_to_string gb =
          | Alive -> "◽")
   |> List.fold_left ( ^ ) ""
 
-let print_board (gb : gameboard) = print_endline (gb_to_string gb)
+(* let print_board (gb : gameboard) = print_endline (gb_to_string gb) *)
 
 let neighbors (gb : gameboard) x =
   let rec neighbors' gb x count acc =
@@ -116,19 +116,13 @@ let update_board (gb : gameboard) rule =
     new_gb.(i) <- update_node gb rule i
   done;
   new_gb
-
-let gb_to_string (gb : gameboard) =
-  Array.to_list gb
-  |> List.map (fun x ->
-         match x with
-         | Dead -> "⬛"
-         | Alive -> "⬜")
-  |> List.fold_left ( ^ ) ""
+(* let gb_to_string (gb : gameboard) = Array.to_list gb |> List.map (fun x ->
+   match x with | Dead -> "⬛" | Alive -> "⬜") |> List.fold_left ( ^ ) "" *)
 
 let print_board (gb : gameboard) = print_endline (gb_to_string gb)
 
-let rec loop gb rule x =
-  if x = 0 then gb else loop (update_board gb rule) rule (x - 1)
+(* let rec loop gb rule x = if x = 0 then gb else loop (update_board gb rule)
+   rule (x - 1) *)
 
 let rec print_loop gb rule x =
   let new_gb = update_board gb rule in
