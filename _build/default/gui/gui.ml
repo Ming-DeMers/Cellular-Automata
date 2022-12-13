@@ -47,15 +47,12 @@ let run_gui () =
   open_graph open_string;
   set_window_title "Conway's Game of Life";
   display_mode true;
-  (* might need mutability here for a ref for grid. see if this works first in
-     gui *)
-  let i = ref 0 in
-  while !i < 19 do
+  (* let i = ref 0 in *)
+  (* while !i < 19 do *)
+  while true do
     draw_grid grid;
     Unix.sleep 1;
-    GoL.update_board grid;
-    i := !i + 1
-    (* let key = read_key () in match key with | 'q' -> exit 0 | _ -> () *)
+    GoL.update_board grid (* i := !i + 1; *)
   done
 
 (* In utop, run: #require "graphics" then you can run a file with header `open
