@@ -2,7 +2,6 @@ open OUnit2
 open Cellular_automata.One
 open Cellular_automata.Two
 
-(* TEST PLAN: *)
 let make_n_test name in_lst in_int exp_out =
   name >:: fun _ -> assert_equal exp_out (make_n in_lst in_int)
 

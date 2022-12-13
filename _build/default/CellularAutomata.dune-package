@@ -1,0 +1,85 @@
+(lang dune 3.6)
+(name CellularAutomata)
+(sections
+ (lib .)
+ (libexec .)
+ (bin ../../bin)
+ (doc ../../doc/CellularAutomata))
+(files
+ (lib
+  (META
+   active.ml
+   cellular_automata.a
+   cellular_automata.cma
+   cellular_automata.cmi
+   cellular_automata.cmt
+   cellular_automata.cmx
+   cellular_automata.cmxa
+   cellular_automata.ml
+   cellular_automata__Active.cmi
+   cellular_automata__Active.cmt
+   cellular_automata__Active.cmx
+   cellular_automata__Gameboard.cmi
+   cellular_automata__Gameboard.cmt
+   cellular_automata__Gameboard.cmti
+   cellular_automata__Gameboard.cmx
+   cellular_automata__One.cmi
+   cellular_automata__One.cmt
+   cellular_automata__One.cmx
+   cellular_automata__Samples.cmi
+   cellular_automata__Samples.cmt
+   cellular_automata__Samples.cmx
+   cellular_automata__Two.cmi
+   cellular_automata__Two.cmt
+   cellular_automata__Two.cmti
+   cellular_automata__Two.cmx
+   dune-package
+   gameboard.ml
+   gameboard.mli
+   one.ml
+   opam
+   samples.ml
+   two.ml
+   two.mli))
+ (libexec (cellular_automata.cmxs))
+ (bin (Gui))
+ (doc (README.md)))
+(library
+ (name CellularAutomata)
+ (kind normal)
+ (archives (byte cellular_automata.cma) (native cellular_automata.cmxa))
+ (plugins (byte cellular_automata.cma) (native cellular_automata.cmxs))
+ (native_archives cellular_automata.a)
+ (requires graphics ANSITerminal)
+ (main_module_name Cellular_automata)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Cellular_automata)
+   (modules
+    ((name Active)
+     (obj_name cellular_automata__Active)
+     (visibility public)
+     (impl))
+    ((name Gameboard)
+     (obj_name cellular_automata__Gameboard)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name One) (obj_name cellular_automata__One) (visibility public) (impl))
+    ((name Samples)
+     (obj_name cellular_automata__Samples)
+     (visibility public)
+     (impl))
+    ((name Two)
+     (obj_name cellular_automata__Two)
+     (visibility public)
+     (impl)
+     (intf)))
+   (alias_module
+    (name Cellular_automata)
+    (obj_name cellular_automata)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))
