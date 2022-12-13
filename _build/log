@@ -1,9 +1,9 @@
 # dune exec gui/gui.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /Users/jasonchung/git/cs3110/Cellular-Automata
+# Workspace root: /home/mingtd/3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc/4gjfwk713qv9rfgq12chmzlw0000gn/T/dune_1deb9c_output
+$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_f1faad_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,77 +13,75 @@ $ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
 #  ; toplevel_path =
-#      Some External "/Users/jasonchung/.opam/cs3110-2022fa/lib/toplevel"
-#  ; ocaml_bin = External "/Users/jasonchung/.opam/cs3110-2022fa/bin"
-#  ; ocaml = Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocaml"
-#  ; ocamlc = External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt"
-#  ; ocamlopt =
-#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt"
-#  ; ocamldep =
-#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamldep.opt"
+#      Some External "/home/mingtd/.opam/cs3110-2022fa/lib/toplevel"
+#  ; ocaml_bin = External "/home/mingtd/.opam/cs3110-2022fa/bin"
+#  ; ocaml = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocaml"
+#  ; ocamlc = External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt"
 #  ; ocamlmklib =
-#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
+#      Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/Users/jasonchung/.opam/cs3110-2022fa/lib"
-#        ; "DUNE_OCAML_STDLIB" :
-#            "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/Users/jasonchung/git/cs3110/Cellular-Automata"
-#        ; "INSIDE_DUNE" :
-#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/default"
+#        { "DUNE_OCAML_HARDCODED" : "/home/mingtd/.opam/cs3110-2022fa/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/mingtd/3110/Cellular-Automata"
+#        ; "INSIDE_DUNE" : "/home/mingtd/3110/Cellular-Automata/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/install/default/lib"
+#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/install/default/lib"
+#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/install/default/lib/toplevel"
+#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/Users/jasonchung/.opam/cs3110-2022fa/lib" ]
+#  ; findlib_paths = [ External "/home/mingtd/.opam/cs3110-2022fa/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
 #      ; standard_library_default =
-#          "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
-#      ; standard_library = "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
+#          "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_library = "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
-#      ; c_compiler = "cc"
+#      ; c_compiler = "gcc"
 #      ; ocamlc_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
 #      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; ocamlopt_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
-#          [ "cc"
+#          [ "gcc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
+#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
 #      ; native_c_compiler =
-#          [ "cc"
+#          [ "gcc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
+#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; native_c_libraries = [ "-lm" ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
-#      ; architecture = "arm64"
+#      ; architecture = "amd64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
-#      ; system = "macosx"
-#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; system = "linux"
+#      ; asm = [ "as" ]
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -94,8 +92,8 @@ $ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "aarch64-apple-darwin21.6.0"
-#      ; target = "aarch64-apple-darwin21.6.0"
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -115,3 +113,9 @@ $ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc
 #      ; windows_unicode = false
 #      }
 #  }
+$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I gui/.gui.eobjs/byte -I gui/.gui.eobjs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -intf-suffix .ml -no-alias-deps -opaque -o gui/.gui.eobjs/native/dune__exe__Gui.cmx -c -impl gui/gui.ml)
+> File "gui/gui.ml", line 43, characters 4-8:
+> 43 | let step g = GoL.update_board g
+>          ^^^^
+> Error (warning 32 [unused-value-declaration]): unused value step.
+[2]
