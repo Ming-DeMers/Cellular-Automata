@@ -40,12 +40,21 @@ let draw_grid g =
     done
   done
 
+let step g = GoL.update_board g
+
 let run_gui () =
-  open_graph "";
+  open_graph " 400x600";
   set_window_title "Conway's Game of Life";
-  let g = ref grid in
+  set_color white;
+  display_mode true;
+  draw_grid grid;
+  (* might need mutability here for a ref for grid. see if this works first in
+     gui *)
   while true do
-    draw_grid !g;
+    clear_graph ();
+    draw_grid grid;
+    Unix.sleep 2;
+    GoL.update_board grid;
     let key = read_key () in
     match key with
     | 'q' -> exit 0
