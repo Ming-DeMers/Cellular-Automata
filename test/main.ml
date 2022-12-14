@@ -512,6 +512,204 @@ let make_rule_test =
       [ 1; 0; 0; 1; 1; 0; 1; 1 ];
     make_rule_test "make_rule 156 is [1; 0; 0; 1; 1; 1; 0; 0]" 156
       [ 1; 0; 0; 1; 1; 1; 0; 0 ];
+    make_rule_test "make_rule 157 is [1; 0; 0; 1; 1; 1; 0; 1]" 157
+      [ 1; 0; 0; 1; 1; 1; 0; 1 ];
+    make_rule_test "make_rule 158 is [1; 0; 0; 1; 1; 1; 1; 0]" 158
+      [ 1; 0; 0; 1; 1; 1; 1; 0 ];
+    make_rule_test "make_rule 159 is [1; 0; 0; 1; 1; 1; 1; 1]" 159
+      [ 1; 0; 0; 1; 1; 1; 1; 1 ];
+    make_rule_test "make_rule 160 is [1; 0; 1; 0; 0; 0; 0; 0]" 160
+      [ 1; 0; 1; 0; 0; 0; 0; 0 ];
+    make_rule_test "make_rule 161 is [1; 0; 1; 0; 0; 0; 0; 1]" 161
+      [ 1; 0; 1; 0; 0; 0; 0; 1 ];
+    make_rule_test "make_rule 162 is [1; 0; 1; 0; 0; 0; 1; 0]" 162
+      [ 1; 0; 1; 0; 0; 0; 1; 0 ];
+    make_rule_test "make_rule 163 is [1; 0; 1; 0; 0; 0; 1; 1]" 163
+      [ 1; 0; 1; 0; 0; 0; 1; 1 ];
+    make_rule_test "make_rule 164 is [1; 0; 1; 0; 0; 1; 0; 0]" 164
+      [ 1; 0; 1; 0; 0; 1; 0; 0 ];
+    make_rule_test "make_rule 165 is [1; 0; 1; 0; 0; 1; 0; 1]" 165
+      [ 1; 0; 1; 0; 0; 1; 0; 1 ];
+    make_rule_test "make_rule 166 is [1; 0; 1; 0; 0; 1; 1; 0]" 166
+      [ 1; 0; 1; 0; 0; 1; 1; 0 ];
+    make_rule_test "make_rule 167 is [1; 0; 1; 0; 0; 1; 1; 1]" 167
+      [ 1; 0; 1; 0; 0; 1; 1; 1 ];
+    make_rule_test "make_rule 168 is [1; 0; 1; 0; 1; 0; 0; 0]" 168
+      [ 1; 0; 1; 0; 1; 0; 0; 0 ];
+    make_rule_test "make_rule 169 is [1; 0; 1; 0; 1; 0; 0; 1]" 169
+      [ 1; 0; 1; 0; 1; 0; 0; 1 ];
+    make_rule_test "make_rule 170 is [1; 0; 1; 0; 1; 0; 1; 0]" 170
+      [ 1; 0; 1; 0; 1; 0; 1; 0 ];
+    make_rule_test "make_rule 171 is [1; 0; 1; 0; 1; 0; 1; 1]" 171
+      [ 1; 0; 1; 0; 1; 0; 1; 1 ];
+    make_rule_test "make_rule 172 is [1; 0; 1; 0; 1; 1; 0; 0]" 172
+      [ 1; 0; 1; 0; 1; 1; 0; 0 ];
+    make_rule_test "make_rule 173 is [1; 0; 1; 0; 1; 1; 0; 1]" 173
+      [ 1; 0; 1; 0; 1; 1; 0; 1 ];
+    make_rule_test "make_rule 174 is [1; 0; 1; 0; 1; 1; 1; 0]" 174
+      [ 1; 0; 1; 0; 1; 1; 1; 0 ];
+    make_rule_test "make_rule 175 is [1; 0; 1; 0; 1; 1; 1; 1]" 175
+      [ 1; 0; 1; 0; 1; 1; 1; 1 ];
+    make_rule_test "make_rule 176 is [1; 0; 1; 1; 0; 0; 0; 0]" 176
+      [ 1; 0; 1; 1; 0; 0; 0; 0 ];
+    make_rule_test "make_rule 177 is [1; 0; 1; 1; 0; 0; 0; 1]" 177
+      [ 1; 0; 1; 1; 0; 0; 0; 1 ];
+    make_rule_test "make_rule 178 is [1; 0; 1; 1; 0; 0; 1; 0]" 178
+      [ 1; 0; 1; 1; 0; 0; 1; 0 ];
+    make_rule_test "make_rule 179 is [1; 0; 1; 1; 0; 0; 1; 1]" 179
+      [ 1; 0; 1; 1; 0; 0; 1; 1 ];
+    make_rule_test "make_rule 180 is [1; 0; 1; 1; 0; 1; 0; 0]" 180
+      [ 1; 0; 1; 1; 0; 1; 0; 0 ];
+    make_rule_test "make_rule 181 is [1; 0; 1; 1; 0; 1; 0; 1]" 181
+      [ 1; 0; 1; 1; 0; 1; 0; 1 ];
+    make_rule_test "make_rule 182 is [1; 0; 1; 1; 0; 1; 1; 0]" 182
+      [ 1; 0; 1; 1; 0; 1; 1; 0 ];
+    make_rule_test "make_rule 183 is [1; 0; 1; 1; 0; 1; 1; 1]" 183
+      [ 1; 0; 1; 1; 0; 1; 1; 1 ];
+    make_rule_test "make_rule 184 is [1; 0; 1; 1; 1; 0; 0; 0]" 184
+      [ 1; 0; 1; 1; 1; 0; 0; 0 ];
+    make_rule_test "make_rule 185 is [1; 0; 1; 1; 1; 0; 0; 1]" 185
+      [ 1; 0; 1; 1; 1; 0; 0; 1 ];
+    make_rule_test "make_rule 186 is [1; 0; 1; 1; 1; 0; 1; 0]" 186
+      [ 1; 0; 1; 1; 1; 0; 1; 0 ];
+    make_rule_test "make_rule 187 is [1; 0; 1; 1; 1; 0; 1; 1]" 187
+      [ 1; 0; 1; 1; 1; 0; 1; 1 ];
+    make_rule_test "make_rule 188 is [1; 0; 1; 1; 1; 1; 0; 0]" 188
+      [ 1; 0; 1; 1; 1; 1; 0; 0 ];
+    make_rule_test "make_rule 189 is [1; 0; 1; 1; 1; 1; 0; 1]" 189
+      [ 1; 0; 1; 1; 1; 1; 0; 1 ];
+    make_rule_test "make_rule 190 is [1; 0; 1; 1; 1; 1; 1; 0]" 190
+      [ 1; 0; 1; 1; 1; 1; 1; 0 ];
+    make_rule_test "make_rule 191 is [1; 0; 1; 1; 1; 1; 1; 1]" 191
+      [ 1; 0; 1; 1; 1; 1; 1; 1 ];
+    make_rule_test "make_rule 192 is [1; 1; 0; 0; 0; 0; 0; 0]" 192
+      [ 1; 1; 0; 0; 0; 0; 0; 0 ];
+    make_rule_test "make_rule 193 is [1; 1; 0; 0; 0; 0; 0; 1]" 193
+      [ 1; 1; 0; 0; 0; 0; 0; 1 ];
+    make_rule_test "make_rule 194 is [1; 1; 0; 0; 0; 0; 1; 0]" 194
+      [ 1; 1; 0; 0; 0; 0; 1; 0 ];
+    make_rule_test "make_rule 195 is [1; 1; 0; 0; 0; 0; 1; 1]" 195
+      [ 1; 1; 0; 0; 0; 0; 1; 1 ];
+    make_rule_test "make_rule 196 is [1; 1; 0; 0; 0; 1; 0; 0]" 196
+      [ 1; 1; 0; 0; 0; 1; 0; 0 ];
+    make_rule_test "make_rule 197 is [1; 1; 0; 0; 0; 1; 0; 1]" 197
+      [ 1; 1; 0; 0; 0; 1; 0; 1 ];
+    make_rule_test "make_rule 198 is [1; 1; 0; 0; 0; 1; 1; 0]" 198
+      [ 1; 1; 0; 0; 0; 1; 1; 0 ];
+    make_rule_test "make_rule 199 is [1; 1; 0; 0; 0; 1; 1; 1]" 199
+      [ 1; 1; 0; 0; 0; 1; 1; 1 ];
+    make_rule_test "make_rule 200 is [1; 1; 0; 0; 1; 0; 0; 0]" 200
+      [ 1; 1; 0; 0; 1; 0; 0; 0 ];
+    make_rule_test "make_rule 201 is [1; 1; 0; 0; 1; 0; 0; 1]" 201
+      [ 1; 1; 0; 0; 1; 0; 0; 1 ];
+    make_rule_test "make_rule 202 is [1; 1; 0; 0; 1; 0; 1; 0]" 202
+      [ 1; 1; 0; 0; 1; 0; 1; 0 ];
+    make_rule_test "make_rule 203 is [1; 1; 0; 0; 1; 0; 1; 1]" 203
+      [ 1; 1; 0; 0; 1; 0; 1; 1 ];
+    make_rule_test "make_rule 204 is [1; 1; 0; 0; 1; 1; 0; 0]" 204
+      [ 1; 1; 0; 0; 1; 1; 0; 0 ];
+    make_rule_test "make_rule 205 is [1; 1; 0; 0; 1; 1; 0; 1]" 205
+      [ 1; 1; 0; 0; 1; 1; 0; 1 ];
+    make_rule_test "make_rule 206 is [1; 1; 0; 0; 1; 1; 1; 0]" 206
+      [ 1; 1; 0; 0; 1; 1; 1; 0 ];
+    make_rule_test "make_rule 207 is [1; 1; 0; 0; 1; 1; 1; 1]" 207
+      [ 1; 1; 0; 0; 1; 1; 1; 1 ];
+    make_rule_test "make_rule 208 is [1; 1; 0; 1; 0; 0; 0; 0]" 208
+      [ 1; 1; 0; 1; 0; 0; 0; 0 ];
+    make_rule_test "make_rule 209 is [1; 1; 0; 1; 0; 0; 0; 1]" 209
+      [ 1; 1; 0; 1; 0; 0; 0; 1 ];
+    make_rule_test "make_rule 210 is [1; 1; 0; 1; 0; 0; 1; 0]" 210
+      [ 1; 1; 0; 1; 0; 0; 1; 0 ];
+    make_rule_test "make_rule 211 is [1; 1; 0; 1; 0; 0; 1; 1]" 211
+      [ 1; 1; 0; 1; 0; 0; 1; 1 ];
+    make_rule_test "make_rule 212 is [1; 1; 0; 1; 0; 1; 0; 0]" 212
+      [ 1; 1; 0; 1; 0; 1; 0; 0 ];
+    make_rule_test "make_rule 213 is [1; 1; 0; 1; 0; 1; 0; 1]" 213
+      [ 1; 1; 0; 1; 0; 1; 0; 1 ];
+    make_rule_test "make_rule 214 is [1; 1; 0; 1; 0; 1; 1; 0]" 214
+      [ 1; 1; 0; 1; 0; 1; 1; 0 ];
+    make_rule_test "make_rule 215 is [1; 1; 0; 1; 0; 1; 1; 1]" 215
+      [ 1; 1; 0; 1; 0; 1; 1; 1 ];
+    make_rule_test "make_rule 216 is [1; 1; 0; 1; 1; 0; 0; 0]" 216
+      [ 1; 1; 0; 1; 1; 0; 0; 0 ];
+    make_rule_test "make_rule 217 is [1; 1; 0; 1; 1; 0; 0; 1]" 217
+      [ 1; 1; 0; 1; 1; 0; 0; 1 ];
+    make_rule_test "make_rule 218 is [1; 1; 0; 1; 1; 0; 1; 0]" 218
+      [ 1; 1; 0; 1; 1; 0; 1; 0 ];
+    make_rule_test "make_rule 219 is [1; 1; 0; 1; 1; 0; 1; 1]" 219
+      [ 1; 1; 0; 1; 1; 0; 1; 1 ];
+    make_rule_test "make_rule 220 is [1; 1; 0; 1; 1; 1; 0; 0]" 220
+      [ 1; 1; 0; 1; 1; 1; 0; 0 ];
+    make_rule_test "make_rule 221 is [1; 1; 0; 1; 1; 1; 0; 1]" 221
+      [ 1; 1; 0; 1; 1; 1; 0; 1 ];
+    make_rule_test "make_rule 222 is [1; 1; 0; 1; 1; 1; 1; 0]" 222
+      [ 1; 1; 0; 1; 1; 1; 1; 0 ];
+    make_rule_test "make_rule 223 is [1; 1; 0; 1; 1; 1; 1; 1]" 223
+      [ 1; 1; 0; 1; 1; 1; 1; 1 ];
+    make_rule_test "make_rule 224 is [1; 1; 1; 0; 0; 0; 0; 0]" 224
+      [ 1; 1; 1; 0; 0; 0; 0; 0 ];
+    make_rule_test "make_rule 225 is [1; 1; 1; 0; 0; 0; 0; 1]" 225
+      [ 1; 1; 1; 0; 0; 0; 0; 1 ];
+    make_rule_test "make_rule 226 is [1; 1; 1; 0; 0; 0; 1; 0]" 226
+      [ 1; 1; 1; 0; 0; 0; 1; 0 ];
+    make_rule_test "make_rule 227 is [1; 1; 1; 0; 0; 0; 1; 1]" 227
+      [ 1; 1; 1; 0; 0; 0; 1; 1 ];
+    make_rule_test "make_rule 228 is [1; 1; 1; 0; 0; 1; 0; 0]" 228
+      [ 1; 1; 1; 0; 0; 1; 0; 0 ];
+    make_rule_test "make_rule 229 is [1; 1; 1; 0; 0; 1; 0; 1]" 229
+      [ 1; 1; 1; 0; 0; 1; 0; 1 ];
+    make_rule_test "make_rule 230 is [1; 1; 1; 0; 0; 1; 1; 0]" 230
+      [ 1; 1; 1; 0; 0; 1; 1; 0 ];
+    make_rule_test "make_rule 231 is [1; 1; 1; 0; 0; 1; 1; 1]" 231
+      [ 1; 1; 1; 0; 0; 1; 1; 1 ];
+    make_rule_test "make_rule 232 is [1; 1; 1; 0; 1; 0; 0; 0]" 232
+      [ 1; 1; 1; 0; 1; 0; 0; 0 ];
+    make_rule_test "make_rule 233 is [1; 1; 1; 0; 1; 0; 0; 1]" 233
+      [ 1; 1; 1; 0; 1; 0; 0; 1 ];
+    make_rule_test "make_rule 234 is [1; 1; 1; 0; 1; 0; 1; 0]" 234
+      [ 1; 1; 1; 0; 1; 0; 1; 0 ];
+    make_rule_test "make_rule 235 is [1; 1; 1; 0; 1; 0; 1; 1]" 235
+      [ 1; 1; 1; 0; 1; 0; 1; 1 ];
+    make_rule_test "make_rule 236 is [1; 1; 1; 0; 1; 1; 0; 0]" 236
+      [ 1; 1; 1; 0; 1; 1; 0; 0 ];
+    make_rule_test "make_rule 237 is [1; 1; 1; 0; 1; 1; 0; 1]" 237
+      [ 1; 1; 1; 0; 1; 1; 0; 1 ];
+    make_rule_test "make_rule 238 is [1; 1; 1; 0; 1; 1; 1; 0]" 238
+      [ 1; 1; 1; 0; 1; 1; 1; 0 ];
+    make_rule_test "make_rule 239 is [1; 1; 1; 0; 1; 1; 1; 1]" 239
+      [ 1; 1; 1; 0; 1; 1; 1; 1 ];
+    make_rule_test "make_rule 240 is [1; 1; 1; 1; 0; 0; 0; 0]" 240
+      [ 1; 1; 1; 1; 0; 0; 0; 0 ];
+    make_rule_test "make_rule 241 is [1; 1; 1; 1; 0; 0; 0; 1]" 241
+      [ 1; 1; 1; 1; 0; 0; 0; 1 ];
+    make_rule_test "make_rule 242 is [1; 1; 1; 1; 0; 0; 1; 0]" 242
+      [ 1; 1; 1; 1; 0; 0; 1; 0 ];
+    make_rule_test "make_rule 243 is [1; 1; 1; 1; 0; 0; 1; 1]" 243
+      [ 1; 1; 1; 1; 0; 0; 1; 1 ];
+    make_rule_test "make_rule 244 is [1; 1; 1; 1; 0; 1; 0; 0]" 244
+      [ 1; 1; 1; 1; 0; 1; 0; 0 ];
+    make_rule_test "make_rule 245 is [1; 1; 1; 1; 0; 1; 0; 1]" 245
+      [ 1; 1; 1; 1; 0; 1; 0; 1 ];
+    make_rule_test "make_rule 246 is [1; 1; 1; 1; 0; 1; 1; 0]" 246
+      [ 1; 1; 1; 1; 0; 1; 1; 0 ];
+    make_rule_test "make_rule 247 is [1; 1; 1; 1; 0; 1; 1; 1]" 247
+      [ 1; 1; 1; 1; 0; 1; 1; 1 ];
+    make_rule_test "make_rule 248 is [1; 1; 1; 1; 1; 0; 0; 0]" 248
+      [ 1; 1; 1; 1; 1; 0; 0; 0 ];
+    make_rule_test "make_rule 249 is [1; 1; 1; 1; 1; 0; 0; 1]" 249
+      [ 1; 1; 1; 1; 1; 0; 0; 1 ];
+    make_rule_test "make_rule 250 is [1; 1; 1; 1; 1; 0; 1; 0]" 250
+      [ 1; 1; 1; 1; 1; 0; 1; 0 ];
+    make_rule_test "make_rule 251 is [1; 1; 1; 1; 1; 0; 1; 1]" 251
+      [ 1; 1; 1; 1; 1; 0; 1; 1 ];
+    make_rule_test "make_rule 252 is [1; 1; 1; 1; 1; 1; 0; 0]" 252
+      [ 1; 1; 1; 1; 1; 1; 0; 0 ];
+    make_rule_test "make_rule 253 is [1; 1; 1; 1; 1; 1; 0; 1]" 253
+      [ 1; 1; 1; 1; 1; 1; 0; 1 ];
+    make_rule_test "make_rule 254 is [1; 1; 1; 1; 1; 1; 1; 0]" 254
+      [ 1; 1; 1; 1; 1; 1; 1; 0 ];
+    make_rule_test "make_rule 255 is [1; 1; 1; 1; 1; 1; 1; 1]" 255
+      [ 1; 1; 1; 1; 1; 1; 1; 1 ];
   ]
 
 (* Test Boards *)
