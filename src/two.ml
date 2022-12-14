@@ -14,6 +14,8 @@ module type Board = sig
   exception AlreadyDead
   exception PreconditionViolation of string
 
+  val born_rule : int list
+  val survive_rule : int list
   val get : gameboard -> int -> int -> state
   val birth_node : gameboard -> int -> int -> unit
   val kill_node : gameboard -> int -> int -> unit
@@ -26,6 +28,8 @@ module type Board = sig
   val init_empty : int -> int -> gameboard
   val init_glider : unit -> gameboard
   val init_replicator : unit -> gameboard
+  val init_rocket : unit -> gameboard
+  val init_seed : unit -> gameboard
   val make_board : int -> int -> (int * int) list -> gameboard
 end
 
@@ -63,6 +67,9 @@ module MakeBoard (BS : BSRules) : Board = struct
   exception AlreadyAlive
   exception AlreadyDead
   exception PreconditionViolation of string
+
+  let born_rule = BS.born
+  let survive_rule = BS.survive
 
   let check_inbounds g x y f_name =
     let width = Array.length g.(0) in
@@ -189,4 +196,31 @@ module MakeBoard (BS : BSRules) : Board = struct
 
   let init_replicator () =
     make_board 18 18 [ (7, 8); (7, 9); (7, 10); (8, 7); (9, 7); (10, 7) ]
+
+  let init_rocket () =
+    make_board 20 15
+      [
+        (18, 7);
+        (17, 7);
+        (16, 7);
+        (15, 7);
+        (14, 7);
+        (13, 7);
+        (12, 7);
+        (11, 7);
+        (14, 6);
+        (14, 8);
+        (13, 5);
+        (13, 6);
+        (13, 8);
+        (13, 9);
+        (12, 5);
+        (12, 9);
+        (11, 6);
+        (11, 8);
+      ]
+
+  let init_seed () =
+    make_board 18 18
+      [ (7, 8); (7, 9); (8, 7); (9, 7); (10, 8); (10, 9); (8, 9); (9, 9) ]
 end

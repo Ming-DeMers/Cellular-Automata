@@ -27,6 +27,13 @@ module type Board = sig
   exception AlreadyDead
   exception PreconditionViolation of string
 
+  val born_rule : int list
+  (** [born_rule] is all the possible number of neighbors in which a dead node
+      will become alive *)
+
+  val survive_rule : int list
+  (** [survive_rule] is all the possible number of neighbors in which an alive node will stay alive] *)
+
   val get : gameboard -> int -> int -> state
   (** [get g x y] is the state of the node at coordinate position (x,y) with the
       top left corner being (0, 0), increasing in x and y when moving right and
@@ -80,8 +87,16 @@ module type Board = sig
       applications in Conway's Game of Life (B3_S23) *)
 
   val init_replicator : unit -> gameboard
-  (** [init_replicator ()] is a replicator centered on a 16x16 grid. Has
+  (** [init_replicator ()] is a replicator centered on a 18x18 grid. Has
       intereting applications in Highlife (B36_S23) *)
+
+  val init_rocket : unit -> gameboard
+  (** [init_rocket ()] is a rocket centered on a 20x15 grid. Has intereting
+      applications in Day and Night (B34678_S3678) *)
+
+  val init_seed : unit -> gameboard
+  (** [init_seed ()] is a seed centered on a 18x18 grid. Has intereting
+      applications in Seeds (B2_S) *)
 
   val make_board : int -> int -> (int * int) list -> gameboard
   (** [make_board x y c] is a gameboard with dimensions [x] by [y] and alive
