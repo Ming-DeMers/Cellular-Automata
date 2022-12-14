@@ -185,4 +185,7 @@ module Make (BS : BSRules) : Board = struct
 
   let init_glider () =
     make_board 10 10 [ (3, 4); (4, 4); (5, 4); (4, 2); (5, 3) ]
+
+  let init_replicator () =
+    make_board 10 10 [ (3, 4); (3, 5); (3, 6); (4, 3); (5, 3); (6, 3) ]
 end
