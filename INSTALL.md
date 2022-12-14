@@ -50,7 +50,7 @@ Now let's take a look at some 1D Cellular Automata
 
 
 Finally, lets use a GUI to observe the board updates in real time.
-- First, open xterm through XQuartz
+- First, open xterm terminal through XQuartz
 - move to the directory ./Cellular-Automata
 - Enter the command $ make gui
 - Observe
