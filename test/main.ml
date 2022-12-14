@@ -650,6 +650,66 @@ let update_node_tests =
   ]
 
 let gol_tests = List.flatten [ neighbors_tests; update_node_tests ]
+
+module HighLife = MakeBoard (B36_S23)
+
+let repl_18x18 = HighLife.init_replicator ()
+let empty_18x18 = HighLife.init_empty 18 18
+
+let hl_neighbors_test name in_gb in_x in_y exp_out =
+  name >:: fun _ ->
+  assert_equal exp_out
+    (HighLife.neighbors in_gb in_x in_y)
+    ~printer:string_of_int
+
+let highlife_tests =
+  [
+    (* empty board *)
+    hl_neighbors_test "neighbors of empty @ 0,0" empty_18x18 0 0 0;
+    hl_neighbors_test "neighbors of empty @ 17,17" empty_18x18 19 19 0;
+    hl_neighbors_test "neighbors of empty @ 10,10" empty_18x18 10 10 0;
+    hl_neighbors_test "neighbors of empty at 2,2" empty_18x18 2 2 0;
+    (* replicator tests - diagonal *)
+    hl_neighbors_test "neighbors of replicator @ 0,0" repl_18x18 0 0 0;
+    hl_neighbors_test "neighbors of replicator @ 1,1" repl_18x18 1 1 0;
+    hl_neighbors_test "neighbors of replicator @ 2,2" repl_18x18 2 2 0;
+    hl_neighbors_test "neighbors of replicator @ 3,3" repl_18x18 3 3 0;
+    hl_neighbors_test "neighbors of replicator @ 4,4" repl_18x18 4 4 0;
+    hl_neighbors_test "neighbors of replicator @ 5,5" repl_18x18 5 5 0;
+    hl_neighbors_test "neighbors of replicator @ 6,6" repl_18x18 6 6 0;
+    hl_neighbors_test "neighbors of replicator @ 7,7" repl_18x18 7 7 2;
+    hl_neighbors_test "neighbors of replicator @ 8,8" repl_18x18 8 8 4;
+    hl_neighbors_test "neighbors of replicator @ 9,9" repl_18x18 9 9 0;
+    hl_neighbors_test "neighbors of replicator @ 10,10" repl_18x18 10 10 0;
+    hl_neighbors_test "neighbors of replicator @ 11,11" repl_18x18 11 11 0;
+    hl_neighbors_test "neighbors of replicator @ 12,12" repl_18x18 12 12 0;
+    hl_neighbors_test "neighbors of replicator @ 13,13" repl_18x18 13 13 0;
+    hl_neighbors_test "neighbors of replicator @ 14,14" repl_18x18 14 14 0;
+    hl_neighbors_test "neighbors of replicator @ 15,15" repl_18x18 15 15 0;
+    hl_neighbors_test "neighbors of replicator @ 16,16" repl_18x18 16 16 0;
+    hl_neighbors_test "neighbors of replicator @ 17,17" repl_18x18 17 17 0;
+    (* edge cases *)
+    hl_neighbors_test "neighbors of replicator @ 0,1" repl_18x18 0 1 0;
+    hl_neighbors_test "neighbors of replicator @ 0,2" repl_18x18 0 2 0;
+    hl_neighbors_test "neighbors of replicator @ 0,3" repl_18x18 0 3 0;
+    hl_neighbors_test "neighbors of replicator @ 0,4" repl_18x18 0 4 0;
+    hl_neighbors_test "neighbors of replicator @ 0,5" repl_18x18 0 5 0;
+    hl_neighbors_test "neighbors of replicator @ 0,6" repl_18x18 0 6 0;
+    hl_neighbors_test "neighbors of replicator @ 0,7" repl_18x18 0 7 0;
+    hl_neighbors_test "neighbors of replicator @ 0,8" repl_18x18 0 8 0;
+    hl_neighbors_test "neighbors of replicator @ 0,9" repl_18x18 0 9 0;
+    hl_neighbors_test "neighbors of replicator @ 0,10" repl_18x18 0 10 0;
+    hl_neighbors_test "neighbors of replicator @ 0,11" repl_18x18 0 11 0;
+    hl_neighbors_test "neighbors of replicator @ 0,12" repl_18x18 0 12 0;
+    hl_neighbors_test "neighbors of replicator @ 0,13" repl_18x18 0 13 0;
+    hl_neighbors_test "neighbors of replicator @ 0,14" repl_18x18 0 14 0;
+    hl_neighbors_test "neighbors of replicator @ 0,15" repl_18x18 0 15 0;
+    hl_neighbors_test "neighbors of replicator @ 0,16" repl_18x18 0 16 0;
+    hl_neighbors_test "neighbors of replicator @ 0,17" repl_18x18 0 17 0;
+  ]
+
+let hl_tests = List.flatten [ highlife_tests ]
+
 (******************************************************************************)
 
 (************** Tests for Active Game of Life with Wraparound **************)
@@ -794,6 +854,7 @@ let suite =
            int_to_binary_tests;
            make_rule_test;
            active_gol_tests;
+           hl_tests;
          ]
 
 let _ = run_test_tt_main suite
