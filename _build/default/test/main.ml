@@ -1,6 +1,7 @@
 open OUnit2
 open Cellular_automata.One
 open Cellular_automata.Two
+open Cellular_automata.Active
 
 let make_n_test name in_lst in_int exp_out =
   name >:: fun _ -> assert_equal exp_out (make_n in_lst in_int)
@@ -26,14 +27,6 @@ let one_tests =
     binary_to_int_test "binary_to_int [1; 0] is 2" [ 1; 0 ] 2;
     binary_to_int_test "binary_to_int [1; 1] is 3" [ 1; 1 ] 3;
     binary_to_int_test "binary_to_int [1; 0; 0; 1] is 9" [ 1; 0; 0; 1 ] 9;
-    make_rule_test "make_rule 0 is [0; 0; 0; 0; 0; 0; 0; 0]" 0
-      [ 0; 0; 0; 0; 0; 0; 0; 0 ];
-    make_rule_test "make_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1]" 1
-      [ 0; 0; 0; 0; 0; 0; 0; 1 ];
-    make_rule_test "make_rule 90 is [0; 1; 0; 1; 1; 0; 1; 0]" 90
-      [ 0; 1; 0; 1; 1; 0; 1; 0 ];
-    make_rule_test "make_rule 255 is [1; 1; 1; 1; 1; 1; 1; 1]" 255
-      [ 1; 1; 1; 1; 1; 1; 1; 1 ];
     init_empty_test "init_empty 3 is [|Dead; Alive; Dead|]" 3
       [| Dead; Alive; Dead |];
     init_empty_test "init_empty 5 is [|Dead; Dead; Alive; Dead; Dead|]" 5
@@ -161,8 +154,29 @@ let int_to_binary_tests =
       [ 1; 1; 1; 1; 1; 1 ];
   ]
 
+let make_rule_test =
+  [
+    make_rule_test "make_rule 0 is [0; 0; 0; 0; 0; 0; 0; 0]" 0
+      [ 0; 0; 0; 0; 0; 0; 0; 0 ];
+    make_rule_test "make_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1]" 1
+      [ 0; 0; 0; 0; 0; 0; 0; 1 ];
+    make_rule_test "make_rule 2 is [0; 0; 0; 0; 0; 0; 1; 0]" 2
+      [ 0; 0; 0; 0; 0; 0; 1; 0 ];
+    make_rule_test "make_rule 3 is [0; 0; 0; 0; 0; 0; 1; 1]" 3
+      [ 0; 0; 0; 0; 0; 0; 1; 1 ];
+    make_rule_test "make_rule 4 is [0; 0; 0; 0; 0; 1; 0; 0]" 4
+      [ 0; 0; 0; 0; 0; 1; 0; 0 ];
+    make_rule_test "make_rule 5 is [0; 0; 0; 0; 0; 1; 0; 1]" 5
+      [ 0; 0; 0; 0; 0; 1; 0; 1 ];
+    make_rule_test "make_rule 90 is [0; 1; 0; 1; 1; 0; 1; 0]" 90
+      [ 0; 1; 0; 1; 1; 0; 1; 0 ];
+    make_rule_test "make_rule 255 is [1; 1; 1; 1; 1; 1; 1; 1]" 255
+      [ 1; 1; 1; 1; 1; 1; 1; 1 ];
+  ]
+
 (* Test Boards *)
 module GoL = MakeBoard (B3_S23)
+module ActiveGoL = MakeActive (B3_S23)
 
 (************** Tests for Standard Game of Life with Wraparound **************)
 let empty_10x10 = GoL.init_empty 10 10
@@ -302,6 +316,7 @@ let gol_tests = List.flatten [ neighbors_tests; update_node_tests ]
 
 let suite =
   "test suite for CA"
-  >::: List.flatten [ gol_tests; one_tests; int_to_binary_tests ]
+  >::: List.flatten
+         [ gol_tests; one_tests; int_to_binary_tests; make_rule_test ]
 
 let _ = run_test_tt_main suite

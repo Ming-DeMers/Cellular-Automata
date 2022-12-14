@@ -1,0 +1,4 @@
+(executable
+ (name headless)
+ (public_name Headless)
+ (libraries CellularAutomata graphics ANSITerminal))

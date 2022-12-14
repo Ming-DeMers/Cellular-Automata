@@ -1,0 +1,14 @@
+(** @canonical Dune__exe.Game *)
+module Game = Dune__exe__Game
+
+
+(** @canonical Dune__exe.Headless *)
+module Headless = Dune__exe__Headless
+
+
+(** @canonical Dune__exe.Headless1d *)
+module Headless1d = Dune__exe__Headless1d
+
+
+(** @canonical Dune__exe.Headless2d *)
+module Headless2d = Dune__exe__Headless2d

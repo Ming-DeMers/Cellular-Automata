@@ -1,9 +1,6 @@
-module type BSRules = sig
-  val born : int list
-  val survive : int list
-end
+open Two
 
-module type Board = sig
+module type ActiveBoard = sig
   type state =
     | Dead
     | Alive
@@ -27,31 +24,7 @@ module type Board = sig
   val make_board : int -> int -> (int * int) list -> gameboard
 end
 
-(* Conway's Game of Life *)
-module B3_S23 : BSRules = struct
-  let born = [ 3 ]
-  let survive = [ 2; 3 ]
-end
-
-(* HighLife *)
-module B36_S23 : BSRules = struct
-  let born = [ 3; 6 ]
-  let survive = [ 2; 3 ]
-end
-
-(* Day and Night *)
-module B34678_S3678 : BSRules = struct
-  let born = [ 3; 4; 6; 7; 8 ]
-  let survive = [ 3; 6; 7; 8 ]
-end
-
-(* Seeds *)
-module B2_S : BSRules = struct
-  let born = [ 2 ]
-  let survive = []
-end
-
-module Make (BS : BSRules) : Board = struct
+module MakeActive (BS : BSRules) : ActiveBoard = struct
   type state =
     | Dead
     | Alive
@@ -115,14 +88,6 @@ module Make (BS : BSRules) : Board = struct
     | Alive ->
         set g x y Dead;
         update_neighbors g x y
-
-  (* O(1) maybe*)
-  (* For ALl Dead Border, DEPRECIATED *)
-  (* let neighbors_dead_boundary g x y = let width = Array.length g.(0) in let
-     height = Array.length g in let count = ref 0 in for r = x - 1 to x + 1 do
-     for c = y - 1 to y + 1 do if (not (r = -1 || r = width)) && (not (c = -1 ||
-     c = height)) && not (r = x && c = y) then if get g r c = Alive then count
-     := !count + 1 else () else () done done; !count *)
 
   let neighbors (g, a) x y =
     check_inbounds (g, a) x y "neighbors";
@@ -206,6 +171,4 @@ module Make (BS : BSRules) : Board = struct
 
   let init_glider () =
     make_board 10 10 [ (3, 4); (4, 4); (5, 4); (4, 2); (5, 3) ]
-  (* let b = init_empty 10 10 in birth_node b 3 4; birth_node b 4 4; birth_node
-     b 5 4; birth_node b 4 2; birth_node b 5 3; b *)
 end
