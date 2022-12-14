@@ -1,0 +1,567 @@
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:1:neighbors of empty @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:1:neighbors of empty @ 9,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:1:neighbors of empty @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:3:neighbors of 5,5 @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:3:neighbors of 5,5 @ 4,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:3:neighbors of 5,5 @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:5:neighbors of 5,5 @ 6,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:5:neighbors of 5,5 @ 6,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:5:neighbors of 5,5 @ 6,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:7:neighbors of 5,5 @ 6,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:7:neighbors of 5,5 @ 6,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:7:neighbors of 5,5 @ 6,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:9:neighbors of 5,5 @ 5,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:9:neighbors of 5,5 @ 5,6 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:9:neighbors of 5,5 @ 5,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:11:neighbors of 5,5 @ 5,7.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:11:neighbors of 5,5 @ 5,7 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:11:neighbors of 5,5 @ 5,7.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:13:neighbors of 5,0 @ 5,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:13:neighbors of 5,0 @ 5,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:13:neighbors of 5,0 @ 5,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:15:neighbors of 9,5 @ 0,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:15:neighbors of 9,5 @ 0,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:15:neighbors of 9,5 @ 0,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:17:neighbors of 9,5 @ 0,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:17:neighbors of 9,5 @ 0,6 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:17:neighbors of 9,5 @ 0,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:19:neighbors of 5,9 @ 5,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:19:neighbors of 5,9 @ 5,0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:19:neighbors of 5,9 @ 5,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:21:neighbors of 0,5 @ 9,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:21:neighbors of 0,5 @ 9,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:21:neighbors of 0,5 @ 9,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:23:neighbors of 0,5 @ 9,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:23:neighbors of 0,5 @ 9,6 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:23:neighbors of 0,5 @ 9,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:25:neighbors of 0,0 @ 0,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:25:neighbors of 0,0 @ 0,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:25:neighbors of 0,0 @ 0,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:27:neighbors of 9,0 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:27:neighbors of 9,0 @ 0,0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:27:neighbors of 9,0 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:29:neighbors of 9,0 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:29:neighbors of 9,0 @ 9,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:29:neighbors of 9,0 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:31:neighbors of 0,9 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:31:neighbors of 0,9 @ 9,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:31:neighbors of 0,9 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:34:neighbors of 9,9 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:34:neighbors of 9,9 @ 0,0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:34:neighbors of 9,9 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:36:neighbors of glider @ 5,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:36:neighbors of glider @ 5,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:36:neighbors of glider @ 5,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:38:neighbors of glider @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:38:neighbors of glider @ 4,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:38:neighbors of glider @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:40:update empty.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:40:update empty is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:40:update empty.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:42:update gilder @ 4,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:42:update gilder @ 4,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:42:update gilder @ 4,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:44:make_n [1] 2 is [0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:44:make_n [1] 2 is [0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:44:make_n [1] 2 is [0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:46:binary_to_int [0] is 0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:46:binary_to_int [0] is 0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:46:binary_to_int [0] is 0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:48:binary_to_int [1; 0] is 2.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:48:binary_to_int [1; 0] is 2 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:48:binary_to_int [1; 0] is 2.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:50:binary_to_int [1; 0; 0; 1] is 9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:50:binary_to_int [1; 0; 0; 1] is 9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:50:binary_to_int [1; 0; 0; 1] is 9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:52:init_empty 5 is [|Dead; Dead; Alive; Dead; Dead|].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:52:init_empty 5 is [|Dead; Dead; Alive; Dead; Dead|] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:52:init_empty 5 is [|Dead; Dead; Alive; Dead; Dead|].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:54:neighborhood game 0 is [Dead; Dead; Dead].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:54:neighborhood game 0 is [Dead; Dead; Dead] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:54:neighborhood game 0 is [Dead; Dead; Dead].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:56:neighborhood game1 2 is [Dead; Alive; Alive].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:56:neighborhood game1 2 is [Dead; Alive; Alive] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:56:neighborhood game1 2 is [Dead; Alive; Alive].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:58:neighborhood game2 4 is [Dead; Alive; Alive].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:58:neighborhood game2 4 is [Dead; Alive; Alive] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:58:neighborhood game2 4 is [Dead; Alive; Alive].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:60:update_node game 90 4 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:60:update_node game 90 4 is Dead is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:60:update_node game 90 4 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:62:update_node game 90 2 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:62:update_node game 90 2 is Dead is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:62:update_node game 90 2 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:64:update_node game 90 0 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:64:update_node game 90 0 is Dead is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:64:update_node game 90 0 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:66:update_node game 90 6 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:66:update_node game 90 6 is Dead is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:66:update_node game 90 6 is Dead.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:68:update_board game 90 is[|Dead; Dead; Dead; Alive; Dead; Alive; Dead; Dead; Dead|].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:68:update_board game 90 is[|Dead; Dead; Dead; Alive; Dead; Alive; Dead; Dead; Dead|] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:68:update_board game 90 is[|Dead; Dead; Dead; Alive; Dead; Alive; Dead; Dead; Dead|].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:70:int_to_binary 1 is [1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:70:int_to_binary 1 is [1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:70:int_to_binary 1 is [1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:72:int_to_binary 3 is [1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:72:int_to_binary 3 is [1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:72:int_to_binary 3 is [1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:74:int_to_binary 5 is [1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:74:int_to_binary 5 is [1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:74:int_to_binary 5 is [1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:76:int_to_binary 7 is [1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:76:int_to_binary 7 is [1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:76:int_to_binary 7 is [1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:78:int_to_binary 9 is [1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:78:int_to_binary 9 is [1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:78:int_to_binary 9 is [1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:80:int_to_binary 11 is [1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:80:int_to_binary 11 is [1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:80:int_to_binary 11 is [1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:82:int_to_binary 13 is [1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:82:int_to_binary 13 is [1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:82:int_to_binary 13 is [1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:84:int_to_binary 15 is [1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:84:int_to_binary 15 is [1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:84:int_to_binary 15 is [1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:86:int_to_binary 17 is [1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:86:int_to_binary 17 is [1; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:86:int_to_binary 17 is [1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:88:int_to_binary 19 is [1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:88:int_to_binary 19 is [1; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:88:int_to_binary 19 is [1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:90:int_to_binary 21 is [1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:90:int_to_binary 21 is [1; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:90:int_to_binary 21 is [1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:92:int_to_binary 23 is [1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:92:int_to_binary 23 is [1; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:92:int_to_binary 23 is [1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:94:int_to_binary 25 is [1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:94:int_to_binary 25 is [1; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:94:int_to_binary 25 is [1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:96:int_to_binary 27 is [1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:96:int_to_binary 27 is [1; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:96:int_to_binary 27 is [1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:98:int_to_binary 29 is [1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:98:int_to_binary 29 is [1; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:98:int_to_binary 29 is [1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:100:int_to_binary 31 is [1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:100:int_to_binary 31 is [1; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:100:int_to_binary 31 is [1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:102:int_to_binary 33 is [1; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:102:int_to_binary 33 is [1; 0; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:102:int_to_binary 33 is [1; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:104:int_to_binary 35 is [1; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:104:int_to_binary 35 is [1; 0; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:104:int_to_binary 35 is [1; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:106:int_to_binary 37 is [1; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:106:int_to_binary 37 is [1; 0; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:106:int_to_binary 37 is [1; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:108:int_to_binary 39 is [1; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:108:int_to_binary 39 is [1; 0; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:108:int_to_binary 39 is [1; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:110:int_to_binary 41 is [1; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:110:int_to_binary 41 is [1; 0; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:110:int_to_binary 41 is [1; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:112:int_to_binary 43 is [1; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:112:int_to_binary 43 is [1; 0; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:112:int_to_binary 43 is [1; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:114:int_to_binary 45 is [1; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:114:int_to_binary 45 is [1; 0; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:114:int_to_binary 45 is [1; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:116:int_to_binary 47 is [1; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:116:int_to_binary 47 is [1; 0; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:116:int_to_binary 47 is [1; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:118:int_to_binary 49 is [1; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:118:int_to_binary 49 is [1; 1; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:118:int_to_binary 49 is [1; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:120:int_to_binary 51 is [1; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:120:int_to_binary 51 is [1; 1; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:120:int_to_binary 51 is [1; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:122:int_to_binary 53 is [1; 1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:122:int_to_binary 53 is [1; 1; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:122:int_to_binary 53 is [1; 1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:124:int_to_binary 55 is [1; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:124:int_to_binary 55 is [1; 1; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:124:int_to_binary 55 is [1; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:126:int_to_binary 57 is [1; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:126:int_to_binary 57 is [1; 1; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:126:int_to_binary 57 is [1; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:128:int_to_binary 59 is [1; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:128:int_to_binary 59 is [1; 1; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:128:int_to_binary 59 is [1; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:130:int_to_binary 61 is [1; 1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:130:int_to_binary 61 is [1; 1; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:130:int_to_binary 61 is [1; 1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:132:int_to_binary 63 is [1; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:132:int_to_binary 63 is [1; 1; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:132:int_to_binary 63 is [1; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:134:int_to_binary 65 is [1; 0; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:134:int_to_binary 65 is [1; 0; 0; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:134:int_to_binary 65 is [1; 0; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:136:make_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:136:make_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:136:make_rule 1 is [0; 0; 0; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:138:make_rule 3 is [0; 0; 0; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:138:make_rule 3 is [0; 0; 0; 0; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:138:make_rule 3 is [0; 0; 0; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:140:make_rule 5 is [0; 0; 0; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:140:make_rule 5 is [0; 0; 0; 0; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:140:make_rule 5 is [0; 0; 0; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:142:make_rule 7 is [0; 0; 0; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:142:make_rule 7 is [0; 0; 0; 0; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:142:make_rule 7 is [0; 0; 0; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:144:make_rule 9 is [0; 0; 0; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:144:make_rule 9 is [0; 0; 0; 0; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:144:make_rule 9 is [0; 0; 0; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:146:make_rule 11 is [0; 0; 0; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:146:make_rule 11 is [0; 0; 0; 0; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:146:make_rule 11 is [0; 0; 0; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:148:make_rule 13 is [0; 0; 0; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:148:make_rule 13 is [0; 0; 0; 0; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:148:make_rule 13 is [0; 0; 0; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:150:make_rule 15 is [0; 0; 0; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:150:make_rule 15 is [0; 0; 0; 0; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:150:make_rule 15 is [0; 0; 0; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:152:make_rule 17 is [0; 0; 0; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:152:make_rule 17 is [0; 0; 0; 1; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:152:make_rule 17 is [0; 0; 0; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:154:make_rule 19 is [0; 0; 0; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:154:make_rule 19 is [0; 0; 0; 1; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:154:make_rule 19 is [0; 0; 0; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:156:make_rule 21 is [0; 0; 0; 1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:156:make_rule 21 is [0; 0; 0; 1; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:156:make_rule 21 is [0; 0; 0; 1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:158:make_rule 23 is [0; 0; 0; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:158:make_rule 23 is [0; 0; 0; 1; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:158:make_rule 23 is [0; 0; 0; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:160:make_rule 25 is [0; 0; 0; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:160:make_rule 25 is [0; 0; 0; 1; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:160:make_rule 25 is [0; 0; 0; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:162:make_rule 27 is [0; 0; 0; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:162:make_rule 27 is [0; 0; 0; 1; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:162:make_rule 27 is [0; 0; 0; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:164:make_rule 29 is [0; 0; 0; 1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:164:make_rule 29 is [0; 0; 0; 1; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:164:make_rule 29 is [0; 0; 0; 1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:166:make_rule 31 is [0; 0; 0; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:166:make_rule 31 is [0; 0; 0; 1; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:166:make_rule 31 is [0; 0; 0; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:168:make_rule 33 is [0; 0; 1; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:168:make_rule 33 is [0; 0; 1; 0; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:168:make_rule 33 is [0; 0; 1; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:170:make_rule 35 is [0; 0; 1; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:170:make_rule 35 is [0; 0; 1; 0; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:170:make_rule 35 is [0; 0; 1; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:172:make_rule 37 is [0; 0; 1; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:172:make_rule 37 is [0; 0; 1; 0; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:172:make_rule 37 is [0; 0; 1; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:174:make_rule 39 is [0; 0; 1; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:174:make_rule 39 is [0; 0; 1; 0; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:174:make_rule 39 is [0; 0; 1; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:176:make_rule 41 is [0; 0; 1; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:176:make_rule 41 is [0; 0; 1; 0; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:176:make_rule 41 is [0; 0; 1; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:178:make_rule 43 is [0; 0; 1; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:178:make_rule 43 is [0; 0; 1; 0; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:178:make_rule 43 is [0; 0; 1; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:180:make_rule 45 is [0; 0; 1; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:180:make_rule 45 is [0; 0; 1; 0; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:180:make_rule 45 is [0; 0; 1; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:182:make_rule 47 is [0; 0; 1; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:182:make_rule 47 is [0; 0; 1; 0; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:182:make_rule 47 is [0; 0; 1; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:183:make_rule 48 is [0; 0; 1; 1; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:183:make_rule 48 is [0; 0; 1; 1; 0; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:183:make_rule 48 is [0; 0; 1; 1; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:186:make_rule 51 is [0; 0; 1; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:186:make_rule 51 is [0; 0; 1; 1; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:186:make_rule 51 is [0; 0; 1; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:187:make_rule 52 is [0; 0; 1; 1; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:187:make_rule 52 is [0; 0; 1; 1; 0; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:187:make_rule 52 is [0; 0; 1; 1; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:190:make_rule 55 is [0; 0; 1; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:190:make_rule 55 is [0; 0; 1; 1; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:190:make_rule 55 is [0; 0; 1; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:192:make_rule 57 is [0; 0; 1; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:192:make_rule 57 is [0; 0; 1; 1; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:192:make_rule 57 is [0; 0; 1; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:193:make_rule 58 is [0; 0; 1; 1; 1; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:193:make_rule 58 is [0; 0; 1; 1; 1; 0; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:193:make_rule 58 is [0; 0; 1; 1; 1; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:195:make_rule 60 is [0; 0; 1; 1; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:195:make_rule 60 is [0; 0; 1; 1; 1; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:195:make_rule 60 is [0; 0; 1; 1; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:197:make_rule 62 is [0; 0; 1; 1; 1; 1; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:197:make_rule 62 is [0; 0; 1; 1; 1; 1; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:197:make_rule 62 is [0; 0; 1; 1; 1; 1; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:199:make_rule 64 is [0; 1; 0; 0; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:199:make_rule 64 is [0; 1; 0; 0; 0; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:199:make_rule 64 is [0; 1; 0; 0; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:201:make_rule 66 is [0; 1; 0; 0; 0; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:201:make_rule 66 is [0; 1; 0; 0; 0; 0; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:201:make_rule 66 is [0; 1; 0; 0; 0; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:203:make_rule 68 is [0; 1; 0; 0; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:203:make_rule 68 is [0; 1; 0; 0; 0; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:203:make_rule 68 is [0; 1; 0; 0; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:205:make_rule 70 is [0; 1; 0; 0; 0; 1; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:205:make_rule 70 is [0; 1; 0; 0; 0; 1; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:205:make_rule 70 is [0; 1; 0; 0; 0; 1; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:207:make_rule 72 is [0; 1; 0; 0; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:207:make_rule 72 is [0; 1; 0; 0; 1; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:207:make_rule 72 is [0; 1; 0; 0; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:209:make_rule 74 is [0; 1; 0; 0; 1; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:209:make_rule 74 is [0; 1; 0; 0; 1; 0; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:209:make_rule 74 is [0; 1; 0; 0; 1; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:212:make_rule 77 is [0; 1; 0; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:212:make_rule 77 is [0; 1; 0; 0; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:212:make_rule 77 is [0; 1; 0; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:214:make_rule 79 is [0; 1; 0; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:214:make_rule 79 is [0; 1; 0; 0; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:214:make_rule 79 is [0; 1; 0; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:216:make_rule 81 is [0; 1; 0; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:216:make_rule 81 is [0; 1; 0; 1; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:216:make_rule 81 is [0; 1; 0; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:218:make_rule 83 is [0; 1; 0; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:218:make_rule 83 is [0; 1; 0; 1; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:218:make_rule 83 is [0; 1; 0; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:220:make_rule 85 is [0; 1; 0; 1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:220:make_rule 85 is [0; 1; 0; 1; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:220:make_rule 85 is [0; 1; 0; 1; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:222:make_rule 87 is [0; 1; 0; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:222:make_rule 87 is [0; 1; 0; 1; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:222:make_rule 87 is [0; 1; 0; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:224:make_rule 89 is [0; 1; 0; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:224:make_rule 89 is [0; 1; 0; 1; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:224:make_rule 89 is [0; 1; 0; 1; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:226:make_rule 91 is [0; 1; 0; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:226:make_rule 91 is [0; 1; 0; 1; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:226:make_rule 91 is [0; 1; 0; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:228:make_rule 93 is [0; 1; 0; 1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:228:make_rule 93 is [0; 1; 0; 1; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:228:make_rule 93 is [0; 1; 0; 1; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:230:make_rule 95 is [0; 1; 0; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:230:make_rule 95 is [0; 1; 0; 1; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:230:make_rule 95 is [0; 1; 0; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:232:make_rule 97 is [0; 1; 1; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:232:make_rule 97 is [0; 1; 1; 0; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:232:make_rule 97 is [0; 1; 1; 0; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:234:make_rule 99 is [0; 1; 1; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:234:make_rule 99 is [0; 1; 1; 0; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:234:make_rule 99 is [0; 1; 1; 0; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:236:make_rule 101 is [0; 1; 1; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:236:make_rule 101 is [0; 1; 1; 0; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:236:make_rule 101 is [0; 1; 1; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:238:make_rule 103 is [0; 1; 1; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:238:make_rule 103 is [0; 1; 1; 0; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:238:make_rule 103 is [0; 1; 1; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:240:make_rule 105 is [0; 1; 1; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:240:make_rule 105 is [0; 1; 1; 0; 1; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:240:make_rule 105 is [0; 1; 1; 0; 1; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:242:make_rule 107 is [0; 1; 1; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:242:make_rule 107 is [0; 1; 1; 0; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:242:make_rule 107 is [0; 1; 1; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:244:make_rule 109 is [0; 1; 1; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:244:make_rule 109 is [0; 1; 1; 0; 1; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:244:make_rule 109 is [0; 1; 1; 0; 1; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:246:make_rule 111 is [0; 1; 1; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:246:make_rule 111 is [0; 1; 1; 0; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:246:make_rule 111 is [0; 1; 1; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:248:make_rule 113 is [0; 1; 1; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:248:make_rule 113 is [0; 1; 1; 1; 0; 0; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:248:make_rule 113 is [0; 1; 1; 1; 0; 0; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:249:make_rule 114 is [0; 1; 1; 1; 0; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:249:make_rule 114 is [0; 1; 1; 1; 0; 0; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:249:make_rule 114 is [0; 1; 1; 1; 0; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:251:make_rule 116 is [0; 1; 1; 1; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:251:make_rule 116 is [0; 1; 1; 1; 0; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:251:make_rule 116 is [0; 1; 1; 1; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:253:make_rule 118 is [0; 1; 1; 1; 0; 1; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:253:make_rule 118 is [0; 1; 1; 1; 0; 1; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:253:make_rule 118 is [0; 1; 1; 1; 0; 1; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:255:make_rule 120 is [0; 1; 1; 1; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:255:make_rule 120 is [0; 1; 1; 1; 1; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:255:make_rule 120 is [0; 1; 1; 1; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:257:make_rule 122 is [0; 1; 1; 1; 1; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:257:make_rule 122 is [0; 1; 1; 1; 1; 0; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:257:make_rule 122 is [0; 1; 1; 1; 1; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:259:make_rule 124 is [0; 1; 1; 1; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:259:make_rule 124 is [0; 1; 1; 1; 1; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:259:make_rule 124 is [0; 1; 1; 1; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:262:make_rule 127 is [0; 1; 1; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:262:make_rule 127 is [0; 1; 1; 1; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:262:make_rule 127 is [0; 1; 1; 1; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:263:make_rule 128 is [1; 0; 0; 0; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:263:make_rule 128 is [1; 0; 0; 0; 0; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:263:make_rule 128 is [1; 0; 0; 0; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:265:make_rule 130 is [1; 0; 0; 0; 0; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:265:make_rule 130 is [1; 0; 0; 0; 0; 0; 1; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:265:make_rule 130 is [1; 0; 0; 0; 0; 0; 1; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:268:make_rule 133 is [1; 0; 0; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:268:make_rule 133 is [1; 0; 0; 0; 0; 1; 0; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:268:make_rule 133 is [1; 0; 0; 0; 0; 1; 0; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:270:make_rule 135 is [1; 0; 0; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:270:make_rule 135 is [1; 0; 0; 0; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:270:make_rule 135 is [1; 0; 0; 0; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:271:make_rule 136 is [1; 0; 0; 0; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:271:make_rule 136 is [1; 0; 0; 0; 1; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:271:make_rule 136 is [1; 0; 0; 0; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:274:make_rule 139 is [1; 0; 0; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:274:make_rule 139 is [1; 0; 0; 0; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:274:make_rule 139 is [1; 0; 0; 0; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:275:make_rule 140 is [1; 0; 0; 0; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:275:make_rule 140 is [1; 0; 0; 0; 1; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:275:make_rule 140 is [1; 0; 0; 0; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:278:make_rule 143 is [1; 0; 0; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:278:make_rule 143 is [1; 0; 0; 0; 1; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:278:make_rule 143 is [1; 0; 0; 0; 1; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:279:make_rule 144 is [1; 0; 0; 1; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:279:make_rule 144 is [1; 0; 0; 1; 0; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:279:make_rule 144 is [1; 0; 0; 1; 0; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:282:make_rule 147 is [1; 0; 0; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:282:make_rule 147 is [1; 0; 0; 1; 0; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:282:make_rule 147 is [1; 0; 0; 1; 0; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:283:make_rule 148 is [1; 0; 0; 1; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:283:make_rule 148 is [1; 0; 0; 1; 0; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:283:make_rule 148 is [1; 0; 0; 1; 0; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:286:make_rule 151 is [1; 0; 0; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:286:make_rule 151 is [1; 0; 0; 1; 0; 1; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:286:make_rule 151 is [1; 0; 0; 1; 0; 1; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:287:make_rule 152 is [1; 0; 0; 1; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:287:make_rule 152 is [1; 0; 0; 1; 1; 0; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:287:make_rule 152 is [1; 0; 0; 1; 1; 0; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:290:make_rule 155 is [1; 0; 0; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:290:make_rule 155 is [1; 0; 0; 1; 1; 0; 1; 1] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:290:make_rule 155 is [1; 0; 0; 1; 1; 0; 1; 1].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:291:make_rule 156 is [1; 0; 0; 1; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:291:make_rule 156 is [1; 0; 0; 1; 1; 1; 0; 0] is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:291:make_rule 156 is [1; 0; 0; 1; 1; 1; 0; 0].
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:294:neighbors of 5,5 @ 5,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:294:neighbors of 5,5 @ 5,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:294:neighbors of 5,5 @ 5,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:295:neighbors of 5,5 @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:295:neighbors of 5,5 @ 4,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:295:neighbors of 5,5 @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:297:neighbors of 5,5 @ 6,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:297:neighbors of 5,5 @ 6,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:297:neighbors of 5,5 @ 6,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:299:neighbors of 5,5 @ 6,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:299:neighbors of 5,5 @ 6,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:299:neighbors of 5,5 @ 6,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:301:neighbors of 5,5 @ 5,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:301:neighbors of 5,5 @ 5,6 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:301:neighbors of 5,5 @ 5,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:303:neighbors of 5,5 @ 5,7.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:303:neighbors of 5,5 @ 5,7 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:303:neighbors of 5,5 @ 5,7.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:305:neighbors of 5,0 @ 5,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:305:neighbors of 5,0 @ 5,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:305:neighbors of 5,0 @ 5,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:307:neighbors of 9,5 @ 0,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:307:neighbors of 9,5 @ 0,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:307:neighbors of 9,5 @ 0,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:309:neighbors of 9,5 @ 0,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:309:neighbors of 9,5 @ 0,6 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:309:neighbors of 9,5 @ 0,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:311:neighbors of 5,9 @ 5,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:311:neighbors of 5,9 @ 5,0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:311:neighbors of 5,9 @ 5,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:314:neighbors of 0,5 @ 9,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:314:neighbors of 0,5 @ 9,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:314:neighbors of 0,5 @ 9,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:315:neighbors of 0,5 @ 9,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:315:neighbors of 0,5 @ 9,6 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:315:neighbors of 0,5 @ 9,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:318:neighbors of 0,0 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:318:neighbors of 0,0 @ 9,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:318:neighbors of 0,0 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:319:neighbors of 9,0 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:319:neighbors of 9,0 @ 0,0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:319:neighbors of 9,0 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:321:neighbors of 9,0 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:321:neighbors of 9,0 @ 9,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:321:neighbors of 9,0 @ 9,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:324:neighbors of 0,9 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:324:neighbors of 0,9 @ 0,0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:324:neighbors of 0,9 @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:325:neighbors of 9,9 @ 0,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:325:neighbors of 9,9 @ 0,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:325:neighbors of 9,9 @ 0,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:328:neighbors of glider @ 4,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:328:neighbors of glider @ 4,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:328:neighbors of glider @ 4,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:330:neighbors of glider @ 4,3.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:330:neighbors of glider @ 4,3 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:330:neighbors of glider @ 4,3.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:332:update gilder @ 5,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:332:update gilder @ 5,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:332:update gilder @ 5,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:334:update gilder @ 5,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:334:update gilder @ 5,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:334:update gilder @ 5,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:336:neighbors of empty @ 17,17.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 E: Test test suite for CA:336:neighbors of empty @ 17,17 exited with an error.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 E: Cellular_automata.Two.MakeBoard(BS).PreconditionViolation("x out of bounds. Error in: neighbors") in test test suite for CA:336:neighbors of empty @ 17,17.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 E: Raised at Cellular_automata__Two.MakeBoard.check_inbounds in file "src/two.ml", line 81, characters 9-79
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 E: Called from Cellular_automata__Two.MakeBoard.neighbors in file "src/two.ml", line 116, characters 4-36
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 E: Called from Dune__exe__Main.hl_neighbors_test.(fun) in file "test/main.ml", line 662, characters 4-40
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 E: 
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:336:neighbors of empty @ 17,17.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:337:neighbors of empty @ 10,10.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:337:neighbors of empty @ 10,10 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:337:neighbors of empty @ 10,10.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:339:neighbors of replicator @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:339:neighbors of replicator @ 0,0 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:339:neighbors of replicator @ 0,0.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:341:neighbors of replicator @ 2,2.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:341:neighbors of replicator @ 2,2 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:341:neighbors of replicator @ 2,2.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:343:neighbors of replicator @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:343:neighbors of replicator @ 4,4 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:343:neighbors of replicator @ 4,4.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:345:neighbors of replicator @ 6,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:345:neighbors of replicator @ 6,6 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:345:neighbors of replicator @ 6,6.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:347:neighbors of replicator @ 8,8.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:347:neighbors of replicator @ 8,8 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:347:neighbors of replicator @ 8,8.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:349:neighbors of replicator @ 10,10.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:349:neighbors of replicator @ 10,10 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:349:neighbors of replicator @ 10,10.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:351:neighbors of replicator @ 12,12.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:351:neighbors of replicator @ 12,12 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:351:neighbors of replicator @ 12,12.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:353:neighbors of replicator @ 14,14.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:353:neighbors of replicator @ 14,14 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:353:neighbors of replicator @ 14,14.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:355:neighbors of replicator @ 16,16.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:355:neighbors of replicator @ 16,16 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:355:neighbors of replicator @ 16,16.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:357:neighbors of replicator @ 0,1.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:357:neighbors of replicator @ 0,1 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:357:neighbors of replicator @ 0,1.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:359:neighbors of replicator @ 0,3.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:359:neighbors of replicator @ 0,3 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:359:neighbors of replicator @ 0,3.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:361:neighbors of replicator @ 0,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:361:neighbors of replicator @ 0,5 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:361:neighbors of replicator @ 0,5.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:363:neighbors of replicator @ 0,7.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:363:neighbors of replicator @ 0,7 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:363:neighbors of replicator @ 0,7.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:365:neighbors of replicator @ 0,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:365:neighbors of replicator @ 0,9 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:365:neighbors of replicator @ 0,9.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:367:neighbors of replicator @ 0,11.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:367:neighbors of replicator @ 0,11 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:367:neighbors of replicator @ 0,11.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:369:neighbors of replicator @ 0,13.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:369:neighbors of replicator @ 0,13 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:369:neighbors of replicator @ 0,13.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:371:neighbors of replicator @ 0,15.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:371:neighbors of replicator @ 0,15 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:371:neighbors of replicator @ 0,15.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Start test test suite for CA:373:neighbors of replicator @ 0,17.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: Test test suite for CA:373:neighbors of replicator @ 0,17 is successful.
+2022-12-14T07:08:05+00:00 dhcp-vl2041-5466.eduroam.cornell.edu#02 I: End test test suite for CA:373:neighbors of replicator @ 0,17.

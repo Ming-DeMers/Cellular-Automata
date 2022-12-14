@@ -1,9 +1,9 @@
 # dune exec test/main.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /home/mingtd/3110/Cellular-Automata
+# Workspace root: /Users/jasonchung/git/cs3110/Cellular-Automata
 # Auto-detected concurrency: 8
-$ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_5ace8a_output
+$ /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/hc/4gjfwk713qv9rfgq12chmzlw0000gn/T/dune_e4351e_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,75 +13,77 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_5ace8a_out
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
 #  ; toplevel_path =
-#      Some External "/home/mingtd/.opam/cs3110-2022fa/lib/toplevel"
-#  ; ocaml_bin = External "/home/mingtd/.opam/cs3110-2022fa/bin"
-#  ; ocaml = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocaml"
-#  ; ocamlc = External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt"
-#  ; ocamlopt = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt"
-#  ; ocamldep = Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt"
+#      Some External "/Users/jasonchung/.opam/cs3110-2022fa/lib/toplevel"
+#  ; ocaml_bin = External "/Users/jasonchung/.opam/cs3110-2022fa/bin"
+#  ; ocaml = Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocaml"
+#  ; ocamlc = External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlc.opt"
+#  ; ocamlopt =
+#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt"
+#  ; ocamldep =
+#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamldep.opt"
 #  ; ocamlmklib =
-#      Ok External "/home/mingtd/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
+#      Ok External "/Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/home/mingtd/.opam/cs3110-2022fa/lib"
-#        ; "DUNE_OCAML_STDLIB" : "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/home/mingtd/3110/Cellular-Automata"
-#        ; "INSIDE_DUNE" : "/home/mingtd/3110/Cellular-Automata/_build/default"
+#        { "DUNE_OCAML_HARDCODED" : "/Users/jasonchung/.opam/cs3110-2022fa/lib"
+#        ; "DUNE_OCAML_STDLIB" :
+#            "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/jasonchung/git/cs3110/Cellular-Automata"
+#        ; "INSIDE_DUNE" :
+#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
+#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib"
+#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/home/mingtd/3110/Cellular-Automata/_build/install/default/lib/toplevel"
+#            "/Users/jasonchung/git/cs3110/Cellular-Automata/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/home/mingtd/.opam/cs3110-2022fa/lib" ]
+#  ; findlib_paths = [ External "/Users/jasonchung/.opam/cs3110-2022fa/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
 #      ; standard_library_default =
-#          "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
-#      ; standard_library = "/home/mingtd/.opam/cs3110-2022fa/lib/ocaml"
+#          "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_library = "/Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
-#      ; c_compiler = "gcc"
+#      ; c_compiler = "cc"
 #      ; ocamlc_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; ocamlopt_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
 #      ; native_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_c_libraries = [ "-lm" ]
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
-#      ; architecture = "amd64"
+#      ; architecture = "arm64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
-#      ; system = "linux"
-#      ; asm = [ "as" ]
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -92,8 +94,8 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_5ace8a_out
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "x86_64-pc-linux-gnu"
-#      ; target = "x86_64-pc-linux-gnu"
+#      ; host = "aarch64-apple-darwin21.6.0"
+#      ; target = "aarch64-apple-darwin21.6.0"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -113,24 +115,5 @@ $ /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /tmp/dune_5ace8a_out
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -bin-annot -I src/.cellular_automata.objs/byte -no-alias-deps -opaque -o src/.cellular_automata.objs/byte/cellular_automata.cmo -c -impl src/cellular_automata.ml-gen)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/two.mli) > _build/default/src/.cellular_automata.objs/two.mli.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/gameboard.mli) > _build/default/src/.cellular_automata.objs/gameboard.mli.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/two.ml) > _build/default/src/.cellular_automata.objs/two.ml.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -intf src/one.mli) > _build/default/src/.cellular_automata.objs/one.mli.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/gameboard.ml) > _build/default/src/.cellular_automata.objs/gameboard.ml.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/one.ml) > _build/default/src/.cellular_automata.objs/one.ml.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamldep.opt -modules -impl src/active.ml) > _build/default/src/.cellular_automata.objs/active.ml.d
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -49 -nopervasives -nostdlib -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -intf-suffix .ml-gen -no-alias-deps -opaque -o src/.cellular_automata.objs/native/cellular_automata.cmx -c -impl src/cellular_automata.ml-gen)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.cellular_automata.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/byte/cellular_automata__Two.cmi -c -intf src/two.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.cellular_automata.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/byte/cellular_automata__Gameboard.cmi -c -intf src/gameboard.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.cellular_automata.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/byte/cellular_automata__One.cmi -c -intf src/one.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.cellular_automata.objs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/byte/cellular_automata__Active.cmo -c -impl src/active.ml)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -intf-suffix .ml -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/native/cellular_automata__Gameboard.cmx -c -impl src/gameboard.ml)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.cellular_automata.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -intf-suffix .ml -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/native/cellular_automata__One.cmx -c -impl src/one.ml)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -intf-suffix .ml -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/native/cellular_automata__Two.cmx -c -impl src/two.ml)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -intf-suffix .ml -no-alias-deps -opaque -open Cellular_automata -o src/.cellular_automata.objs/native/cellular_automata__Active.cmx -c -impl src/active.ml)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o src/cellular_automata.cmxa src/.cellular_automata.objs/native/cellular_automata.cmx src/.cellular_automata.objs/native/cellular_automata__Two.cmx src/.cellular_automata.objs/native/cellular_automata__One.cmx src/.cellular_automata.objs/native/cellular_automata__Gameboard.cmx src/.cellular_automata.objs/native/cellular_automata__Active.cmx)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2 -I /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced -I /home/mingtd/.opam/cs3110-2022fa/lib/seq -I /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
-$ (cd _build/default && /home/mingtd/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/main.exe /home/mingtd/.opam/cs3110-2022fa/lib/graphics/graphics.cmxa -I /home/mingtd/.opam/cs3110-2022fa/lib/graphics /home/mingtd/.opam/cs3110-2022fa/lib/ocaml/unix.cmxa -I /home/mingtd/.opam/cs3110-2022fa/lib/ocaml -I /home/mingtd/.opam/cs3110-2022fa/lib/ocaml /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal/ANSITerminal.cmxa -I /home/mingtd/.opam/cs3110-2022fa/lib/ANSITerminal src/cellular_automata.cmxa /home/mingtd/.opam/cs3110-2022fa/lib/stdlib-shims/stdlib_shims.cmxa /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/mingtd/.opam/cs3110-2022fa/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal -I /Users/jasonchung/.opam/cs3110-2022fa/lib/graphics -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ounit2 -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ounit2/advanced -I /Users/jasonchung/.opam/cs3110-2022fa/lib/seq -I /Users/jasonchung/.opam/cs3110-2022fa/lib/stdlib-shims -I src/.cellular_automata.objs/byte -I src/.cellular_automata.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+$ (cd _build/default && /Users/jasonchung/.opam/cs3110-2022fa/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/main.exe /Users/jasonchung/.opam/cs3110-2022fa/lib/graphics/graphics.cmxa -I /Users/jasonchung/.opam/cs3110-2022fa/lib/graphics /Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml/unix.cmxa -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ocaml /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal/ANSITerminal.cmxa -I /Users/jasonchung/.opam/cs3110-2022fa/lib/ANSITerminal src/cellular_automata.cmxa /Users/jasonchung/.opam/cs3110-2022fa/lib/stdlib-shims/stdlib_shims.cmxa /Users/jasonchung/.opam/cs3110-2022fa/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/jasonchung/.opam/cs3110-2022fa/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)
