@@ -25,6 +25,7 @@ module type Board = sig
   val loop : gameboard -> int -> unit
   val init_empty : int -> int -> gameboard
   val init_glider : unit -> gameboard
+  val init_replicator : unit -> gameboard
   val make_board : int -> int -> (int * int) list -> gameboard
 end
 
