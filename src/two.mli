@@ -76,7 +76,12 @@ module type Board = sig
       dead nodes. Requires: [x > 0] and [y > 0] *)
 
   val init_glider : unit -> gameboard
-  (** Is a new glider *)
+  (** [init_glider ()] is a glider centered on a 10x10 grid. Has interesting
+      applications in Conway's Game of Life (B3_S23) *)
+
+  val init_replicator : unit -> gameboard
+  (** [init_replicator ()] is a replicator centered on a 10x10 grid. Has
+      intereting applications in Highlife (B36_S23) *)
 
   val make_board : int -> int -> (int * int) list -> gameboard
   (** [make_board x y c] is a gameboard with dimensions [x] by [y] and alive
