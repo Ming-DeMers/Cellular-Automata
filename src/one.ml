@@ -36,7 +36,7 @@ let int_to_binary i =
         let remainder = i mod 2 in
         int_to_binary' (i / 2) (remainder :: acc)
     in
-    int_to_binary' i [] |> List.rev
+    int_to_binary' i []
 
 (* [binary_to_int binary] is the int representation of binary, of type byte. *)
 let binary_to_int binary =
@@ -46,12 +46,6 @@ let binary_to_int binary =
     | h :: t -> binary_to_int' t ((acc * 2) + h)
   in
   binary_to_int' binary 0
-
-(* [int_to_rule n] is the byte that represents a rule, stemming from a bit
-   input. For example, [int_to_rule 90 = \[0; 1; 0; 1; 1; 0; 1; 0\]]*)
-let int_to_rule (n : int) : rule =
-  let rule = int_to_binary n in
-  make_n rule 8
 
 (* [gb_to_byte gb] converts gameboard [gb] to its byte representation, where
    Dead has a value of 0, and Alive has a value of 1. *)
@@ -106,7 +100,7 @@ let kill_node gb x = if gb.(x) = Dead then raise AlreadyDead else gb.(x) <- Dead
 (* [make_rule rule b] creates a type rule of the appropriate length containing
    the rule of a converted integer input. Requires: [b] is a positive
    integer. *)
-let make_rule b = make_end_n (int_to_binary b) 8 |> List.rev
+let make_rule b = make_n (int_to_binary b) 8
 
 let update_node (gb : gameboard) rule x =
   let neighborhood = neighborhood gb x in
@@ -166,3 +160,16 @@ let print_grid grid = Array.iter print_board grid
 
 (* [make_2d gb] is the 2D dimensional representation of the grid so it may be
    read by the program GUI. *)
+let make_2d gb rule x =
+  let len = len gb in
+  let matrix = Array.make_matrix x len Dead in
+  let rec make_2d' gb count =
+    if count = x then (
+      matrix.(0) <- init_empty len;
+      matrix)
+    else
+      let new_gb = update_board gb rule in
+      matrix.(count) <- new_gb;
+      make_2d' new_gb (count + 1)
+  in
+  make_2d' gb 1
