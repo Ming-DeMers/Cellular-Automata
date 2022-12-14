@@ -219,7 +219,6 @@ let make_rule_test =
 
 (* Test Boards *)
 module GoL = MakeBoard (B3_S23)
-module ActiveGoL = MakeActive (B3_S23)
 
 (************** Tests for Standard Game of Life with Wraparound **************)
 let empty_10x10 = GoL.init_empty 10 10
@@ -319,7 +318,7 @@ let neighbors_tests =
     neighbors_test "neighbors of 9,5 @ 0,5" b95_10x10 0 5 1;
     neighbors_test "neighbors of 9,5 @ 0,6" b95_10x10 0 6 1;
     neighbors_test "neighbors of 5,9 @ 4,0" b59_10x10 4 0 1;
-    (* neighbors_test "neighbors of 5,9 @ 5,0" b59_10x10 5 0 1; *)
+    neighbors_test "neighbors of 5,9 @ 5,0" b59_10x10 5 0 1;
     (* failed *)
     neighbors_test "neighbors of 5,9 @ 6,0" b59_10x10 6 0 1;
     neighbors_test "neighbors of 0,5 @ 9,4" b05_10x10 9 4 1;
@@ -337,7 +336,7 @@ let neighbors_tests =
     neighbors_test "neighbors of 0,9 @ 0,0" b09_10x10 9 0 1;
     neighbors_test "neighbors of 9,9 @ 0,9" b99_10x10 0 9 1;
     neighbors_test "neighbors of 9,9 @ 0,0" b99_10x10 0 0 1;
-    (* neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1; *)
+    neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1;
     (* failed *)
     neighbors_test "neighbors of glider @ 5,5" glider_10x10 5 5 2;
     neighbors_test "neighbors of glider @ 4,5" glider_10x10 4 5 3;
@@ -354,12 +353,150 @@ let update_node_tests =
   ]
 
 let gol_tests = List.flatten [ neighbors_tests; update_node_tests ]
-
 (******************************************************************************)
+
+(************** Tests for Active Game of Life with Wraparound **************)
+
+module ActiveGoL = MakeActive (B3_S23)
+
+let a_empty_10x10 = ActiveGoL.init_empty 10 10
+let a_glider_10x10 = ActiveGoL.init_glider ()
+
+let a_b55_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 5 5;
+  x
+
+let a_b00_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 0 0;
+  x
+
+let a_b09_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 0 9;
+  x
+
+let a_b90_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 9 0;
+  x
+
+let a_b99_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 9 9;
+  x
+
+let a_b05_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 0 5;
+  x
+
+let a_b95_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 9 5;
+  x
+
+let a_b50_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 5 0;
+  x
+
+let a_b59_10x10 =
+  let x = ActiveGoL.init_empty 10 10 in
+  ActiveGoL.birth_node x 5 9;
+  x
+
+let active_state_printer s =
+  match s with
+  | ActiveGoL.Alive -> "Alive"
+  | ActiveGoL.Dead -> "Dead"
+
+let active_neighbors_test name in_gb in_x in_y exp_out =
+  name >:: fun _ ->
+  assert_equal exp_out
+    (ActiveGoL.neighbors in_gb in_x in_y)
+    ~printer:string_of_int
+
+let active_update_node_test name in_gb in_x in_y (exp_out : ActiveGoL.state) =
+  name >:: fun _ ->
+  assert_equal exp_out
+    (let n = ActiveGoL.neighbors in_gb in_x in_y in
+     ActiveGoL.update_node in_gb in_x in_y n;
+     ActiveGoL.get in_gb in_x in_y)
+    ~printer:active_state_printer
+
+let active_neighbors_tests =
+  [
+    (* empty board *)
+    active_neighbors_test "neighbors of empty @ 0,0" a_empty_10x10 0 0 0;
+    active_neighbors_test "neighbors of empty @ 9,9" a_empty_10x10 9 9 0;
+    (* only alive node at 5,5 *)
+    active_neighbors_test "neighbors of 5,5 @ 5,5" a_b55_10x10 5 5 0;
+    active_neighbors_test "neighbors of 5,5 @ 4,4" a_b55_10x10 4 4 1;
+    active_neighbors_test "neighbors of 5,5 @ 5,4" a_b55_10x10 5 4 1;
+    active_neighbors_test "neighbors of 5,5 @ 6,4" a_b55_10x10 6 4 1;
+    active_neighbors_test "neighbors of 5,5 @ 4,5" a_b55_10x10 4 5 1;
+    active_neighbors_test "neighbors of 5,5 @ 6,5" a_b55_10x10 6 5 1;
+    active_neighbors_test "neighbors of 5,5 @ 4,6" a_b55_10x10 4 6 1;
+    active_neighbors_test "neighbors of 5,5 @ 5,6" a_b55_10x10 5 6 1;
+    active_neighbors_test "neighbors of 5,5 @ 6,6" a_b55_10x10 6 6 1;
+    active_neighbors_test "neighbors of 5,5 @ 5,7" a_b55_10x10 5 7 0;
+    (* mid edge cases*)
+    active_neighbors_test "neighbors of 5,0 @ 4,9" a_b50_10x10 4 9 1;
+    active_neighbors_test "neighbors of 5,0 @ 5,9" a_b50_10x10 5 9 1;
+    active_neighbors_test "neighbors of 5,0 @ 6,9" a_b50_10x10 6 9 1;
+    active_neighbors_test "neighbors of 9,5 @ 0,4" a_b95_10x10 0 4 1;
+    active_neighbors_test "neighbors of 9,5 @ 0,5" a_b95_10x10 0 5 1;
+    active_neighbors_test "neighbors of 9,5 @ 0,6" a_b95_10x10 0 6 1;
+    active_neighbors_test "neighbors of 5,9 @ 4,0" a_b59_10x10 4 0 1;
+    active_neighbors_test "neighbors of 5,9 @ 5,0" a_b59_10x10 5 0 1;
+    active_neighbors_test "neighbors of 5,9 @ 6,0" a_b59_10x10 6 0 1;
+    active_neighbors_test "neighbors of 0,5 @ 9,4" a_b05_10x10 9 4 1;
+    active_neighbors_test "neighbors of 0,5 @ 9,5" a_b05_10x10 9 5 1;
+    active_neighbors_test "neighbors of 0,5 @ 9,6" a_b05_10x10 9 6 1;
+    (* corner cases *)
+    active_neighbors_test "neighbors of 0,0 @ 9,0" a_b00_10x10 9 0 1;
+    active_neighbors_test "neighbors of 0,0 @ 0,9" a_b00_10x10 0 9 1;
+    active_neighbors_test "neighbors of 0,0 @ 9,9" a_b00_10x10 9 9 1;
+    active_neighbors_test "neighbors of 9,0 @ 0,0" a_b90_10x10 0 0 1;
+    active_neighbors_test "neighbors of 9,0 @ 0,9" a_b90_10x10 0 9 1;
+    active_neighbors_test "neighbors of 9,0 @ 9,9" a_b90_10x10 9 9 1;
+    active_neighbors_test "neighbors of 0,9 @ 0,0" a_b09_10x10 0 0 1;
+    active_neighbors_test "neighbors of 0,9 @ 9,9" a_b09_10x10 9 9 1;
+    active_neighbors_test "neighbors of 0,9 @ 0,0" a_b09_10x10 9 0 1;
+    active_neighbors_test "neighbors of 9,9 @ 0,9" a_b99_10x10 0 9 1;
+    active_neighbors_test "neighbors of 9,9 @ 0,0" a_b99_10x10 0 0 1;
+    (* neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1; *)
+    active_neighbors_test "neighbors of glider @ 5,5" a_glider_10x10 5 5 2;
+    active_neighbors_test "neighbors of glider @ 4,5" a_glider_10x10 4 5 3;
+    active_neighbors_test "neighbors of glider @ 4,4" a_glider_10x10 4 4 3;
+    active_neighbors_test "neighbors of glider @ 4,3" a_glider_10x10 4 3 5;
+  ]
+
+let active_update_node_tests =
+  [
+    active_update_node_test "update empty" a_empty_10x10 5 5 ActiveGoL.Dead;
+    active_update_node_test "update gilder @ 5,5" a_glider_10x10 5 5
+      ActiveGoL.Dead;
+    active_update_node_test "update gilder @ 4,5" a_glider_10x10 4 5
+      ActiveGoL.Alive;
+    active_update_node_test "update gilder @ 5,4" a_glider_10x10 5 4
+      ActiveGoL.Alive;
+  ]
+
+let active_gol_tests =
+  List.flatten [ active_neighbors_tests; active_update_node_tests ]
 
 let suite =
   "test suite for CA"
   >::: List.flatten
-         [ gol_tests; one_tests; int_to_binary_tests; make_rule_test ]
+         [
+           gol_tests;
+           one_tests;
+           int_to_binary_tests;
+           make_rule_test;
+           active_gol_tests;
+         ]
 
 let _ = run_test_tt_main suite
