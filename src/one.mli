@@ -41,9 +41,9 @@ val int_to_binary : int -> byte
 val binary_to_int : byte -> int
 (** [binary_to_int binary] is the int representation of binary, of type byte. *)
 
-val int_to_rule : bit -> rule
-(** [int_to_rule n] is the byte that represents a rule, stemming from a bit
-    input. For example, [int_to_rule 90 = \[0; 1; 0; 1; 1; 0; 1; 0\]]*)
+val make_rule : bit -> rule
+(** [make_rule n] is the byte that represents a rule, stemming from a bit input.
+    For example, [int_to_rule 90 = \[0; 1; 0; 1; 1; 0; 1; 0\]]*)
 
 val gb_to_byte : gameboard -> byte
 (** [gb_to_byte gb] converts gameboard [gb] to its byte representation, where
@@ -108,3 +108,5 @@ val make_grid : gameboard -> bit -> bit -> gamegrid
 
 val print_grid : gameboard array -> unit
 (** [print_grid gg] prints the 2D dimensional representation of the gameboard *)
+
+val make_2d : gameboard -> bit -> bit -> state array array
