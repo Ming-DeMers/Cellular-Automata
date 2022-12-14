@@ -1,3 +1,18 @@
+(********************************* TEST PLAN *********************************)
+(* We used OUnit tests to automatically test the following: 
+ * - 1D CA functions: make_n, int_to_binary, binary_to_int, make_rule, 
+ * neighborhood, update_node, and update_board 
+ * - 2D CA functions for various gamerules: 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ *)
+
+(*****************************************************************************)
 open OUnit2
 open Cellular_automata.One
 open Cellular_automata.Two
@@ -769,10 +784,18 @@ let state_printer s =
   | GoL.Alive -> "Alive"
   | GoL.Dead -> "Dead"
 
-(* let assert_equal_boards gb1 gb2 = let gb1_lst = gb1 |> Array.to_list |>
-   List.map (fun arr -> Array.to_list arr) |> List.flatten in let gb2_lst = gb2
-   |> Array.to_list |> List.map (fun arr -> Array.to_list arr) |> List.flatten
-   in List.equal (fun a b -> a = b) gb1_lst gb2_lst *)
+let equal_boards gb1 gb2 =
+  let gb1_lst =
+    gb1 |> Array.to_list
+    |> List.map (fun arr -> Array.to_list arr)
+    |> List.flatten
+  in
+  let gb2_lst =
+    gb2 |> Array.to_list
+    |> List.map (fun arr -> Array.to_list arr)
+    |> List.flatten
+  in
+  List.equal (fun a b -> a = b) gb1_lst gb2_lst
 
 let neighbors_test name in_gb in_x in_y exp_out =
   name >:: fun _ ->
@@ -786,8 +809,12 @@ let update_node_test name in_gb in_x in_y (exp_out : GoL.state) =
      GoL.get in_gb in_x in_y)
     ~printer:state_printer
 
-(* let update_board_test name in_gb exp_out = name >:: fun _ -> assert_equal
-   exp_out (GoL.update_board in_gb; in_gb) *)
+let update_board_test name in_gb exp_out =
+  name >:: fun _ ->
+  assert_equal exp_out
+    (GoL.update_board in_gb;
+     in_gb)
+    ~cmp:equal_boards ~printer:GoL.string_of_board
 
 let neighbors_tests =
   [
@@ -814,7 +841,6 @@ let neighbors_tests =
     neighbors_test "neighbors of 9,5 @ 0,6" b95_10x10 0 6 1;
     neighbors_test "neighbors of 5,9 @ 4,0" b59_10x10 4 0 1;
     neighbors_test "neighbors of 5,9 @ 5,0" b59_10x10 5 0 1;
-    (* failed *)
     neighbors_test "neighbors of 5,9 @ 6,0" b59_10x10 6 0 1;
     neighbors_test "neighbors of 0,5 @ 9,4" b05_10x10 9 4 1;
     neighbors_test "neighbors of 0,5 @ 9,5" b05_10x10 9 5 1;
@@ -832,7 +858,6 @@ let neighbors_tests =
     neighbors_test "neighbors of 9,9 @ 0,9" b99_10x10 0 9 1;
     neighbors_test "neighbors of 9,9 @ 0,0" b99_10x10 0 0 1;
     neighbors_test "neighbors of 9,9 @ 9,0" b99_10x10 9 0 1;
-    (* failed *)
     neighbors_test "neighbors of glider @ 5,5" glider_10x10 5 5 2;
     neighbors_test "neighbors of glider @ 4,5" glider_10x10 4 5 3;
     neighbors_test "neighbors of glider @ 4,4" glider_10x10 4 4 3;
@@ -842,12 +867,88 @@ let neighbors_tests =
 let update_node_tests =
   [
     update_node_test "update empty" empty_10x10 5 5 GoL.Dead;
-    update_node_test "update gilder @ 5,5" glider_10x10 5 5 GoL.Dead;
-    update_node_test "update gilder @ 4,5" glider_10x10 4 5 GoL.Alive;
-    update_node_test "update gilder @ 5,4" glider_10x10 5 4 GoL.Alive;
+    (*Initial Glider State*)
+    update_node_test "update initial gilder @ 3,2" (GoL.init_glider ()) 3 2
+      GoL.Dead;
+    update_node_test "update initial gilder @ 4,2" (GoL.init_glider ()) 4 2
+      GoL.Dead;
+    update_node_test "update initial gilder @ 5,2" (GoL.init_glider ()) 5 2
+      GoL.Dead;
+    update_node_test "update initial gilder @ 3,3" (GoL.init_glider ()) 3 3
+      GoL.Alive;
+    update_node_test "update initial gilder @ 4,3" (GoL.init_glider ()) 4 3
+      GoL.Dead;
+    update_node_test "update initial gilder @ 5,3" (GoL.init_glider ()) 5 3
+      GoL.Alive;
+    update_node_test "update initial gilder @ 3,4" (GoL.init_glider ()) 3 4
+      GoL.Dead;
+    update_node_test "update initial gilder @ 4,4" (GoL.init_glider ()) 4 4
+      GoL.Alive;
+    update_node_test "update initial gilder @ 5,4" (GoL.init_glider ()) 5 4
+      GoL.Alive;
+    update_node_test "update initial gilder @ 3,5" (GoL.init_glider ()) 3 5
+      GoL.Dead;
+    update_node_test "update initial gilder @ 4,5" (GoL.init_glider ()) 4 5
+      GoL.Alive;
+    update_node_test "update initial gilder @ 5,5" (GoL.init_glider ()) 5 5
+      GoL.Dead;
+    (*Glider In Corner*)
+    update_node_test "update corner glider @ 7 7"
+      (let x = GoL.init_glider () in
+       for _ = 0 to 17 do
+         GoL.update_board x
+       done;
+       x)
+      7 7 GoL.Dead;
+    update_node_test "update corner glider @ 8 7"
+      (let x = GoL.init_glider () in
+       for _ = 0 to 17 do
+         GoL.update_board x
+       done;
+       x)
+      8 7 GoL.Alive;
+    update_node_test "update corner glider @ 9 7"
+      (let x = GoL.init_glider () in
+       for _ = 0 to 17 do
+         GoL.update_board x
+       done;
+       x)
+      9 7 GoL.Dead;
+    update_node_test "update corner glider @ 0 8"
+      (let x = GoL.init_glider () in
+       for _ = 0 to 17 do
+         GoL.update_board x
+       done;
+       x)
+      0 8 GoL.Alive;
+    update_node_test "update corner glider @ 7 8"
+      (let x = GoL.init_glider () in
+       for _ = 0 to 17 do
+         GoL.update_board x
+       done;
+       x)
+      7 8 GoL.Dead;
   ]
 
-let gol_tests = List.flatten [ neighbors_tests; update_node_tests ]
+let update_board_tests =
+  [
+    update_board_test "update glider initial" (GoL.init_glider ())
+      (GoL.make_board 10 10 [ (3, 3); (5, 3); (4, 4); (5, 4); (4, 5) ]);
+    update_board_test "update glider step 2"
+      (let x = GoL.init_glider () in
+       GoL.update_board x;
+       x)
+      (GoL.make_board 10 10 [ (5, 3); (3, 4); (5, 4); (4, 5); (5, 5) ]);
+    update_board_test "update glider step 3"
+      (let x = GoL.init_glider () in
+       GoL.update_board x;
+       GoL.update_board x;
+       x)
+      (GoL.make_board 10 10 [ (4, 3); (5, 4); (6, 4); (4, 5); (5, 5) ]);
+  ]
+
+let gol_tests =
+  List.flatten [ neighbors_tests; update_node_tests; update_board_tests ]
 
 module HighLife = MakeBoard (B36_S23)
 
@@ -864,7 +965,7 @@ let highlife_tests =
   [
     (* empty board *)
     hl_neighbors_test "neighbors of empty @ 0,0" empty_18x18 0 0 0;
-    hl_neighbors_test "neighbors of empty @ 17,17" empty_18x18 19 19 0;
+    hl_neighbors_test "neighbors of empty @ 17,17" empty_18x18 17 17 0;
     hl_neighbors_test "neighbors of empty @ 10,10" empty_18x18 10 10 0;
     hl_neighbors_test "neighbors of empty at 2,2" empty_18x18 2 2 0;
     (* replicator tests - diagonal *)
