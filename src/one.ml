@@ -14,8 +14,7 @@ exception AlreadyDead
 
 (* [make_n lst n] prepends 0s to the front of a list to achieve n length.
    Requires: [lst] is a bit list of length <= n. *)
-(* let rec make_n lst n = if List.length lst < n then make_n (0 :: lst) n else
-   lst *)
+let rec make_n lst n = if List.length lst < n then make_n (0 :: lst) n else lst
 
 (* [make_end_n lst n] appends 0s to the back of a list to achieve n length.
    Requires: [lst] is a bit list of length <= n. *)
@@ -50,8 +49,9 @@ let binary_to_int binary =
 
 (* [int_to_rule n] is the byte that represents a rule, stemming from a bit
    input. For example, [int_to_rule 90 = \[0; 1; 0; 1; 1; 0; 1; 0\]]*)
-(* let int_to_rule (n : int) : rule = let rule = int_to_binary n in make_n rule
-   8 *)
+let int_to_rule (n : int) : rule =
+  let rule = int_to_binary n in
+  make_n rule 8
 
 (* [gb_to_byte gb] converts gameboard [gb] to its byte representation, where
    Dead has a value of 0, and Alive has a value of 1. *)
@@ -71,16 +71,6 @@ let init_empty x : gameboard =
     let ary = Array.make x Dead in
     ary.(x / 2) <- Alive;
     ary
-
-(* [gb_to_string gb] converts the row of a gameboard into a string with squares
-   that represent the alive/dead state of a node. *)
-let gb_to_string (gb : gameboard) =
-  Array.to_list gb
-  |> List.map (fun x ->
-         match x with
-         | Dead -> "◾"
-         | Alive -> "◽")
-  |> List.fold_left ( ^ ) ""
 
 (* let print_board (gb : gameboard) = print_endline (gb_to_string gb) *)
 

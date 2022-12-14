@@ -55,14 +55,6 @@ val init_empty : bit -> gameboard
 
     Requires: [x] is a postive integer.*)
 
-val gb_to_string : gameboard -> string
-(** [gb_to_string gb] converts the row of a gameboard into a string with squares
-    that represent the alive/dead state of a node. *)
-
-(* val print_board : gameboard -> unit *)
-(** [print_board gb] prints the gameboard [gb] to terminal, using black squares
-    to represent dead and white squares to represent alive.*)
-
 val neighbors : gameboard -> bit -> bit
 (** [neighbors gb x] is the number of alive neighbors of the node located at
     position [x]. Neighbors are the left and right nodes, thus there can be 0,
@@ -102,7 +94,7 @@ val gb_to_string : gameboard -> string
 (** [gb_to_string gb] is the string representation of the gameboard, using black
     and white squares. *)
 
-val print_grid : gameboard -> unit
+val print_board : gameboard -> unit
 (** [print_board gb] prints the string representation of the gameboard to
     terminal. *)
 
@@ -110,9 +102,9 @@ val print_loop : gameboard -> bit -> bit -> unit
 (** [print_loop gb rule x] is a loop that prints the continually updated
     gameboard [gb] according to the [rule], [x] times. *)
 
-(* val make_grid : gameboard -> bit -> bit -> gamegrid (** [make_grid gb rule x]
-   is the 2D dimensional representation of [game] according to [rule] with [x]
-   many row representing each generation. *) *)
+val make_grid : gameboard -> bit -> bit -> gamegrid
+(** [make_grid gb rule x] is the 2D dimensional representation of [game]
+    according to [rule] with [x] many row representing each generation. *)
 
 val print_grid : gameboard array -> unit
 (** [print_grid gg] prints the 2D dimensional representation of the gameboard *)
