@@ -424,7 +424,6 @@ let make_rule_test =
       [ 0; 1; 1; 0; 1; 1; 1; 1 ];
     make_rule_test "make_rule 112 is [0; 1; 1; 1; 0; 0; 0; 0]" 112
       [ 0; 1; 1; 1; 0; 0; 0; 0 ];
-
     make_rule_test "make_rule 113 is [0; 1; 1; 1; 0; 0; 0; 1]" 113
       [ 0; 1; 1; 1; 0; 0; 0; 1 ];
     make_rule_test "make_rule 114 is [0; 1; 1; 1; 0; 0; 1; 0]" 114
@@ -445,7 +444,6 @@ let make_rule_test =
       [ 0; 1; 1; 1; 1; 0; 0; 1 ];
     make_rule_test "make_rule 122 is [0; 1; 1; 1; 1; 0; 1; 0]" 122
       [ 0; 1; 1; 1; 1; 0; 1; 0 ];
-    
   ]
 
 (* Test Boards *)

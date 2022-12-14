@@ -32,7 +32,8 @@ module type Board = sig
       will become alive *)
 
   val survive_rule : int list
-  (** [survive_rule] is all the possible number of neighbors in which an alive node will stay alive] *)
+  (** [survive_rule] is all the possible number of neighbors in which an alive
+      node will stay alive *)
 
   val get : gameboard -> int -> int -> state
   (** [get g x y] is the state of the node at coordinate position (x,y) with the
