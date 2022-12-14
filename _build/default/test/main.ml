@@ -52,7 +52,7 @@ let one_tests =
   ]
 
 (* Test Boards *)
-module GoL = MakeBoard (B3_S23)
+module GoL = Make (B3_S23)
 
 (************** Tests for Standard Game of Life with Wraparound **************)
 let empty_10x10 = GoL.init_empty 10 10

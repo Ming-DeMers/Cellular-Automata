@@ -2,7 +2,7 @@ open Graphics
 open Cellular_automata.Two
 
 (* Make the board *)
-module GoL = MakeBoard (B3_S23)
+module GoL = Make (B3_S23)
 
 (** [grid] is the initialization of a glider configuration of a gameboard. *)
 let grid = GoL.init_glider ()
