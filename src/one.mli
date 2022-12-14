@@ -1,18 +1,19 @@
-type state
-(** [state] is the dead/alive status of a node. *)
+type state =
+  | Dead
+  | Alive  (** [state] is the dead/alive status of a node. *)
 
-type bit
+type bit = int
 (** [bit] is the int representation of a bit -- either 0 or 1. *)
 
-type byte
+type byte = bit list
 (** [byte] is a list representation of 8 bits, representing 2^8 = 256 possible
     rules. *)
 
-type rule
+type rule = byte
 (** [rule] is a byte representation of the game's rules, typically inputted by
     the user. *)
 
-type gameboard
+type gameboard = state array
 (** [gameboard] represents each node's state (dead or alive) on the gameboard. *)
 
 exception AlreadyAlive
