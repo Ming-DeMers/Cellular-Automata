@@ -59,7 +59,7 @@ val gb_to_string : gameboard -> string
 (** [gb_to_string gb] converts the row of a gameboard into a string with squares
     that represent the alive/dead state of a node. *)
 
-val print_board : gameboard -> unit
+(* val print_board : gameboard -> unit *)
 (** [print_board gb] prints the gameboard [gb] to terminal, using black squares
     to represent dead and white squares to represent alive.*)
 

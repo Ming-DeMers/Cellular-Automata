@@ -133,7 +133,7 @@ let update_node_test name in_gb in_x in_y (exp_out : GoL.state) =
      GoL.get in_gb in_x in_y)
     ~printer:state_printer
 
-let _update_board_test name in_gb exp_out =
+let update_board_test name in_gb exp_out =
   name >:: fun _ ->
   assert_equal exp_out
     (GoL.update_board in_gb;
@@ -254,7 +254,25 @@ let update_node_tests =
       7 8 GoL.Dead;
   ]
 
-let gol_tests = List.flatten [ neighbors_tests; update_node_tests ]
+let update_board_tests =
+  [
+    update_board_test "update glider initial" (GoL.init_glider ())
+      (GoL.make_board 10 10 [ (3, 3); (5, 3); (4, 4); (5, 4); (4, 5) ]);
+    update_board_test "update glider step 2"
+      (let x = GoL.init_glider () in
+       GoL.update_board x;
+       x)
+      (GoL.make_board 10 10 [ (5, 3); (3, 4); (5, 4); (4, 5); (5, 5) ]);
+    update_board_test "update glider step 3"
+      (let x = GoL.init_glider () in
+       GoL.update_board x;
+       GoL.update_board x;
+       x)
+      (GoL.make_board 10 10 [ (4, 3); (5, 4); (6, 4); (4, 5); (5, 5) ]);
+  ]
+
+let gol_tests =
+  List.flatten [ neighbors_tests; update_node_tests; update_board_tests ]
 
 (******************************************************************************)
 

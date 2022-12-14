@@ -31,32 +31,41 @@ let draw_cell x y st =
   set_color color;
   fill_rect (x * cell_size) (y * cell_size) cell_size cell_size
 
-(* let create_button x y wh = failwith "unimplemented" *)
+let draw_borders x y =
+  set_color black;
+  draw_rect (x * cell_size) (y * cell_size) cell_size cell_size
 
 let draw_grid g =
   for x = 0 to grid_width - 1 do
     for y = 0 to grid_height - 1 do
-      draw_cell (x + 8) (y + 8) g.(x).(y)
+      draw_cell (x + 8) (y + 8) g.(x).(y);
+      draw_borders (x + 8) (y + 8)
     done
   done
 
-(* let step g = GoL.update_board g *)
+(* let mouse_x = fst (mouse_pos ()) let mouse_y = snd (mouse_pos ()) let
+   mouse_is_clicked = button_down () *)
 let open_string = " " ^ window_width ^ "x" ^ window_height
 
-let run_gui () =
+let run_gui_glider () =
   open_graph open_string;
   set_window_title "Conway's Game of Life";
   display_mode true;
-  (* let i = ref 0 in *)
-  (* while !i < 19 do *)
+  set_color black;
   while true do
     draw_grid grid;
     Unix.sleep 1;
-    GoL.update_board grid (* i := !i + 1; *)
+    GoL.update_board grid
+    (* let key = read_key () in match key with | 'q' -> exit 0 | _ -> () *)
+
+    (* loop_at_exit [ Key_pressed; Poll ] (fun e -> if e.button then
+       GoL.update_board grid else raise Exit; draw_grid grid *)
+    (* let st = wait_next_event [ Key_pressed ] in synchronize (); *)
+    (* if st.keypressed then begin Unix.sleep 1; raise Exit *)
+    (* end *)
+    (* Unix.sleep 1; *)
+    (* if st.button then GoL.update_board grid *)
+    (* GoL.update_board grid *)
   done
 
-(* In utop, run: #require "graphics" then you can run a file with header `open
-   Graphics` *)
-(* problem: open Two is not currently working. need to make new directory o*)
-
-let _ = run_gui ()
+let _ = run_gui_glider ()

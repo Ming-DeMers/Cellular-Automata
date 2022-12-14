@@ -51,6 +51,6 @@ val draw_grid : GoL.state array array -> unit
 (** [draw_grid g] creates a grid using [draw_cell x y st] as a helper, creating
     a grid of cells of dimension [grid_width] x [grid_height]. *)
 
-val run_gui : unit -> unit
+val run_gui_glider : unit -> unit
 (** [run_gui ()] is the function that opens a window, sets the title, and runs a
     loop to continuously check for state changes. *)
