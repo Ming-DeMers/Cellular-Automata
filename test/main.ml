@@ -48,7 +48,6 @@ let one_tests =
        Dead; Dead |]"
       10
       [| Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead |];
-      
   ]
 
 (* Test Boards *)
