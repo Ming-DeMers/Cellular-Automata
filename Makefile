@@ -29,6 +29,7 @@ doc:
 opendoc: doc
 	@bash opendoc.sh
 
-gol:  
-	OCAMLRUNPARAM=b dune exec gui/gol.exe
+gui:  
+	OCAMLRUNPARAM=b dune exec gui/gui.exe
+
 

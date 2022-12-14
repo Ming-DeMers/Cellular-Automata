@@ -1,8 +1,0 @@
-let game_9 = init_empty 9
-let game_15 = init_empty 15
-
-
-
-
-let update_node_test test_name in_gb in_rule in_x exp_out =
-  test_name >:: fun _ -> assert_equal exp_out (update_node in_gb in_rule in_x)
