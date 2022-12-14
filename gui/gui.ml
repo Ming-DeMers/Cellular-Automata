@@ -65,3 +65,8 @@ module MakeGUI (B : Board) = struct
       B.update_board grid
     done
 end
+
+module GoL = MakeBoard (B3_S23)
+module GoLGUI = MakeGUI (GoL)
+
+let _ = GoLGUI.run_gui ()
