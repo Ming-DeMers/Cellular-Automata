@@ -22,41 +22,13 @@ exception AlreadyAlive
 exception AlreadyDead
 (** Raised if updating a dead node's state to dead. *)
 
-val make_n : byte -> bit -> byte
-(** [make_n lst n] prepends 0s to the front of a list to achieve n length.
-    Requires: [lst] is a bit list of length <= n. *)
-
-val make_end_n : byte -> bit -> byte
-(** [make_end_n lst n] appends 0s to the back of a list to achieve n length.
-    Requires: [lst] is a bit list of length <= n. *)
-
-val int_to_binary : int -> byte
-(** [int_to_binary i] returns the byte representation of a string. For the
-    purpose of this program, binary numbers 0-7 are representated as a 3-bit
-    list. *)
-
-val binary_to_int : byte -> int
-(** [binary_to_int binary] is the int representation of binary, of type byte. *)
-
-val int_to_rule : bit -> rule
-(** [int_to_rule n] is the byte that represents a rule, stemming from a bit
-    input. For example, [int_to_rule 90 = \[0; 1; 0; 1; 1; 0; 1; 0\]]*)
-
-val gb_to_byte : gameboard -> byte
-(** [gb_to_byte gb] converts gameboard [gb] to its byte representation, where
-    Dead has a value of 0, and Alive has a value of 1. *)
-
 val init_empty : bit -> gameboard
 (** [init_empty x] initializes a gameboard with a single alive node in the
     middle of the board. *)
 
-val gb_to_string : gameboard -> string
-(** [gb_to_string gb] converts the row of a gameboard into a string with squares
-    that represent the alive/dead state of a node. *)
-
 val print_board : gameboard -> unit
-(** [print_board gb] prints the gameboard [gb] to terminal, using
-    [gb_to_string gb] as a helper function. *)
+(** [print_board gb] prints the gameboard [gb] to terminal, using black squares
+    to represent dead and white squares to represent alive.*)
 
 val neighbors : gameboard -> bit -> bit
 (** [neighbors gb x] is the number of alive neighbors of the node located at
@@ -78,10 +50,6 @@ val kill_node : gameboard -> bit -> unit
     AlreadyDead if the node is already dead. Requires: [x] is a valid positive
     integer. *)
 
-val make_rule : bit -> rule
-(** [make_rule rule b] creates a type rule of the appropriate length containing
-    the rule of a converted integer input. Requires: [b] is a positive integer. *)
-
 val update_node : gameboard -> bit -> bit -> state
 (** [update_node gb rule x] updates the node at [x] in gameboard [gb] with a
     specified amount of neighbors in the previous generation to be dead/alive in
@@ -92,12 +60,13 @@ val update_board : gameboard -> bit -> gameboard
 (** [update_board gb rule] outputs a modified gameboard [gb] of the next
     generation. *)
 
-(* val gb_to_string : gameboard -> string (** [gb_to_string gb] is the string
-   representation of the gameboard, using black and white squares. *)
+val gb_to_string : gameboard -> string
+(** [gb_to_string gb] is the string representation of the gameboard, using black
+    and white squares. *)
 
-   val print_board : gameboard -> unit (** [print_board gb] prints the string
-   representation of the gameboard to terminal, using [gb_to_string gb] as a
-   helper function. *) *)
+val print_board : gameboard -> unit
+(** [print_board gb] prints the string representation of the gameboard to
+    terminal, using [gb_to_string gb] as a helper function. *)
 
 val print_loop : gameboard -> bit -> bit -> unit
 (** [print_loop gb rule x] is a loop that prints the continually updated
