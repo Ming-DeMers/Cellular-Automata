@@ -47,8 +47,8 @@ end
 
 (* Day and Night *)
 module B34678_S3678 : BSRules = struct
-  let born = [ 3; 4; 6; 7; 8 ]
-  let survive = [ 3; 6; 7; 8 ]
+  let born = [ 3; 6; 7; 8 ]
+  let survive = [ 3; 4; 6; 7; 8 ]
 end
 
 (* Seeds *)
@@ -139,7 +139,7 @@ module MakeBoard (BS : BSRules) : Board = struct
   let update_board g =
     let width = Array.length g.(0) in
     let height = Array.length g in
-    let neighbors_matrix = Array.make_matrix width height 0 in
+    let neighbors_matrix = Array.make_matrix height width 0 in
     for r = 0 to width - 1 do
       for c = 0 to height - 1 do
         set neighbors_matrix r c (neighbors g r c)
@@ -181,7 +181,7 @@ module MakeBoard (BS : BSRules) : Board = struct
   let init_empty x y =
     if x < 1 || y < 1 then
       raise (PreconditionViolation "error in init_empty: x and y must be >= 1")
-    else Array.make_matrix x y Dead
+    else Array.make_matrix y x Dead
 
   let make_board x y c =
     let gb = init_empty x y in
