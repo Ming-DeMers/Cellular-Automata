@@ -1,4 +1,4 @@
-(* #use "src/one.ml" *)
+#use "src/one.ml"
 #use "src/two.ml"
 module GoL = Make (B3_S23)
 open GoL

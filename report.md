@@ -13,7 +13,7 @@ Overall progress is substantial and a good step to our goals. Implementing the g
 For each team member, give a bulleted list of the responsibilities that team members had, the activities in which they participated, the features they delivered, and the number of hours they spent working.
 
 ### Ming
-- Assigned to setup the repo and collaborative environment, help implement functions, and ensure the program is within application requirements.
+- Assigned to setup the prepo and collaborative environment, help implement functions, and ensure the program is within application requirements.
 - Set up Cornell github, as well as personal github so those not at Cornell may see the project.
 - Wrote makefiles, dune files, etc.
 - Helped implement functions and ensure functionality.
@@ -22,7 +22,7 @@ For each team member, give a bulleted list of the responsibilities that team mem
 - 8 Hours.
 
 ### Jack
-- Assigned to implement in the program, testing, and ensure we are meeting application req's.
+- Assigned to implement in the rogram, testing, and ensure we are meeting application req's.
 - Defined specifications for all functions in gameboard.mli
 - Implemented update_board and its helper functions
 - Implemented update_node
