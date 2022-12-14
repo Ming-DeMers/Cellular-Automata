@@ -1,0 +1,129 @@
+# dune build @doc
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: "/Users/bennozik/cs3110/final project/Cellular-Automata"
+# Auto-detected concurrency: 8
+$ /Users/bennozik/.opam/cs3110-2022fa/bin/ocamlc.opt -config > /var/folders/9z/1dzdfsv16tqf54_gwb5qymz00000gn/T/dune_96c306_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path =
+#      Some External "/Users/bennozik/.opam/cs3110-2022fa/lib/toplevel"
+#  ; ocaml_bin = External "/Users/bennozik/.opam/cs3110-2022fa/bin"
+#  ; ocaml = Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocaml"
+#  ; ocamlc = External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamlc.opt"
+#  ; ocamlopt =
+#      Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamlopt.opt"
+#  ; ocamldep =
+#      Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamldep.opt"
+#  ; ocamlmklib =
+#      Ok External "/Users/bennozik/.opam/cs3110-2022fa/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/bennozik/.opam/cs3110-2022fa/lib"
+#        ; "DUNE_OCAML_STDLIB" :
+#            "/Users/bennozik/.opam/cs3110-2022fa/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata"
+#        ; "INSIDE_DUNE" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/bennozik/cs3110/final project/Cellular-Automata/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/Users/bennozik/.opam/cs3110-2022fa/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.14.0"
+#      ; standard_library_default =
+#          "/Users/bennozik/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_library = "/Users/bennozik/.opam/cs3110-2022fa/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "cc"
+#      ; ocamlc_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
+#      ; bytecomp_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "cc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "arm64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "aarch64-apple-darwin21.6.0"
+#      ; target = "aarch64-apple-darwin21.6.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X031"
+#      ; cmi_magic_number = "Caml1999I031"
+#      ; cmo_magic_number = "Caml1999O031"
+#      ; cma_magic_number = "Caml1999A031"
+#      ; cmx_magic_number = "Caml1999Y031"
+#      ; cmxa_magic_number = "Caml1999Z031"
+#      ; ast_impl_magic_number = "Caml1999M031"
+#      ; ast_intf_magic_number = "Caml1999N031"
+#      ; cmxs_magic_number = "Caml1999D031"
+#      ; cmt_magic_number = "Caml1999T031"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc support-files -o _doc/_html)
+$ (cd _build/default/_doc/_odoc/pkg/CellularAutomata && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc compile --pkg CellularAutomata -o page-index.odoc ../../../_mlds/CellularAutomata/index.mld)
+$ (cd _build/default/src/.cellular_automata.objs/byte && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/CellularAutomata --pkg CellularAutomata -o cellular_automata.odoc cellular_automata.cmt)
+$ (cd _build/default/src/.cellular_automata.objs/byte && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/CellularAutomata --pkg CellularAutomata -o cellular_automata__Gameboard.odoc cellular_automata__Gameboard.cmti)
+$ (cd _build/default/src/.cellular_automata.objs/byte && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/CellularAutomata --pkg CellularAutomata -o cellular_automata__One.odoc cellular_automata__One.cmti)
+$ (cd _build/default/src/.cellular_automata.objs/byte && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/CellularAutomata --pkg CellularAutomata -o cellular_automata__Two.odoc cellular_automata__Two.cmti)
+$ (cd _build/default/src/.cellular_automata.objs/byte && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc compile -I . -I ../../../_doc/_odoc/pkg/CellularAutomata --pkg CellularAutomata -o cellular_automata__Active.odoc cellular_automata__Active.cmt)
+$ (cd _build/default/_doc/_html && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc link -I ../_odoc/pkg/CellularAutomata -I ../../src/.cellular_automata.objs/byte -o ../_odocls/CellularAutomata/page-index.odocl ../_odoc/pkg/CellularAutomata/page-index.odoc)
+$ (cd _build/default/_doc/_html && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc link -I ../_odoc/pkg/CellularAutomata -I ../../src/.cellular_automata.objs/byte -o ../_odocls/CellularAutomata/cellular_automata.odocl ../../src/.cellular_automata.objs/byte/cellular_automata.odoc)
+$ (cd _build/default/_doc/_html && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc html-generate -o . ../_odocls/CellularAutomata/page-index.odocl)
+$ (cd _build/default/_doc/_html && /Users/bennozik/.opam/cs3110-2022fa/bin/odoc html-generate -o . ../_odocls/CellularAutomata/cellular_automata.odocl)
