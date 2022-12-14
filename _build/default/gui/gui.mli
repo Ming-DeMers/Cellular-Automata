@@ -16,11 +16,11 @@ val grid_height : int
 val cell_size : int
 (** [cell_size] is constant storing the height and width of each drawn cell. *)
 
-val window_width : int
+val window_width : string
 (** [window_width] is the width of the opened window in pixels, based from
     [cell_size] and [grid_width]. *)
 
-val window_height : int
+val window_height : string
 (** [window_height] is the height of the opened window in pixels, based from
     [cell_size] and [grid_width]. *)
 

@@ -61,6 +61,9 @@ module type Board = sig
   val update_board : gameboard -> unit
   (** [update_board gb] updates gameboard [gb] to the next generation *)
 
+  val string_of_board : gameboard -> string
+  (** [string_of_board gb] is the string representation of gameboard gb *)
+
   val print_board : gameboard -> unit
   (** [print_board g] prints [g]. *)
 
