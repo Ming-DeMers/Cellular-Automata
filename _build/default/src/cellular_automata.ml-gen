@@ -10,9 +10,5 @@ module Gameboard = Cellular_automata__Gameboard
 module One = Cellular_automata__One
 
 
-(** @canonical Cellular_automata.Samples *)
-module Samples = Cellular_automata__Samples
-
-
 (** @canonical Cellular_automata.Two *)
 module Two = Cellular_automata__Two

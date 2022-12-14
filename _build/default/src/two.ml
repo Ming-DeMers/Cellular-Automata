@@ -20,6 +20,7 @@ module type Board = sig
   val neighbors : gameboard -> int -> int -> int
   val update_node : gameboard -> int -> int -> int -> unit
   val update_board : gameboard -> unit
+  val string_of_board : gameboard -> string
   val print_board : gameboard -> unit
   val loop : gameboard -> int -> unit
   val init_empty : int -> int -> gameboard
@@ -159,7 +160,8 @@ module Make (BS : BSRules) : Board = struct
     | [] -> ""
     | h :: t -> make_row_string (to_list h) ^ "\n" ^ gb_list_to_string t
 
-  let print_board g = print_endline (g |> to_list |> gb_list_to_string)
+  let string_of_board g = g |> to_list |> gb_list_to_string
+  let print_board g = g |> string_of_board |> print_endline
 
   let loop g n =
     for num = n downto 1 do
@@ -183,6 +185,4 @@ module Make (BS : BSRules) : Board = struct
 
   let init_glider () =
     make_board 10 10 [ (3, 4); (4, 4); (5, 4); (4, 2); (5, 3) ]
-  (* let b = init_empty 10 10 in birth_node b 3 4; birth_node b 4 4; birth_node
-     b 5 4; birth_node b 4 2; birth_node b 5 3; b *)
 end

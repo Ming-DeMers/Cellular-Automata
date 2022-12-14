@@ -6,6 +6,7 @@ type bit = int
 type byte = bit list
 type rule = byte
 type gameboard = state array
+type gamegrid = gameboard array
 (* type 'a gen = Cons of 'a * 'a gen *)
 
 exception AlreadyAlive
@@ -19,6 +20,9 @@ let rec make_n lst n = if List.length lst < n then make_n (0 :: lst) n else lst
    Requires: [lst] is a bit list of length <= n. *)
 let rec make_end_n lst n =
   if List.length lst < n then make_end_n (lst @ [ 0 ]) n else lst
+
+(* [len gb] is the length of a given gameboard, [gb] *)
+let len (gb : gameboard) = Array.length gb
 
 (* [int_to_binary i] returns the byte representation of a string. For the
    purpose of this program, binary numbers 0-7 are representated as a 3-bit
@@ -53,7 +57,7 @@ let int_to_rule (n : int) : rule =
    Dead has a value of 0, and Alive has a value of 1. *)
 let gb_to_byte (gb : gameboard) : bit list =
   let rec gb_to_byte' acc count =
-    if count = Array.length gb then acc
+    if count = len gb then acc
     else
       match gb.(count) with
       | Alive -> gb_to_byte' (1 :: acc) (count + 1)
@@ -70,7 +74,7 @@ let init_empty x : gameboard =
 
 (* [gb_to_string gb] converts the row of a gameboard into a string with squares
    that represent the alive/dead state of a node. *)
-let gb_to_string gb =
+let gb_to_string (gb : gameboard) =
   Array.to_list gb
   |> List.map (fun x ->
          match x with
@@ -96,8 +100,8 @@ let neighborhood (gb : gameboard) x : state array =
     if count = 3 then array
     else
       let st =
-        if x = 0 && count = 0 then gb.(Array.length gb - 1)
-        else gb.((x - 1 + count) mod Array.length gb)
+        if x = 0 && count = 0 then gb.(len gb - 1)
+        else gb.((x - 1 + count) mod len gb)
       in
       array.(count) <- st;
       make_nb (count + 1)
@@ -129,13 +133,19 @@ let update_node (gb : gameboard) rule x =
   | _ -> raise (Failure "Invalid neighborhood")
 
 let update_board (gb : gameboard) rule =
-  let new_gb = init_empty (Array.length gb) in
-  for i = 0 to Array.length gb - 1 do
+  let new_gb = init_empty (len gb) in
+  for i = 0 to len gb - 1 do
     new_gb.(i) <- update_node gb rule i
   done;
   new_gb
-(* let gb_to_string (gb : gameboard) = Array.to_list gb |> List.map (fun x ->
-   match x with | Dead -> "⬛" | Alive -> "⬜") |> List.fold_left ( ^ ) "" *)
+
+let gb_to_string (gb : gameboard) =
+  Array.to_list gb
+  |> List.map (fun x ->
+         match x with
+         | Dead -> "⬛"
+         | Alive -> "⬜")
+  |> List.fold_left ( ^ ) ""
 
 let print_board (gb : gameboard) = print_endline (gb_to_string gb)
 
@@ -148,3 +158,21 @@ let rec print_loop gb rule x =
   else (
     print_board gb;
     print_loop new_gb rule (x - 1))
+
+let make_grid (gb : gameboard) rule x =
+  let len = len gb in
+  let empty = init_empty len in
+  let grid = Array.make x empty in
+  let rec make_grid' gb count =
+    if count = x then grid
+    else
+      let new_gb = update_board gb rule in
+      grid.(count) <- new_gb;
+      make_grid' new_gb (count + 1)
+  in
+  make_grid' gb 1
+
+let print_grid grid = Array.iter print_board grid
+
+(* [make_2d gb] is the 2D dimensional representation of the grid so it may be
+   read by the program GUI. *)

@@ -1,5 +1,3 @@
-include Samples
-
 type state =
   | Dead
   | Alive
