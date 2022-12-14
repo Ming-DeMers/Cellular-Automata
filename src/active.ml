@@ -1,4 +1,7 @@
-open Two
+module type BSRules = sig
+  val born : int list
+  val survive : int list
+end
 
 module type ActiveBoard = sig
   type state =
@@ -21,6 +24,9 @@ module type ActiveBoard = sig
   val loop : gameboard -> int -> unit
   val init_empty : int -> int -> gameboard
   val init_glider : unit -> gameboard
+  val init_replicator : unit -> gameboard
+  val init_rocket : unit -> gameboard
+  val init_seed : unit -> gameboard
   val make_board : int -> int -> (int * int) list -> gameboard
 end
 
@@ -130,8 +136,8 @@ module MakeActive (BS : BSRules) : ActiveBoard = struct
     | [] -> ""
     | h :: t -> begin
         match h with
-        | Alive -> "◾" ^ make_row_string t
-        | Dead -> "◽" ^ make_row_string t
+        | Alive -> "⬛" ^ make_row_string t
+        | Dead -> "⬜" ^ make_row_string t
       end
 
   (** Creates a string of the given gameboard *)
@@ -171,4 +177,34 @@ module MakeActive (BS : BSRules) : ActiveBoard = struct
 
   let init_glider () =
     make_board 10 10 [ (3, 4); (4, 4); (5, 4); (4, 2); (5, 3) ]
+
+  let init_replicator () =
+    make_board 18 18 [ (7, 8); (7, 9); (7, 10); (8, 7); (9, 7); (10, 7) ]
+
+  let init_rocket () =
+    make_board 30 20
+      [
+        (18, 7);
+        (17, 7);
+        (16, 7);
+        (15, 7);
+        (14, 7);
+        (13, 7);
+        (12, 7);
+        (11, 7);
+        (14, 6);
+        (14, 8);
+        (13, 5);
+        (13, 6);
+        (13, 8);
+        (13, 9);
+        (12, 5);
+        (12, 9);
+        (11, 6);
+        (11, 8);
+      ]
+
+  let init_seed () =
+    make_board 18 18
+      [ (7, 8); (7, 9); (8, 7); (9, 7); (10, 8); (10, 9); (8, 10); (9, 10) ]
 end

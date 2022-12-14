@@ -1,11 +1,24 @@
-(* #use "src/one.ml" *)
+#use "src/one.ml"
 #use "src/two.ml"
-module GoL = Make (B3_S23)
-open GoL
+#use "src/active.ml"
 
-#require "graphics"
-open Graphics
+module G = MakeBoard (B3_S23);;
+let g = G.init_glider ();;
 
-(* let game = init_empty 59;;
-print_loop game 90 100;; *)
+module H = MakeBoard (B36_S23);;
+let h = H.init_replicator ();;
 
+module D = MakeBoard (B3678_S34678);;
+let d = D.init_rocket ();;
+
+module S = MakeBoard (B2_S);;
+let s = S.init_seed ();;
+
+module GA = MakeActive (B3_S23);;
+let ga = GA.init_glider ();;
+
+module HA = MakeActive (B36_S23);;
+let ha = HA.init_replicator ();;
+
+module SA = MakeActive (B2_S);;
+let sa = SA.init_seed ();;
