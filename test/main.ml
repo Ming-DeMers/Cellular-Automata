@@ -908,6 +908,41 @@ let highlife_tests =
 
 let hl_tests = List.flatten [ highlife_tests ]
 
+module DayNight = MakeBoard (B34678_S3678)
+
+(* let rocket_20x15 = DayNight.init_rocket () *)
+let empty_20x15 = DayNight.init_empty 20 15
+
+let dn_neighbors_test name in_gb in_x in_y exp_out =
+  name >:: fun _ ->
+  assert_equal exp_out
+    (DayNight.neighbors in_gb in_x in_y)
+    ~printer:string_of_int
+
+let dn_neighbors_tests =
+  [
+    (* diagonal neighbors tests for empty board *)
+    dn_neighbors_test "neighbors of empty @ 0,0" empty_20x15 0 0 0;
+    dn_neighbors_test "neighbors of empty @ 1,1" empty_20x15 1 1 0;
+    dn_neighbors_test "neighbors of empty @ 2,2" empty_20x15 2 2 0;
+    dn_neighbors_test "neighbors of empty @ 3,3" empty_20x15 3 3 0;
+    dn_neighbors_test "neighbors of empty @ 4,4" empty_20x15 4 4 0;
+    dn_neighbors_test "neighbors of empty @ 5,5" empty_20x15 5 5 0;
+    dn_neighbors_test "neighbors of empty @ 6,6" empty_20x15 6 6 0;
+    dn_neighbors_test "neighbors of empty @ 7,7" empty_20x15 7 7 0;
+    dn_neighbors_test "neighbors of empty @ 8,8" empty_20x15 8 8 0;
+    dn_neighbors_test "neighbors of empty @ 9,9" empty_20x15 9 9 0;
+    dn_neighbors_test "neighbors of empty @ 10,10" empty_20x15 10 10 0;
+    dn_neighbors_test "neighbors of empty @ 11,11" empty_20x15 11 11 0;
+    dn_neighbors_test "neighbors of empty @ 12,12" empty_20x15 12 12 0;
+    dn_neighbors_test "neighbors of empty @ 13,13" empty_20x15 13 13 0;
+    dn_neighbors_test "neighbors of empty @ 14,14" empty_20x15 14 14 0
+    (* diagonal test for rocket board *)
+    (* dn_neighbors_test "neighbors of rocket @ 0,0" rocket_20x15 0 0 0; *);
+  ]
+
+let dn_tests = List.flatten [ dn_neighbors_tests ]
+
 (******************************************************************************)
 
 (************** Tests for Active Game of Life with Wraparound **************)
@@ -1049,10 +1084,11 @@ let suite =
          [
            gol_tests;
            one_tests;
+           hl_tests;
+           dn_tests;
            int_to_binary_tests;
            make_rule_test;
            active_gol_tests;
-           hl_tests;
          ]
 
 let _ = run_test_tt_main suite
