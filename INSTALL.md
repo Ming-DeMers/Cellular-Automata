@@ -11,6 +11,7 @@
 - move to the directory ./Cellular-Automata/src using the command $ cd src
 - Open utop
 
+<<<<<<< HEAD
 ## Elementary 1D Cellular Automata
 - A new game is created by defining the width of the board. The midddle most node will be *Alive* and the rest will be *Dead*. We do this by running `init_empty n` where n is the length of the board. An odd integer is recommended.
 - We can print any gameboard with `print_board gb` where `gb` is the gameboard. 
@@ -57,12 +58,30 @@ Other interesting rules:
 - Input the command $ module S = MakeBoard (B2_S);;
 - Input the command $ let s = S.init_seed ();;
 - Input the command $ S.loop s 20;; (Or however many iterations you wish to see)
+=======
+We'll start by observing some 2D Cellualar Automata, both the original 
+implementation as well as a more efficient implementation
+
+Conway's Game of life:
+- Original: Input the command $ G.loop g 30;; 
+(Or however many iterations you wish to see)
+- Efficient: Input the command $ GA.loop ga 30;;
 - Observe the printed gameboards
 
-Now let's take a look at a new implimentation of 2D Cellular Automata that is optomized to run more efficiently:
+Hilifelife:
+- Original: Input the command $ H.loop h 20;;
+- Efficient: Input the command $ HA.loop ha 20;;
+- Observe the printed gameboards
 
+Day and Night:
+- Original: Input the command $ D.loop d 30;;
+- Observe the printed gameboards
 
-
+Seeds:
+- Original: Input the command $ S.loop s 20;;
+- Efficient: Input the command $ SA.loop sa 20;;
+>>>>>>> f8a4918fbe3015b309d3a6cd61e65de9adf6839e
+- Observe the printed gameboards
 
 
 
