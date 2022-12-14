@@ -4,17 +4,33 @@
    implementation allows the user to generate preset patterns or input their own
    manually, and run the pattern for generations. *)
 
+(** [BSRules] contains information about the gamerules for a 2D CA *)
 module type BSRules = sig
   val born : int list
+  (** [born] is all the possible number of neighbors in which a dead node will
+      become alive *)
+
   val survive : int list
+  (** [survive] is all the possible number of neighbors in which an alive node
+      will stay alive *)
 end
 
 module B3_S23 : BSRules
-module B36_S23 : BSRules
-module B3678_S34678 : BSRules
-module B2_S : BSRules
+(** [B3_S23] contains the gamerules for Conway's Game of Life *)
 
+module B36_S23 : BSRules
+(** [B36_S23] contains the gamerules for Highlife *)
+
+module B3678_S34678 : BSRules
+(** [B3678_S34678] contains the gamerules for Day and Night *)
+
+module B2_S : BSRules
+(** [B2_S] contains the gamerules for Seeds *)
+
+(** [Board] contains the neccessary functions to observe 2D CA acorrding to
+    specific gamerules*)
 module type Board = sig
+  (** [state] represents the state of a node. Either [Dead] or [Alive] *)
   type state =
     | Dead
     | Alive
@@ -24,8 +40,16 @@ module type Board = sig
       is (0, 0), increasing in x and y when moving right and down respectively *)
 
   exception AlreadyAlive
+  (** [AlreadyAlive] is raised when a node containing an [Alive] node is
+      attempted to be birthed *)
+
   exception AlreadyDead
+  (** [AlreadyDead] is raised when a node containing an [Dead] node is attempted
+      to be killed *)
+
   exception PreconditionViolation of string
+  (** [PreconditionViolation s] is raised when the precondition of a funciton is
+      violated. [s] tells which function raised this excpetion *)
 
   val born_rule : int list
   (** [born_rule] is all the possible number of neighbors in which a dead node
@@ -104,4 +128,5 @@ module type Board = sig
       nodes at each coordinate specified in [c] *)
 end
 
+(** [MakeBoard] makes a [Board] according to the rules specified by [BSRules] *)
 module MakeBoard : functor (_ : BSRules) -> Board
