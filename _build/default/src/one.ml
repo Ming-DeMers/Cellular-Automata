@@ -7,18 +7,26 @@ type byte = bit list
 type rule = byte
 type gameboard = state array
 type gamegrid = gameboard array
+(* type 'a gen = Cons of 'a * 'a gen *)
 
 exception AlreadyAlive
 exception AlreadyDead
 
+(* [make_n lst n] prepends 0s to the front of a list to achieve n length.
+   Requires: [lst] is a bit list of length <= n. *)
 let rec make_n lst n = if List.length lst < n then make_n (0 :: lst) n else lst
 
+(* [make_end_n lst n] appends 0s to the back of a list to achieve n length.
+   Requires: [lst] is a bit list of length <= n. *)
 let rec make_end_n lst n =
   if List.length lst < n then make_end_n (lst @ [ 0 ]) n else lst
 
 (* [len gb] is the length of a given gameboard, [gb] *)
 let len (gb : gameboard) = Array.length gb
 
+(* [int_to_binary i] returns the byte representation of a string. For the
+   purpose of this program, binary numbers 0-7 are representated as a 3-bit
+   list. *)
 let int_to_binary i =
   if i = 0 then [ 0 ]
   else
@@ -30,6 +38,7 @@ let int_to_binary i =
     in
     int_to_binary' i []
 
+(* [binary_to_int binary] is the int representation of binary, of type byte. *)
 let binary_to_int binary =
   let rec binary_to_int' binary acc =
     match binary with
@@ -38,6 +47,8 @@ let binary_to_int binary =
   in
   binary_to_int' binary 0
 
+(* [gb_to_byte gb] converts gameboard [gb] to its byte representation, where
+   Dead has a value of 0, and Alive has a value of 1. *)
 let gb_to_byte (gb : gameboard) : bit list =
   let rec gb_to_byte' acc count =
     if count = len gb then acc
@@ -54,6 +65,8 @@ let init_empty x : gameboard =
     let ary = Array.make x Dead in
     ary.(x / 2) <- Alive;
     ary
+
+(* let print_board (gb : gameboard) = print_endline (gb_to_string gb) *)
 
 let neighborhood (gb : gameboard) x : state array =
   let array = Array.make 3 Dead in
@@ -73,6 +86,10 @@ let birth_node gb x =
   if gb.(x) = Alive then raise AlreadyAlive else gb.(x) <- Alive
 
 let kill_node gb x = if gb.(x) = Dead then raise AlreadyDead else gb.(x) <- Dead
+
+(* [make_rule rule b] creates a type rule of the appropriate length containing
+   the rule of a converted integer input. Requires: [b] is a positive
+   integer. *)
 let make_rule b = make_n (int_to_binary b) 8
 
 let update_node (gb : gameboard) rule x =
@@ -106,6 +123,9 @@ let gb_to_string (gb : gameboard) =
 
 let print_board (gb : gameboard) = print_endline (gb_to_string gb)
 
+(* let rec loop gb rule x = if x = 0 then gb else loop (update_board gb rule)
+   rule (x - 1) *)
+
 let rec print_loop gb rule x =
   let new_gb = update_board gb rule in
   if x = 0 then print_board gb
@@ -128,6 +148,8 @@ let make_grid (gb : gameboard) rule x =
 
 let print_grid grid = Array.iter print_board grid
 
+(* [make_2d gb] is the 2D dimensional representation of the grid so it may be
+   read by the program GUI. *)
 let make_2d gb rule x =
   let len = len gb in
   let matrix = Array.make_matrix x len Dead in

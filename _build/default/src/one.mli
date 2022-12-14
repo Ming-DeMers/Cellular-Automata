@@ -1,7 +1,6 @@
-(** [state] is the state of a given node, either [Dead] or [Alive]. *)
 type state =
   | Dead
-  | Alive
+  | Alive  (** [state] is the state of a given node, either dead or alive. *)
 
 type bit = int
 (** [bit] is the int representation of a bit: either 0 or 1. *)
@@ -44,8 +43,7 @@ val binary_to_int : byte -> int
 
 val make_rule : bit -> rule
 (** [make_rule n] is the byte that represents a rule, stemming from a bit input.
-    For example, [int_to_rule 90 = \[0; 1; 0; 1; 1; 0; 1; 0\]]. Requires: [b] is
-    a positive integer.*)
+    For example, [int_to_rule 90 = \[0; 1; 0; 1; 1; 0; 1; 0\]]*)
 
 val gb_to_byte : gameboard -> byte
 (** [gb_to_byte gb] converts gameboard [gb] to its byte representation, where
@@ -53,11 +51,15 @@ val gb_to_byte : gameboard -> byte
 
 val init_empty : bit -> gameboard
 (** [init_empty x] initializes a gameboard with a single alive node in the
-    middle of the board of length [x]. Requires: [x] is a postive integer.*)
+    middle of the board of length [x].
+
+    Requires: [x] is a postive integer.*)
 
 val neighborhood : gameboard -> bit -> state array
 (** [neighborhood gb x] creates a state array that represents the neighbors at
-    each position. Requires: [x] is a postive integer in the gameboard.*)
+    each position.
+
+    Requires: [x] is a postive integer in the gameboard.*)
 
 val birth_node : gameboard -> bit -> unit
 (** [birth_node gb x] checks the state of the node at position [x] in gameboard
@@ -73,8 +75,9 @@ val kill_node : gameboard -> bit -> unit
 val update_node : gameboard -> bit -> bit -> state
 (** [update_node gb rule x] updates the node at [x] in gameboard [gb] with a
     specified amount of neighbors in the previous generation to be dead/alive in
-    the next according to [rule]. Requires: [x] is a positive integer and [rule]
-    is between 1-255, inclusive. *)
+    the next according to [rule].
+
+    Requires: [x] is a positive integer and [rule] is between 1-255, inclusive. *)
 
 val update_board : gameboard -> bit -> gameboard
 (** [update_board gb rule] outputs a modified gameboard [gb] of the next
@@ -100,5 +103,3 @@ val print_grid : gameboard array -> unit
 (** [print_grid gg] prints the 2D dimensional representation of the gameboard *)
 
 val make_2d : gameboard -> bit -> bit -> state array array
-(** [make_2s gb rule x] is the 2D dimensional representation of the grid so it
-    may be read by the program GUI. *)
