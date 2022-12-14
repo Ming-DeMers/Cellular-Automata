@@ -1,6 +1,0 @@
-(** @canonical Dune__exe.Gui *)
-module Gui = Dune__exe__Gui
-
-
-(** @canonical Dune__exe.Gui2d *)
-module Gui2d = Dune__exe__Gui2d

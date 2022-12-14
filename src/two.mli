@@ -80,7 +80,7 @@ module type Board = sig
       applications in Conway's Game of Life (B3_S23) *)
 
   val init_replicator : unit -> gameboard
-  (** [init_replicator ()] is a replicator centered on a 10x10 grid. Has
+  (** [init_replicator ()] is a replicator centered on a 16x16 grid. Has
       intereting applications in Highlife (B36_S23) *)
 
   val make_board : int -> int -> (int * int) list -> gameboard
@@ -88,4 +88,4 @@ module type Board = sig
       nodes at each coordinate specified in [c] *)
 end
 
-module Make : functor (_ : BSRules) -> Board
+module MakeBoard : functor (_ : BSRules) -> Board

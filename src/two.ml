@@ -53,7 +53,7 @@ module B2_S : BSRules = struct
   let survive = []
 end
 
-module Make (BS : BSRules) : Board = struct
+module MakeBoard (BS : BSRules) : Board = struct
   type state =
     | Dead
     | Alive
@@ -188,5 +188,5 @@ module Make (BS : BSRules) : Board = struct
     make_board 10 10 [ (3, 4); (4, 4); (5, 4); (4, 2); (5, 3) ]
 
   let init_replicator () =
-    make_board 10 10 [ (3, 4); (3, 5); (3, 6); (4, 3); (5, 3); (6, 3) ]
+    make_board 18 18 [ (7, 8); (7, 9); (7, 10); (8, 7); (9, 7); (10, 7) ]
 end
