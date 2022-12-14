@@ -1,6 +1,7 @@
 open OUnit2
 open Cellular_automata.One
 open Cellular_automata.Two
+open Cellular_automata.Active
 
 let make_n_test name in_lst in_int exp_out =
   name >:: fun _ -> assert_equal exp_out (make_n in_lst in_int)
@@ -48,11 +49,11 @@ let one_tests =
        Dead; Dead |]"
       10
       [| Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead |];
-      
   ]
 
 (* Test Boards *)
 module GoL = MakeBoard (B3_S23)
+module ActiveGoL = MakeActive (B3_S23)
 
 (************** Tests for Standard Game of Life with Wraparound **************)
 let empty_10x10 = GoL.init_empty 10 10
