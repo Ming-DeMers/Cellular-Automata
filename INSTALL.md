@@ -22,7 +22,10 @@
 1. `# let game = init_empty 49`
 2. `# print_loop game 90 50`
 
-Other interesting rules:
+- A rule is a byte that determines what nodes live and what die in the next generation. For any node, there are two neighboring nodes, and including itself, we have a 3-node neighborhood. There are 8 possible neighborhoods, and depending on which it is, 0-7, we match that to the index of the rule byte, and see if it is 1 or 0, determining if it lives or dies. For example, in a 3-node gameboard, where the middle is alive and others are dead and the rule 90: 
+- The rule can be represented as [01011010] the first node, which has the nieghborhood [001], which is the bit of 2, thus lives. For the second, [010]. which dies, and the third, [100], which lives.
+
+### Other interesting rules
 - 13
 - 18
 - 30
