@@ -55,13 +55,6 @@ val init_empty : bit -> gameboard
 
     Requires: [x] is a postive integer.*)
 
-val neighbors : gameboard -> bit -> bit
-(** [neighbors gb x] is the number of alive neighbors of the node located at
-    position [x]. Neighbors are the left and right nodes, thus there can be 0,
-    1, or 2 neighbors.
-
-    Requires: [x] is a postive integer in the gameboard. *)
-
 val neighborhood : gameboard -> bit -> state array
 (** [neighborhood gb x] creates a state array that represents the neighbors at
     each position.

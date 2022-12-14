@@ -68,16 +68,6 @@ let init_empty x : gameboard =
 
 (* let print_board (gb : gameboard) = print_endline (gb_to_string gb) *)
 
-let neighbors (gb : gameboard) x =
-  let rec neighbors' gb x count acc =
-    if count = 3 then acc
-    else
-      match gb.(x - 1) with
-      | Alive -> neighbors' gb (x + 1) (count + 1) (acc + 1)
-      | Dead -> neighbors' gb (x + 1) (count + 1) acc
-  in
-  neighbors' gb x 0 0
-
 let neighborhood (gb : gameboard) x : state array =
   let array = Array.make 3 Dead in
   let rec make_nb count =

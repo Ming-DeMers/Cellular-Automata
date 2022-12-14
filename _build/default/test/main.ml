@@ -18,6 +18,19 @@ let make_rule_test name in_int exp_out =
 let init_empty_test name in_x exp_out =
   name >:: fun _ -> assert_equal exp_out (init_empty in_x)
 
+let game = init_empty 9
+let game1 = [| Alive; Dead; Alive; Alive; Dead |]
+let game2 = [| Dead; Alive; Dead; Dead; Alive; Alive; Dead; Alive; Dead |]
+
+let neighborhood_test name in_game in_x exp_out =
+  name >:: fun _ -> assert_equal exp_out (neighborhood in_game in_x)
+
+let update_node_test name in_game in_rule in_x exp_out =
+  name >:: fun _ -> assert_equal exp_out (update_node in_game in_rule in_x)
+
+let update_board_test name in_game in_rule exp_out =
+  name >:: fun _ -> assert_equal exp_out (update_board in_game in_rule)
+
 let one_tests =
   [
     make_n_test "make_n [1] 2 is [0; 1]" [ 1 ] 2 [ 0; 1 ];
@@ -36,6 +49,31 @@ let one_tests =
        Dead; Dead |]"
       10
       [| Dead; Dead; Dead; Dead; Dead; Alive; Dead; Dead; Dead; Dead |];
+    neighborhood_test "neighborhood game 0 is [Dead; Dead; Dead]" game 0
+      [| Dead; Dead; Dead |];
+    neighborhood_test "neighborhood game 3 is [Dead; Dead; Alive]" game 3
+      [| Dead; Dead; Alive |];
+    neighborhood_test "neighborhood game1 2 is [Dead; Alive; Alive]" game1 2
+      [| Dead; Alive; Alive |];
+    neighborhood_test "neighborhood game2 3 is [Dead; Dead; Alive]" game2 3
+      [| Dead; Dead; Alive |];
+    neighborhood_test "neighborhood game2 4 is [Dead; Alive; Alive]" game2 4
+      [| Dead; Alive; Alive |];
+    neighborhood_test "neighborhood game2 5 is [Alive; Alive; Dead]" game2 5
+      [| Alive; Alive; Dead |];
+    update_node_test "update_node game 90 4 is Dead" game 90 4 Dead;
+    update_node_test "update_node game 90 3 is Alive" game 90 3 Alive;
+    update_node_test "update_node game 90 2 is Dead" game 90 2 Dead;
+    update_node_test "update_node game 90 1 is Dead" game 90 1 Dead;
+    update_node_test "update_node game 90 0 is Dead" game 90 0 Dead;
+    update_node_test "update_node game 90 7 is Dead" game 90 7 Dead;
+    update_node_test "update_node game 90 6 is Dead" game 90 6 Dead;
+    update_node_test "update_node game 90 5 is Alive" game 90 5 Alive;
+    update_board_test
+      "update_board game 90 is[|Dead; Dead; Dead; Alive; Dead; Alive; Dead; \
+       Dead; Dead|]"
+      game 90
+      [| Dead; Dead; Dead; Alive; Dead; Alive; Dead; Dead; Dead |];
   ]
 
 let int_to_binary_tests =
