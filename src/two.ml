@@ -46,7 +46,7 @@ module B36_S23 : BSRules = struct
 end
 
 (* Day and Night *)
-module B34678_S3678 : BSRules = struct
+module B3678_S34678 : BSRules = struct
   let born = [ 3; 6; 7; 8 ]
   let survive = [ 3; 4; 6; 7; 8 ]
 end
@@ -222,5 +222,5 @@ module MakeBoard (BS : BSRules) : Board = struct
 
   let init_seed () =
     make_board 18 18
-      [ (7, 8); (7, 9); (8, 7); (9, 7); (10, 8); (10, 9); (8, 9); (9, 9) ]
+      [ (7, 8); (7, 9); (8, 7); (9, 7); (10, 8); (10, 9); (8, 10); (9, 10) ]
 end

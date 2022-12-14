@@ -1011,7 +1011,7 @@ let highlife_tests =
 
 let hl_tests = List.flatten [ highlife_tests ]
 
-module DayNight = MakeBoard (B34678_S3678)
+module DayNight = MakeBoard (B3678_S34678)
 
 (* let rocket_20x15 = DayNight.init_rocket () *)
 let empty_20x15 = DayNight.init_empty 20 15

@@ -11,7 +11,7 @@ end
 
 module B3_S23 : BSRules
 module B36_S23 : BSRules
-module B34678_S3678 : BSRules
+module B3678_S34678 : BSRules
 module B2_S : BSRules
 
 module type Board = sig
